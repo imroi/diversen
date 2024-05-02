@@ -1,0 +1,213 @@
+{
+  "name": "Witte kaart",
+  "rules": [
+    {
+      "name": "Ziekenhuis",
+      "filter": ["==", "sector", "Ziekenhuis"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Ziekenhuis.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Apothekers",
+      "filter": ["==", "sector", "Apothekers"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Apothekers.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Ambulancezorg",
+      "filter": ["==", "sector", "Ambulancezorg"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-RAV.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Gehandicaptenzorg",
+      "filter": ["==", "sector", "Gehandicaptenzorg"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Gehandicaptenzorg.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "GGD",
+      "filter": ["==", "sector", "GGD"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-GGD.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "GGZ",
+      "filter": ["==", "sector", "GGZ"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-GGZ.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Huisartsen",
+      "filter": ["==", "sector", "Huisartsen"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Huisartsen.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Huisartsenpost",
+      "filter": ["==", "sector", "Huisartsenpost"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Huisartsen.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Jeugdzorg",
+      "filter": ["==", "sector", "Jeugdzorg"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Jeugdzorg.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Medisch behandelcentrum",
+      "filter": ["==", "sector", "Medisch behandelcentrum"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-rest.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Nederlandse Rode Kruis",
+      "filter": ["==", "sector", "Nederlandse Rode Kruis"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-NRK.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Overig",
+      "filter": ["==", "sector", "Overig"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-rest.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Revalidatiecentrum",
+      "filter": ["==", "sector", "Revalidatiecentrum"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Revalidatiecentra.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Thuiszorg",
+      "filter": ["==", "sector", "Thuiszorg"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Thuiszorg.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Verloskundigen",
+      "filter": ["==", "sector", "Verloskundigen"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Verloskunde.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Verpleegzorg",
+      "filter": ["==", "sector", "Verpleegzorg"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/wittekaart/WK-Verpleging.png",
+          "allowOverlap": true
+        }
+      ]
+    }
+  ]
+}
+

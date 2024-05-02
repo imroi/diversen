@@ -1,0 +1,138 @@
+{
+  "name": "Treinen",
+  "rules": [
+    {
+      "name": "Overige",
+      "filter": ["==", "$type", "Point"],
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#ffffffff",
+          "radius": 3,
+          "strokeColor": "black",
+          "strokeWidth": 2,
+          "strokeOpacity": 1,
+          "wellKnownName": "circle"
+        }
+      ]
+    },
+    {
+      "name": "Automatische rijweginstelling",
+      "filter": ["==", "icon", "ari"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/ari.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Intercity",
+      "filter": ["==", "icon", "nsr-ic"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/nsr-ic.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Sprinter",
+      "filter": ["==", "icon", "nsr-spr"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/nsr-spr.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Eurostar",
+      "filter": ["==", "icon", "est"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/est.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "RRR",
+      "filter": ["==", "icon", "rrr"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/rrr.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Intercity direct",
+      "filter": ["==", "icon", "icd"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/icd.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Rnet",
+      "filter": ["==", "icon", "rnet"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/rnet.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "BN",
+      "filter": ["==", "icon", "bn"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/bn.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "INT",
+      "filter": ["==", "icon", "int"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/int.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    }
+  ]
+}
+

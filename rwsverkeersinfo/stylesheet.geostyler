@@ -1,0 +1,88 @@
+{
+  "name": "Actuele verkeersinfo Rijkswaterstaat",
+  "rules": [
+    {
+      "name": "Overige",
+      "filter": ["==", "$type", "Point"],
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#11111100",
+          "radius": 3,
+          "strokeColor": "#111111",
+          "strokeWidth": 2,
+          "strokeOpacity": 1,
+          "wellKnownName": "circle"
+        }
+      ]
+    },
+    {
+      "name": "Wegwerkzaamheden",
+      "filter": [
+        "||",
+        ["==", "obstructionType", 1],
+        ["==", "obstructionType", 22]
+      ],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 14,
+          "image": "https://imroi.github.io/diversen/rwsverkeersinfo/wegwerkzaamheden.svg",
+          "offset": [0, -14],
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Files",
+      "filter": ["==", "obstructionType", 4],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 14,
+          "image": "https://imroi.github.io/diversen/rwsverkeersinfo/files.svg",
+          "offset": [0, -14],
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Afsluitingen",
+      "filter": ["==", "obstructionType", 7],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 14,
+          "image": "https://imroi.github.io/diversen/rwsverkeersinfo/afsluitingen.svg",
+          "offset": [0, -14],
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Incidenten",
+      "filter": [
+        "||",
+        ["==", "obstructionType", 2],
+        ["==", "obstructionType", 8],
+        ["==", "obstructionType", 11],
+        ["==", "obstructionType", 20],
+        ["==", "obstructionType", 21]
+      ],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 14,
+          "image": "https://imroi.github.io/diversen/rwsverkeersinfo/incidenten.svg",
+          "offset": [0, -14],
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    }
+  ]
+}
+

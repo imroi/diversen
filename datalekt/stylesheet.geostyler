@@ -1,0 +1,119 @@
+{
+  "name": "Cyberincidenten",
+  "rules": [
+    {
+      "name": "(D)DoS-aanval",
+      "filter": ["==", "Gebeurtenis", "(D)DoS-aanval"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/ddos.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "AVG compliance issue",
+      "filter": ["==", "Gebeurtenis", "AVG compliance issue"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/avg.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Business Email Compromise (BEC)",
+      "filter": ["==", "Gebeurtenis", "Business Email Compromise (BEC)"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/bec.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Datalek, inbraak of kwetsbaarheid (externe oorzaak)",
+      "filter": [
+        "==",
+        "Gebeurtenis",
+        "Datalek, inbraak of kwetsbaarheid (externe oorzaak)"
+      ],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/extern.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Datalek, verlies of misbruik (interne oorzaak)",
+      "filter": [
+        "==",
+        "Gebeurtenis",
+        "Datalek, verlies of misbruik (interne oorzaak)"
+      ],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/intern.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Gijzelsoftware (ransomware)",
+      "filter": ["==", "Gebeurtenis", "Gijzelsoftware (ransomware)"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/ransomware.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Transparantie rapport",
+      "filter": ["==", "Gebeurtenis", "Transparantie rapport"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 16,
+          "image": "https://imroi.github.io/diversen/datalekt/transparantie.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Organisatie",
+      "symbolizers": [
+        {
+          "kind": "Text",
+          "size": 12,
+          "color": "#111111",
+          "label": "{{Organisatie}}",
+          "offset": [0, 2],
+          "haloColor": "#FFFFFF",
+          "haloWidth": 1
+        }
+      ]
+    }
+  ]
+}
+
