@@ -22,13 +22,13 @@
         htmlString += '<div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">';
         htmlString += '<ol class="list-group">';
         for (let file of data) {
-          if (file.name.endsWith('.png')) {
+          if (file.name.endsWith('.png') || file.name.endsWith('.jpg') || file.name.endsWith('.jpeg') || file.name.endsWith('.svg')) {
           htmlString += `<li class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
                 <img src="${file.download_url}" alt="${file.name}" width="32" height="32">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                   <div>
                     <h6>${file.name}</h6>
-                    <p>${document.URL}/${file.name}</p>
+                    <p>${document.URL}${file.name}</p>
                   </div>
                   <small class="opacity-50 text-nowrap">${Math.round(file.size / 1024)}kb</small>
                 </div>
