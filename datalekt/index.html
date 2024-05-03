@@ -27,7 +27,7 @@
                 <img src="${file.download_url}" alt="${file.name}" width="32" height="32">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                   <div>
-                    <h6>${file.name}</h6>
+                    <h6><a href="${file.download_url}">${file.name}</a></h6>
                     <p>${document.URL}${file.name}</p>
                   </div>
                   <small class="opacity-50 text-nowrap">${Math.round(file.size / 1024)}kb</small>
