@@ -13,8 +13,8 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">${subdir.toUpperCase()}</a>
           <div class="navbar-nav">
-              <a class="nav-link" href="${document.URL}/stylesheet.sld">SLD</a>
-              <a class="nav-link" href="${document.URL}/stylesheet.geostyler">GeoStyler</a>
+              <a class="nav-link" href="https://github.com/imroi/diversen/blob/main/${subdir}/stylesheet.sld">SLD</a>
+              <a class="nav-link" href="https://github.com/imroi/diversen/blob/main/${subdir}/stylesheet.geostyler">GeoStyler</a>
             </div>
         </div>
       </nav>
@@ -27,7 +27,7 @@
                 <img src="${file.download_url}" alt="${file.name}" width="32" height="32">
                 <div class="d-flex gap-2 w-100 justify-content-between">
                   <div>
-                    <h6><a href="${file.download_url}">${file.name}</a></h6>
+                    <h6><a href="${file.html_url}">${file.name}</a></h6>
                     <p>${document.URL}${file.name}</p>
                   </div>
                   <small class="opacity-50 text-nowrap">${Math.round(file.size / 1024)}kb</small>
