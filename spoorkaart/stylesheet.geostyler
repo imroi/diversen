@@ -69,7 +69,7 @@
       ]
     },
     {
-      "name": "RRR",
+      "name": "RRReis",
       "filter": ["==", "icon", "rrr"],
       "symbolizers": [
         {
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "name": "Rnet",
+      "name": "R-net",
       "filter": ["==", "icon", "rnet"],
       "symbolizers": [
         {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "name": "BN",
+      "name": "Blauwnet",
       "filter": ["==", "icon", "bn"],
       "symbolizers": [
         {
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "name": "INT",
+      "name": "Internationaal",
       "filter": ["==", "icon", "int"],
       "symbolizers": [
         {
@@ -135,4 +135,3 @@
     }
   ]
 }
-
