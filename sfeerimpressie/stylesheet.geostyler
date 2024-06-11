@@ -1,0 +1,45 @@
+{
+  "name": "Sfeerimpressie",
+  "rules": [
+    {
+      "name": "Sfeerimpressie",
+      "filter": ["==", "sfeer", "gespannen"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 8,
+          "image": "https://imroi.github.io/diversen/sfeerimpressie/gespannen.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Sfeerimpressie",
+      "filter": ["==", "sfeer", "neutraal"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 8,
+          "image": "https://imroi.github.io/diversen/sfeerimpressie/neutraal.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Sfeerimpressie",
+      "filter": ["==", "sfeer", "uitstekend"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 8,
+          "image": "https://imroi.github.io/diversen/sfeerimpressie/uitstekend.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    }
+  ]
+}
+
