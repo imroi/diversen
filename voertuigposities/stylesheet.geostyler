@@ -7,7 +7,7 @@
       "symbolizers": [
         {
           "kind": "Icon",
-          "size": 7,
+          "size": 12,
           "image": "https://imroi.github.io/diversen/voertuigposities/ambulance.svg",
           "sizeUnit": "m",
           "allowOverlap": true
@@ -16,20 +16,18 @@
     },
     {
       "name": "Brandweer",
-      "filter": ["!",
-        ["not",
-          ["==", "voertuigSoort", "AMBU"],
-          ["==", "voertuigSoort", "IM"],
-          ["==", "voertuigSoort", "L-COPI"],
-          ["==", "voertuigSoort", "MCU"],
-          ["==", "voertuigSoort", "MD"],
-          ["==", "voertuigSoort", "MPHM"]
-        ]
+      "filter": ["&&",
+        ["!=", "voertuigSoort", "AMBU"],
+        ["!=", "voertuigSoort", "IM"],
+        ["!=", "voertuigSoort", "L-COPI"],
+        ["!=", "voertuigSoort", "MCU"],
+        ["!=", "voertuigSoort", "MD"],
+        ["!=", "voertuigSoort", "MPHM"]
       ],
       "symbolizers": [
         {
           "kind": "Icon",
-          "size": 7,
+          "size": 12,
           "image": "https://imroi.github.io/diversen/voertuigposities/brandweer.svg",
           "sizeUnit": "m",
           "allowOverlap": true
