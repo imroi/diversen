@@ -1,0 +1,60 @@
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Ambulance",
+      "filter": ["==", "voertuigSoort", "AMBU"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/voertuigposities/ambulance.svg",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "Brandweer",
+      "filter": ["!",
+        ["not",
+          ["==", "voertuigSoort", "AMBU"],
+          ["==", "voertuigSoort", "IM"],
+          ["==", "voertuigSoort", "L-COPI"],
+          ["==", "voertuigSoort", "MCU"],
+          ["==", "voertuigSoort", "MD"],
+          ["==", "voertuigSoort", "MPHM"]
+        ]
+      ],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/diversen/voertuigposities/brandweer.svg",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "CoPI",
+      "filter": ["||",
+        ["==", "voertuigSoort", "IM"],
+        ["==", "voertuigSoort", "L-COPI"],
+        ["==", "voertuigSoort", "MCU"],
+        ["==", "voertuigSoort", "MD"],
+        ["==", "voertuigSoort", "MPHM"]
+      ] ,
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 7,
+          "image": "https://imroi.github.io/kaartsymbolen/iconen/voertuig/120.svg",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    }
+  ]
+}
+
