@@ -7,6 +7,7 @@
 <script>
     (async () => {
         const path = window.location.pathname.replace('/diversen/', '/diversen/contents/');
+        const subdir = window.location.pathname.replace(/.*\/(\w+)\/?$/, '$1');
         const main = 'https://github.com/imroi/diversen/blob/main/';
         const response = await fetch('https://api.github.com/repos/imroi' + path);
         const data = await response.json();
