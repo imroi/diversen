@@ -1,0 +1,21 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_47_106)">
+<rect width="28" height="28" fill="white"/>
+<mask id="path-1-inside-1_47_106" fill="white">
+<rect width="28" height="28" rx="1"/>
+</mask>
+<rect width="28" height="28" rx="1" fill="white" stroke="black" stroke-width="4" mask="url(#path-1-inside-1_47_106)"/>
+<rect x="7" y="6" width="2" height="16" fill="black"/>
+<rect x="5" y="10" width="2" height="18" transform="rotate(-90 5 10)" fill="black"/>
+<rect x="5" y="20" width="2" height="18" transform="rotate(-90 5 20)" fill="black"/>
+<rect x="11" y="6" width="2" height="16" fill="black"/>
+<rect x="15" y="6" width="2" height="16" fill="black"/>
+<rect x="19" y="6" width="2" height="16" fill="black"/>
+<rect x="18" y="13" width="1" height="2" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_47_106">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
