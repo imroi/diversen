@@ -1,21 +1,6 @@
 {
-  "name": "Treinen",
+  "name": "",
   "rules": [
-    {
-      "name": "Overige",
-      "filter": ["==", "$type", "Point"],
-      "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "#ffffffff",
-          "radius": 3,
-          "strokeColor": "black",
-          "strokeWidth": 2,
-          "strokeOpacity": 1,
-          "wellKnownName": "circle"
-        }
-      ]
-    },
     {
       "name": "Automatische rijweginstelling",
       "filter": ["==", "icon", "ari"],
@@ -69,7 +54,7 @@
       ]
     },
     {
-      "name": "RRReis",
+      "name": "RRR",
       "filter": ["==", "icon", "rrr"],
       "symbolizers": [
         {
@@ -95,7 +80,7 @@
       ]
     },
     {
-      "name": "R-net",
+      "name": "Rnet",
       "filter": ["==", "icon", "rnet"],
       "symbolizers": [
         {
@@ -108,7 +93,7 @@
       ]
     },
     {
-      "name": "Blauwnet",
+      "name": "BN",
       "filter": ["==", "icon", "bn"],
       "symbolizers": [
         {
@@ -121,13 +106,26 @@
       ]
     },
     {
-      "name": "Internationaal",
+      "name": "INT",
       "filter": ["==", "icon", "int"],
       "symbolizers": [
         {
           "kind": "Icon",
           "size": 20,
           "image": "https://imroi.github.io/diversen/spoorkaart/int.png",
+          "sizeUnit": "m",
+          "allowOverlap": true
+        }
+      ]
+    },
+    {
+      "name": "ICE",
+      "filter": ["==", "icon", "ice"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 20,
+          "image": "https://imroi.github.io/diversen/spoorkaart/ice.png",
           "sizeUnit": "m",
           "allowOverlap": true
         }
