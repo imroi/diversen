@@ -1,0 +1,71 @@
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Evenement",
+      "filter": ["==", "type", "evenement"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "image": "https://imroi.github.io/diversen/jaarwisseling/geel.svg",
+          "size": 28
+        }
+      ]
+    },
+    {
+      "name": "Onrust",
+      "filter": ["==", "type", "onrust"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "image": "https://imroi.github.io/diversen/jaarwisseling/rood.svg",
+          "size": 28
+        }
+      ]
+    },
+    {
+      "name": "Oov",
+      "filter": ["==", "type", "oov"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "image": "https://imroi.github.io/diversen/jaarwisseling/zwart.svg",
+          "size": 28
+        }
+      ]
+    },
+    {
+      "name": "Optioneel",
+      "filter": ["==", "type", "optioneel"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "image": "https://imroi.github.io/diversen/jaarwisseling/oranje.svg",
+          "size": 28
+        }
+      ]
+    },
+    {
+      "name": "Politie",
+      "filter": ["==", "type", "politie"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "image": "https://imroi.github.io/diversen/jaarwisseling/blauw.svg",
+          "size": 28
+        }
+      ]
+    },
+    {
+      "name": "Vuurwerkverbod",
+      "filter": ["==", "type", "vuurwerkverbod"],
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "image": "https://imroi.github.io/diversen/jaarwisseling/groen.svg",
+          "size": 28
+        }
+      ]
+    }
+  ]
+}
