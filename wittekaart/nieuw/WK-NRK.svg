@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect x="17.2" y="16.6" width="372" height="372.7" fill="#fff"/>
+  <path
+     d="M 253.26194,42.206508 H 144.34536 V 144.29248 H 43.803809 V 254.88213 H 144.34536 V 356.9681 H 253.26194 V 254.88213 H 353.80349 V 144.29248 H 253.26194 Z"
+     fill="#ff001b"
+     id="path1"
+     style="stroke-width:0.592219" />
+  <rect
+     x="9"
+     y="9"
+     width="381.3"
+     height="381.3"
+     fill="none"
+     stroke="#000"
+     stroke-width="17.8"
+     id="rect2" />
+</svg>
