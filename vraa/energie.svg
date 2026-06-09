@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="32.87 373.39 99.94 79.11">
+<defs>
+    <style>
+      .st0 {
+        stroke-width: 7.1px;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35 {
+        stroke-miterlimit: 10;
+      }
+
+      .st0, .st1, .st2, .st3, .st6, .st7, .st9, .st36, .st10, .st11, .st13, .st14, .st16, .st19, .st20, .st21, .st22, .st23, .st24, .st26, .st29, .st30, .st31, .st32, .st33, .st34, .st35 {
+        fill: none;
+      }
+
+      .st0, .st2, .st5, .st6, .st7, .st9, .st11, .st13, .st14, .st19, .st20, .st23, .st26, .st29, .st30, .st31, .st32, .st33, .st34, .st35 {
+        stroke: #000;
+      }
+
+      .st1 {
+        stroke-width: 3.92px;
+      }
+
+      .st1, .st3, .st10, .st24 {
+        stroke: #39007f;
+      }
+
+      .st2 {
+        stroke-width: 3.04px;
+      }
+
+      .st3 {
+        stroke-width: 3.76px;
+      }
+
+      .st4, .st5, .st23 {
+        stroke-width: 4px;
+      }
+
+      .st4, .st8, .st12, .st15, .st17, .st22, .st25, .st28 {
+        stroke: #fff;
+      }
+
+      .st37 {
+        fill: #14b710;
+      }
+
+      .st38 {
+        font-family: Poppins-Medium, Poppins;
+        font-size: 10px;
+        font-weight: 500;
+      }
+
+      .st38, .st39 {
+        isolation: isolate;
+      }
+
+      .st40 {
+        fill: #fff;
+      }
+
+      .st6 {
+        stroke-width: 3.42px;
+      }
+
+      .st7 {
+        stroke-width: 1.02px;
+      }
+
+      .st8, .st12, .st27 {
+        fill: #0090e9;
+      }
+
+      .st8, .st28 {
+        stroke-width: 3.02px;
+      }
+
+      .st9 {
+        stroke-width: 2.67px;
+      }
+
+      .st10 {
+        stroke-width: 2.99px;
+      }
+
+      .st11 {
+        stroke-width: 1.11px;
+      }
+
+      .st12, .st15, .st18, .st21, .st27 {
+        stroke-width: 4.03px;
+      }
+
+      .st41 {
+        fill: #ffde17;
+      }
+
+      .st13 {
+        stroke-width: 1.89px;
+      }
+
+      .st14 {
+        stroke-width: 2px;
+      }
+
+      .st15, .st18, .st28 {
+        fill: #b700bf;
+      }
+
+      .st16 {
+        stroke: #a51c24;
+        stroke-width: .22px;
+      }
+
+      .st17 {
+        fill: #fb0d01;
+        stroke-width: .75px;
+      }
+
+      .st18 {
+        stroke: #b700bf;
+      }
+
+      .st19 {
+        stroke-width: .95px;
+      }
+
+      .st42 {
+        fill: #878787;
+      }
+
+      .st20 {
+        stroke-width: 3.79px;
+      }
+
+      .st43 {
+        fill: #259155;
+      }
+
+      .st21, .st27 {
+        stroke: #0090e9;
+      }
+
+      .st22 {
+        stroke-width: 1.01px;
+      }
+
+      .st44 {
+        fill: #ed1b24;
+      }
+
+      .st24 {
+        stroke-width: 3.98px;
+      }
+
+      .st25, .st31 {
+        stroke-width: 3px;
+      }
+
+      .st26 {
+        stroke-width: 2.59px;
+      }
+
+      .st29 {
+        stroke-width: 3.09px;
+      }
+
+      .st30 {
+        stroke-width: 2.66px;
+      }
+
+      .st45 {
+        fill: #f1bb1d;
+      }
+
+      .st32 {
+        stroke-width: 1.06px;
+      }
+
+      .st33 {
+        stroke-width: 1.42px;
+      }
+
+      .st34 {
+        stroke-width: 1.13px;
+      }
+
+      .st35 {
+        stroke-width: 1.03px;
+      }
+    </style>
+  </defs>
+<g xmlns="http://www.w3.org/2000/svg">
+    <path d="M40.87,443.99c20.97.11,41.95.21,62.92.32-3.96-8.43-8.19-19.34-11.17-32.44-2.63-11.56-3.64-21.94-3.91-30.48-10.94.02-21.88.04-32.82.06-.15,8.21-1,18.23-3.47,29.41-2.99,13.57-7.45,24.72-11.55,33.13Z" />
+    <path d="M106.51,444.5c6.1-.08,12.2-.17,18.3-.25-3.7-7.81-7.63-18.04-10.16-30.42-1.73-8.45-2.45-16.14-2.65-22.72h-20.07c.63,7.3,1.88,15.83,4.29,25.18,2.89,11.21,6.67,20.68,10.29,28.21h0Z" />
+    <rect x="88.84" y="391.11" width="4.86" height="2.68" />
+    <path class="st40" d="M69.6,426.34l2.55-11.55-6.82.06,9.66-14.7-2.27,10.92,6.94.13-9.99,15.18s-.07.01-.06-.03h-.01Z" />
+  </g>
+</svg>
