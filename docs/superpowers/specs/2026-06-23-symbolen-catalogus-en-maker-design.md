@@ -179,3 +179,13 @@ Feedback na het lokaal testen van Plan A, met de doorgevoerde keuzes:
 7. **Thema: licht standaard + dark-toggle** (knop in de header; voorkeur in
    localStorage `lcms_theme`).
 8. "256/235 geladen"-teller verdween met het weghalen van de Bibliotheek-tab.
+
+## Revisie 2 — maker-kleuren teruggebracht naar 2 (na lokale test)
+
+De 3-kleuren-aanpak (buitenrand/rand/vul, "ring splitsen") is **vervallen**. In de
+praktijk gaf de buitenrand-als-stroke een ongewenste **dubbele rand** (de afzender-ring
+plus een extra dunne lijn). De template heeft maar twee inkleurbare vlakken, dus de
+maker werkt nu met **twee kleuren**:
+- **Rand** = het ringpad (default afzender-`ink`).
+- **Vul** = het binnenvlak (default afzender-`fill`).
+Beide met afzender-presets + "Reset naar afzender". Geen `buitenrand`-veld meer.
