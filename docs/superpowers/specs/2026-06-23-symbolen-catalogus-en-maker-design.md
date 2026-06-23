@@ -38,7 +38,7 @@ functionaliteiten, en deze als hoofdingang van het project ontsluiten:
 
 | Onderwerp | Keuze |
 |---|---|
-| Catalogus-scope | Alle `*.svg` in de hele repo |
+| Catalogus-scope | Alle `*.svg` én `*.png` in de hele repo (beide met kopieer-link; alleen SVG's bruikbaar in de maker) |
 | Kopieer-link formaat | Beide tonen: GitHub Pages-URL én raw-URL, elk met kopieerknop |
 | Indexering | Gegenereerd `catalog-manifest.json`, automatisch ververst door een GitHub Action bij push |
 | Structuur | Eén app, twee tabs (Catalogus + Nieuw symbool), voortbouwend op `lcms-bibliotheek/index.html` |
@@ -62,13 +62,13 @@ index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
 ## Componenten
 
 ### 1. `build_catalog.py` (nieuw, in repo-root)
-- Scant de repo recursief naar `*.svg`, exclusief `.git/`.
+- Scant de repo recursief naar `*.svg` én `*.png`, exclusief `.git/`.
 - Schrijft `lcms-bibliotheek/catalog-manifest.json`: een array van
-  `{ "name": "<bestandsnaam-zonder-.svg>", "folder": "<map-pad>", "path": "<repo-relatief-pad>" }`,
-  gesorteerd op `path`. Voorbeeld: `{ "name": "natuurbrand", "folder": "lcms-bibliotheek/symbolen", "path": "lcms-bibliotheek/symbolen/natuurbrand.svg" }`.
+  `{ "name": "<bestandsnaam-zonder-extensie>", "folder": "<map-pad>", "path": "<repo-relatief-pad>", "type": "svg" | "png" }`,
+  gesorteerd op `path`. Voorbeeld: `{ "name": "natuurbrand", "folder": "lcms-bibliotheek/symbolen", "path": "lcms-bibliotheek/symbolen/natuurbrand.svg", "type": "svg" }`.
 - Standaardbibliotheek only; draaibaar met `python3 build_catalog.py`.
 - **Open detail (spec-review):** template-SVG's (`lcms-bibliotheek/lcms-svgs/template/*.svg`)
-  worden wél meegenomen tenzij anders besloten; `symbolen/files.zip` is geen `.svg`
+  worden wél meegenomen tenzij anders besloten; `symbolen/files.zip` is geen `.svg`/`.png`
   en valt vanzelf buiten de scan.
 
 ### 2. `.github/workflows/build-catalog.yml` (nieuw)
@@ -81,9 +81,11 @@ index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
 
 ### 3. `lcms-bibliotheek/index.html` — Tab "Catalogus" (func 1)
 - Laadt `catalog-manifest.json` via `fetch()`.
-- Toont een doorzoekbaar grid (zoekveld op naam) met een filter per map/afzender.
-- Previews worden geladen via relatief pad (`../<path>`, want de app staat één
-  map diep).
+- Toont een doorzoekbaar grid (zoekveld op naam) met een filter per map/afzender,
+  en een filter op type (SVG / PNG / beide).
+- Toont zowel SVG's als PNG's; previews worden geladen via relatief pad
+  (`../<path>`, want de app staat één map diep). Het `type`-veld bepaalt hoe de
+  thumbnail wordt weergegeven.
 - Klik op een symbool → detailpaneel met grote preview en **twee** velden met
   kopieerknop:
   - Pages-URL: `https://imroi.github.io/diversen/<path>`
@@ -96,7 +98,8 @@ index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
 - **Afzender-presets:** kies een vaste afzender → de drie kleuren worden
   voorgevuld (vul = afzender-fill, rand = afzender-ink, buitenrand = `#000`); elke
   kleur is daarna handmatig te overschrijven.
-- **Icoon-bron:** kies een icoon uit de catalogus (zelfde data als Tab 1) óf
+- **Icoon-bron:** kies een icoon uit de catalogus (zelfde data als Tab 1, maar
+  **alleen de SVG-entries** — PNG's zijn niet als vector-icoon bruikbaar) óf
   upload een eigen SVG; beide lopen door de bestaande `ingestNewIcon()`-pijplijn.
 - Output: zelfstandige 121×121 SVG, te downloaden/kopiëren (zoals nu).
 
@@ -117,7 +120,9 @@ index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
 ### 6. `index.html` (root) — doorverwijzing (wijziging)
 - Voeg een prominente knop/link toe naar `lcms-bibliotheek/` ("Symbolen-app" of
   vergelijkbaar), zodat de app de hoofdingang is. De mappen-browser blijft
-  verder ongewijzigd.
+  verder **ongewijzigd bestaan** — daardoor blijven ook de PNG's (en alle andere
+  bestanden) vindbaar via de bestaande mappen- en per-map preview-route, ook al
+  zou je later besluiten de catalogus tot bepaalde types te beperken.
 
 ## Datamodel: afzenderkleuren
 
