@@ -7,13 +7,13 @@
 <style>
   :root{
     --bg:#0e1216; --panel:#161c22; --panel2:#1e262e; --line:#2a343e;
-    --ink:#e8eef3; --muted:#8593a0; --accent:#4cc2ff; --ok:#46d39a; --warn:#f5b945; --err:#ff6b6b;
+    --ink:#e8eef3; --muted:#8593a0; --accent:#4cc2ff; --ok:#46d39a; --warn:#f5b945; --err:#ff6b6b; --checker:#11161b;
     --mono:ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
     --sans:"Segoe UI",system-ui,-apple-system,sans-serif;
   }
   body.light{
     --bg:#ffffff; --panel:#f4f6f8; --panel2:#e9edf1; --line:#d4dade;
-    --ink:#1a2027; --muted:#5b6770; --accent:#0a84d6; --ok:#1a9e6e; --warn:#b9821a; --err:#d63b3b;
+    --ink:#1a2027; --muted:#5b6770; --accent:#0a84d6; --ok:#1a9e6e; --warn:#b9821a; --err:#d63b3b; --checker:#e9edf1;
   }
   .theme-toggle{margin-left:14px;padding:7px 12px;border-radius:7px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:12px;cursor:pointer;font-family:var(--sans);white-space:nowrap}
   .theme-toggle:hover{border-color:var(--accent)}
@@ -40,7 +40,7 @@
   .search:focus{outline:none;border-color:var(--accent)}
   .fitem{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:6px;cursor:pointer;font-size:12.5px;color:var(--muted)}
   .fitem:hover{background:var(--panel2);color:var(--ink)}
-  .fitem.active{background:#13303f;color:var(--ink)}
+  .fitem.active{background:#cdeccf;color:#15402a}
   .fitem .sw{width:12px;height:12px;border-radius:3px;border:1px solid rgba(255,255,255,.2);flex:none}
   .fitem .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;opacity:.7}
 
@@ -61,8 +61,8 @@
   .card:hover{border-color:var(--accent);transform:translateY(-2px)}
   .card .thumb{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;
     background:
-      linear-gradient(45deg,#11161b 25%,transparent 25%),linear-gradient(-45deg,#11161b 25%,transparent 25%),
-      linear-gradient(45deg,transparent 75%,#11161b 75%),linear-gradient(-45deg,transparent 75%,#11161b 75%);
+      linear-gradient(45deg,var(--checker) 25%,transparent 25%),linear-gradient(-45deg,var(--checker) 25%,transparent 25%),
+      linear-gradient(45deg,transparent 75%,var(--checker) 75%),linear-gradient(-45deg,transparent 75%,var(--checker) 75%);
     background-size:14px 14px;background-position:0 0,0 7px,7px -7px,-7px 0;border-radius:7px}
   .card .thumb svg{width:74px;height:74px}
   .card .nm{font-size:11px;margin-top:7px;word-break:break-word;line-height:1.3}
@@ -86,7 +86,7 @@
   select,input[type=text]{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font-size:13px}
   select:focus,input:focus{outline:none;border-color:var(--accent)}
   .stage{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;
-    background:linear-gradient(45deg,#11161b 25%,transparent 25%),linear-gradient(-45deg,#11161b 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#11161b 75%),linear-gradient(-45deg,transparent 75%,#11161b 75%);
+    background:linear-gradient(45deg,var(--checker) 25%,transparent 25%),linear-gradient(-45deg,var(--checker) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--checker) 75%),linear-gradient(-45deg,transparent 75%,var(--checker) 75%);
     background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
   .stage svg{width:200px;height:200px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.5))}
   .stagemeta{margin-top:20px;font-family:var(--mono);font-size:12px;color:var(--muted)}
@@ -170,7 +170,7 @@
   .cat-detail-close{position:absolute;top:10px;right:12px;width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:16px;line-height:1;cursor:pointer}
   .cat-detail-close:hover{border-color:var(--accent)}
   .cat-detail-preview{height:200px;display:flex;align-items:center;justify-content:center;border-radius:9px;margin-bottom:14px;
-    background:linear-gradient(45deg,#11161b 25%,transparent 25%),linear-gradient(-45deg,#11161b 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#11161b 75%),linear-gradient(-45deg,transparent 75%,#11161b 75%);
+    background:linear-gradient(45deg,var(--checker) 25%,transparent 25%),linear-gradient(-45deg,var(--checker) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--checker) 75%),linear-gradient(-45deg,transparent 75%,var(--checker) 75%);
     background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
   .cat-detail-preview img{max-width:170px;max-height:170px}
   .cat-detail-name{font-size:14px;font-weight:600;margin-bottom:6px;word-break:break-word}
@@ -182,7 +182,7 @@
 <body class="light">
 <header>
   <h1>LCMS Symbool Bibliotheek</h1>
-  <span class="sub" id="hdrSub">laad je <b>LCMS SVG</b>-map om te beginnen</span>
+  <span class="sub" id="hdrSub">Catalogus &amp; symbool-maker</span>
   <div class="tabs">
     <div class="tab active" data-view="catalog">Catalogus</div>
     <div class="tab" data-view="add">Nieuw symbool</div>
@@ -596,8 +596,6 @@ function rebuild(){
   let st=n?`${n} van ${total} geladen`:"Nog niets geladen.";
   if(missing!==null&&missing>0) st+=` — ${missing} ontbreken`;
   document.getElementById("statusbar").textContent=st+(n?".":"");
-  document.getElementById("hdrSub").innerHTML=
-    n?`${n}/${total} symbolen geladen`:`laad je <b>LCMS SVG</b>-map om te beginnen`;
   if(n) lz.style.display="none";
 }
 function buildFilters(){
@@ -639,7 +637,7 @@ function buildFilters(){
   let ch=mk("Alle categorieën","*","c","");
   allCats.forEach(c=>ch+=mk(c,c,"c",""));
   cEl.innerHTML=ch;
-  document.querySelectorAll(".fitem").forEach(el=>el.onclick=()=>{
+  document.querySelectorAll("#senderFilters .fitem, #catFilters .fitem").forEach(el=>el.onclick=()=>{
     if(el.dataset.kind==="s") filterSender=el.dataset.val; else filterCat=el.dataset.val;
     buildFilters(); renderGrid();
   });
