@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCMS Symbool Bibliotheek</title>
+<style>
+  :root{
+    --bg:#0e1216; --panel:#161c22; --panel2:#1e262e; --line:#2a343e;
+    --ink:#e8eef3; --muted:#8593a0; --accent:#4cc2ff; --ok:#46d39a; --warn:#f5b945; --err:#ff6b6b; --checker:#11161b;
+    --mono:ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:"Segoe UI",system-ui,-apple-system,sans-serif;
+  }
+  body.light{
+    --bg:#ffffff; --panel:#f4f6f8; --panel2:#e9edf1; --line:#d4dade;
+    --ink:#1a2027; --muted:#5b6770; --accent:#0a84d6; --ok:#1a9e6e; --warn:#b9821a; --err:#d63b3b; --checker:#e9edf1;
+  }
+  .theme-toggle{margin-left:14px;padding:7px 12px;border-radius:7px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:12px;cursor:pointer;font-family:var(--sans);white-space:nowrap}
+  .theme-toggle:hover{border-color:var(--accent)}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
+  header{padding:14px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px}
+  header h1{font-size:16px;margin:0;font-weight:600;letter-spacing:.3px;white-space:nowrap}
+  header .sub{color:var(--muted);font-size:12px}
+  .tabs{display:flex;gap:4px;margin-left:auto}
+  .tab{padding:7px 14px;border-radius:7px;cursor:pointer;font-size:13px;color:var(--muted);border:1px solid transparent}
+  .tab.active{background:var(--panel2);color:var(--ink);border-color:var(--line)}
+  .tab:hover{color:var(--ink)}
+  main{height:calc(100% - 53px);overflow:hidden}
+  .view{display:none;height:100%}
+  .view.active{display:block}
+
+  /* ---- library ---- */
+  .lib{display:grid;grid-template-columns:240px 1fr;height:100%}
+  .filters{border-right:1px solid var(--line);padding:18px;overflow-y:auto}
+  .filters h2{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:18px 0 8px}
+  .filters h2:first-child{margin-top:0}
+  .search{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);padding:9px 11px;border-radius:7px;font-size:13px}
+  .search:focus{outline:none;border-color:var(--accent)}
+  .fitem{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:6px;cursor:pointer;font-size:12.5px;color:var(--muted)}
+  .fitem:hover{background:var(--panel2);color:var(--ink)}
+  .fitem.active{background:#cdeccf;color:#15402a}
+  .fitem .sw{width:12px;height:12px;border-radius:3px;border:1px solid rgba(255,255,255,.2);flex:none}
+  .fitem .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;opacity:.7}
+
+  .gridwrap{overflow-y:auto;padding:18px 22px}
+  .loadzone{border:1.5px dashed var(--line);border-radius:10px;padding:20px 24px;color:var(--muted);margin-bottom:18px;cursor:pointer}
+  .loadzone.drag{border-color:var(--accent);background:#12222c;color:var(--ink)}
+  .loadzone input{display:none}
+  .loadzone b{color:var(--ink)}
+  .lzdrop{font-size:13px}
+  .lznote{font-size:11px;margin-top:4px;line-height:1.5}
+  .lzserver{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;display:none;align-items:center;gap:10px}
+  .lzserver.visible{display:flex}
+  .btnsm{padding:5px 13px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#06121c;font-weight:600;font-size:12px;cursor:pointer}
+  .btnsm:disabled{opacity:.5;cursor:not-allowed}
+  .btnsm:hover:not(:disabled){filter:brightness(1.1)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;cursor:pointer;transition:.12s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card .thumb{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+    background:
+      linear-gradient(45deg,var(--checker) 25%,transparent 25%),linear-gradient(-45deg,var(--checker) 25%,transparent 25%),
+      linear-gradient(45deg,transparent 75%,var(--checker) 75%),linear-gradient(-45deg,transparent 75%,var(--checker) 75%);
+    background-size:14px 14px;background-position:0 0,0 7px,7px -7px,-7px 0;border-radius:7px}
+  .card .thumb svg{width:74px;height:74px}
+  .card .nm{font-size:11px;margin-top:7px;word-break:break-word;line-height:1.3}
+  .card .meta{font-size:10px;color:var(--muted);font-family:var(--mono);margin-top:2px}
+  .card.missing .thumb{opacity:.25}
+  .card.missing{border-style:dashed;cursor:default}
+  .card.missing:hover{border-color:var(--line);transform:none}
+  .card{position:relative}
+  .card.eigen-symbol{border-color:var(--ok)}
+  .card.eigen-symbol::after{content:"mijn";position:absolute;top:5px;right:6px;font-size:9px;font-family:var(--mono);color:var(--ok);background:rgba(70,211,154,.12);border:1px solid rgba(70,211,154,.4);border-radius:3px;padding:1px 4px;line-height:1.4}
+  .card-del{display:none;position:absolute;top:4px;left:5px;width:16px;height:16px;line-height:16px;text-align:center;font-size:11px;background:rgba(255,80,80,.15);color:#e05;border:1px solid rgba(255,80,80,.4);border-radius:3px;cursor:pointer;padding:0}
+  .card.eigen-symbol:hover .card-del{display:block}
+  .empty{color:var(--muted);text-align:center;padding:50px;font-size:13px}
+  .statusbar{font-size:12px;color:var(--muted);margin-bottom:12px;font-family:var(--mono)}
+
+  /* ---- add/editor ---- */
+  .add{display:grid;grid-template-columns:300px 1fr;height:100%}
+  .add .col{padding:18px 20px;overflow-y:auto}
+  .add .col.l{border-right:1px solid var(--line)}
+  label{display:block;font-size:12px;color:var(--muted);margin:14px 0 5px}
+  select,input[type=text]{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font-size:13px}
+  select:focus,input:focus{outline:none;border-color:var(--accent)}
+  .stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;
+    background:linear-gradient(45deg,var(--checker) 25%,transparent 25%),linear-gradient(-45deg,var(--checker) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--checker) 75%),linear-gradient(-45deg,transparent 75%,var(--checker) 75%);
+    background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+  .stage svg{width:200px;height:200px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.5));transform:scale(var(--preview-zoom,1));transition:transform .05s linear}
+  .stagemeta{margin-top:20px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .stage-zoom{position:absolute;top:12px;left:0;right:0;z-index:2;justify-content:center;display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted);font-family:var(--mono)}
+  .stage-zoom input[type=range]{width:150px}
+  .upload{border:1.5px dashed var(--line);border-radius:8px;padding:14px;text-align:center;cursor:pointer;color:var(--muted);font-size:12px}
+  .upload:hover{border-color:var(--accent);color:var(--ink)}
+  .upload input{display:none}
+  .diag{margin-top:10px;font-size:12px;font-family:var(--mono)}
+  .diag .row{display:flex;gap:8px;padding:3px 0;align-items:flex-start}
+  .diag .dot{flex:none;margin-top:5px;width:7px;height:7px;border-radius:50%}
+  .dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}.dot.err{background:var(--err)}
+  .btn{display:block;width:100%;padding:10px;border-radius:7px;border:1px solid var(--accent);background:var(--accent);color:#06121c;font-weight:600;font-size:13px;cursor:pointer;margin-top:10px}
+  .btn.ghost{background:transparent;color:var(--accent)}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .btn:hover:not(:disabled){filter:brightness(1.08)}
+  .code{background:#0a0e12;border:1px solid var(--line);border-radius:7px;padding:9px;font-family:var(--mono);font-size:10.5px;color:#9fb3c8;white-space:pre-wrap;word-break:break-all;max-height:130px;overflow:auto;margin-top:8px}
+  .note{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.6;border-top:1px solid var(--line);padding-top:12px}
+  .pill{display:inline-block;font-family:var(--mono);font-size:10px;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--muted)}
+
+  /* ---- wizard ---- */
+  .wiz-steps{display:flex;align-items:center;gap:1px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .wiz-step{display:flex;align-items:center;gap:6px;padding:5px 7px;border-radius:6px;opacity:.3;cursor:default;transition:.12s}
+  .wiz-step.done{opacity:.7;cursor:pointer}.wiz-step.active{opacity:1;background:var(--panel2)}
+  .wiz-num{width:20px;height:20px;border-radius:50%;background:var(--line);color:var(--muted);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:var(--mono);flex:none}
+  .wiz-step.active .wiz-num{background:var(--accent);color:#06121c}
+  .wiz-step.done .wiz-num{background:var(--ok);color:#06121c}
+  .wiz-lbl{font-size:12px;font-weight:500;white-space:nowrap}
+  .wiz-sep{color:var(--line);font-size:14px;flex:none;padding:0 1px}
+  .wiz-title{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:12px}
+  .wiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+  .pointer-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px}
+  .pcard{background:var(--panel2);border:2px solid var(--line);border-radius:10px;padding:12px 8px 10px;text-align:center;cursor:pointer;transition:.12s}
+  .pcard:hover,.pcard.sel{border-color:var(--accent)}.pcard.sel{background:#12222c}
+  .pcard svg{display:block;margin:0 auto 8px;width:60px;height:60px}
+  .pcard-lbl{font-size:12px;font-weight:600}.pcard-desc{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.3}
+  .sender-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:4px}
+  .scard{border:2px solid var(--line);border-radius:8px;padding:9px 10px;cursor:pointer;transition:.12s;display:flex;align-items:center;gap:9px;position:relative}
+  .scard:hover,.scard.sel{border-color:var(--accent)}.scard.sel{background:var(--panel2)}
+  .sender-dot{width:26px;height:26px;border-radius:5px;flex:none}
+  .scard-lbl{font-size:12px;font-weight:500;line-height:1.3}
+  .scard.add{border-style:dashed;color:var(--muted);justify-content:center}
+  .scard.add:hover{color:var(--ink);border-color:var(--accent)}
+  .scard.custom{border-color:var(--ok)}
+  .scard-del{display:none;position:absolute;top:3px;right:4px;width:16px;height:16px;line-height:14px;text-align:center;font-size:11px;background:rgba(255,80,80,.15);color:#e05;border:1px solid rgba(255,80,80,.4);border-radius:3px;cursor:pointer;padding:0}
+  .scard.custom:hover .scard-del{display:block}
+  .sform{margin-top:12px;padding:12px;background:var(--panel2);border:1px solid var(--line);border-radius:8px}
+  .sform-row{display:flex;gap:10px;margin-top:8px}
+  .sform-row label{flex:1;margin:0}
+  .sform-row input[type=color]{width:100%;height:32px;background:transparent;border:1px solid var(--line);border-radius:5px;padding:2px;cursor:pointer}
+  .sform-actions{display:flex;gap:8px;margin-top:10px}
+  .icon-sliders{margin:10px 0 4px}
+  .slider-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .slbl{font-size:10px;font-family:var(--mono);color:var(--muted);width:90px;flex:none}
+  .slider-row input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
+  .sval{font-family:var(--mono);font-size:10px;color:var(--ink);width:36px;text-align:right;flex:none}
+  .wiz-sectlbl{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:7px}
+  .sym-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:7px;margin-bottom:4px;max-height:180px;overflow-y:auto}
+  .symcard{background:var(--panel2);border:2px solid var(--line);border-radius:8px;padding:7px 5px 5px;text-align:center;cursor:pointer;transition:.12s}
+  .symcard:hover,.symcard.sel{border-color:var(--accent)}.symcard.sel{background:#12222c}
+  .sym-thumb{background:#d6e4ed;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:4px;aspect-ratio:1}
+  .sym-thumb svg{width:40px!important;height:40px!important;display:block}
+  .sym-lbl{font-size:9px;margin-top:4px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:var(--mono)}
+
+  /* ---- controle ---- */
+  #view-ctrl{overflow-y:auto}
+  .ctrl{padding:24px 28px;max-width:860px}
+  .ctrl-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
+  .ctrl-section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:12px}
+  .ctrl-title{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 0;display:flex;align-items:center;gap:9px}
+  .ctrl-badge{font-family:var(--mono);font-size:11px;padding:1px 8px;border-radius:4px;font-weight:700;line-height:1.5}
+  .ctrl-badge.ok{background:rgba(70,211,154,.15);color:var(--ok);border:1px solid rgba(70,211,154,.3)}
+  .ctrl-badge.warn{background:rgba(245,185,69,.15);color:var(--warn);border:1px solid rgba(245,185,69,.3)}
+  .ctrl-badge.err{background:rgba(255,107,107,.15);color:var(--err);border:1px solid rgba(255,107,107,.3)}
+  .ctrl-items{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+  .ctrl-item{font-size:11.5px;font-family:var(--mono);padding:3px 0;color:var(--muted);border-bottom:1px solid rgba(42,52,62,.6)}
+  .ctrl-item:last-child{border-bottom:none}
+  .ctrl-item b{color:var(--ink)}
+  /* ---- catalogus detail ---- */
+  .cat-detail{display:none;position:fixed;inset:0;background:rgba(6,12,18,.72);z-index:50;align-items:center;justify-content:center;padding:24px}
+  .cat-detail.open{display:flex}
+  .cat-detail-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;width:min(460px,92vw);position:relative}
+  .cat-detail-close{position:absolute;top:10px;right:12px;width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:16px;line-height:1;cursor:pointer}
+  .cat-detail-close:hover{border-color:var(--accent)}
+  .cat-detail-preview{height:200px;display:flex;align-items:center;justify-content:center;border-radius:9px;margin-bottom:14px;
+    background:linear-gradient(45deg,var(--checker) 25%,transparent 25%),linear-gradient(-45deg,var(--checker) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,var(--checker) 75%),linear-gradient(-45deg,transparent 75%,var(--checker) 75%);
+    background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
+  .cat-detail-preview img{max-width:170px;max-height:170px}
+  .cat-detail-name{font-size:14px;font-weight:600;margin-bottom:6px;word-break:break-word}
+  .cat-copyrow{display:flex;gap:8px;margin-bottom:6px}
+  .cat-copyrow input{flex:1;font-family:var(--mono);font-size:11px}
+  #view-catalog .card .thumb img{max-width:74px;max-height:74px}
+</style>
+</head>
+<body class="light">
+<header>
+  <h1>LCMS Symbool Bibliotheek</h1>
+  <span class="sub" id="hdrSub">Catalogus &amp; symbool-maker</span>
+  <div class="tabs">
+    <div class="tab active" data-view="catalog">Catalogus</div>
+    <div class="tab" data-view="add">Nieuw symbool</div>
+  </div>
+  <button id="themeToggle" class="theme-toggle" title="Wissel licht/donker thema">Donker</button>
+</header>
+
+<main>
+  <!-- ===== CATALOGUS ===== -->
+  <section class="view active" id="view-catalog">
+    <div class="lib">
+      <aside class="filters">
+        <input class="search" id="catSearch" placeholder="Zoek op naam…">
+        <h2>Type</h2>
+        <div id="catTypeFilters">
+          <div class="fitem active" data-cattype="all">Alle <span class="cnt" id="catCntAll"></span></div>
+          <div class="fitem" data-cattype="svg">SVG <span class="cnt" id="catCntSvg"></span></div>
+          <div class="fitem" data-cattype="png">PNG <span class="cnt" id="catCntPng"></span></div>
+        </div>
+        <h2>Bron</h2>
+        <div id="catBronFilters"></div>
+        <h2>Afzender</h2>
+        <div id="catAfzFilters"></div>
+        <h2>Categorie</h2>
+        <div id="catCatFilters"></div>
+      </aside>
+      <div class="gridwrap">
+        <div class="statusbar" id="catStatus">Catalogus laden…</div>
+        <div class="grid" id="catGrid"></div>
+        <div class="empty" id="catEmpty" style="display:none">Geen symbolen die aan de filters voldoen.</div>
+      </div>
+    </div>
+    <div class="cat-detail" id="catDetail">
+      <div class="cat-detail-card">
+        <button class="cat-detail-close" id="catDetailClose" title="Sluiten">×</button>
+        <div class="cat-detail-preview" id="catDetailPreview"></div>
+        <div class="cat-detail-name" id="catDetailName"></div>
+        <label>Pages-URL</label>
+        <div class="cat-copyrow">
+          <input type="text" id="catPagesUrl" readonly>
+          <button class="btnsm" id="catCopyPages">Kopieer</button>
+        </div>
+        <label>raw-URL</label>
+        <div class="cat-copyrow">
+          <input type="text" id="catRawUrl" readonly>
+          <button class="btnsm" id="catCopyRaw">Kopieer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIBRARY ===== -->
+  <section class="view" id="view-library">
+    <div class="lib">
+      <aside class="filters">
+        <input class="search" id="search" placeholder="Zoek op naam…">
+        <h2>Afzender</h2>
+        <div id="senderFilters"></div>
+        <h2>Categorie</h2>
+        <div id="catFilters"></div>
+      </aside>
+      <div class="gridwrap">
+        <div class="loadzone" id="loadzone">
+          <input type="file" id="folderInput" webkitdirectory directory multiple accept=".svg">
+          <div class="lzdrop">Sleep je <b>LCMS SVG</b>-map hier of <b>klik</b> om een map te kiezen.</div>
+          <div class="lznote">
+            De app verwacht 235 symbolen in 9 afzendermappen. Niet-geladen symbolen worden grijs getoond.<br>
+            <span style="color:var(--muted)">Via een server (<code style="font-family:var(--mono)">python -m http.server</code>) worden de symbolen automatisch geladen uit <code style="font-family:var(--mono)">lcms-svgs/</code>. Via <b>file://</b> gebruik je drag-&amp;drop hieronder.</span>
+          </div>
+          <div class="lzserver" id="lzServer">
+            <span style="color:var(--ok);font-size:16px;line-height:1">●</span>
+            <span style="color:var(--muted)">Server actief</span>
+            <button class="btnsm" id="btnFetchAssets">Herladen</button>
+            <span id="fetchStatus" style="font-family:var(--mono);color:var(--muted)"></span>
+          </div>
+        </div>
+        <div class="statusbar" id="statusbar">Nog niets geladen.</div>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="emptyMsg" style="display:none">Geen symbolen die aan de filters voldoen.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADD ===== -->
+  <section class="view" id="view-add">
+    <div class="add">
+      <!-- Links: wizard -->
+      <div class="col l">
+        <div class="wiz-steps">
+          <div class="wiz-step active" id="wstep1"><span class="wiz-num">1</span><span class="wiz-lbl">Pointer</span></div>
+          <div class="wiz-sep">›</div>
+          <div class="wiz-step" id="wstep2"><span class="wiz-num">2</span><span class="wiz-lbl">Afzender</span></div>
+          <div class="wiz-sep">›</div>
+          <div class="wiz-step" id="wstep3"><span class="wiz-num">3</span><span class="wiz-lbl">Icoon</span></div>
+        </div>
+        <!-- Stap 1 -->
+        <div id="wcStep1">
+          <div class="wiz-title">Kies het type pointer</div>
+          <div class="pointer-cards" id="pointerCards"></div>
+        </div>
+        <!-- Stap 2 -->
+        <div id="wcStep2" style="display:none">
+          <div class="wiz-title">Kies de afzender</div>
+          <div class="sender-cards" id="senderCards"></div>
+          <div class="sform" id="newSenderForm" style="display:none">
+            <div class="wiz-sectlbl">Nieuwe afzender</div>
+            <input type="text" id="newSenderName" placeholder="bv. Civiele bescherming" style="margin-top:4px">
+            <div class="sform-row">
+              <label>
+                <span style="font-size:11px;color:var(--muted)">Vulkleur</span>
+                <input type="color" id="newSenderFill" value="#888888">
+              </label>
+              <label>
+                <span style="font-size:11px;color:var(--muted)">Randkleur</span>
+                <input type="color" id="newSenderInk" value="#000000">
+              </label>
+            </div>
+            <div class="sform-actions">
+              <button class="btn" id="newSenderSave" style="width:auto;padding:7px 14px;margin-top:0">Opslaan</button>
+              <button class="btn ghost" id="newSenderCancel" style="width:auto;padding:7px 14px;margin-top:0">Annuleer</button>
+            </div>
+          </div>
+        </div>
+        <!-- Stap 3 -->
+        <div id="wcStep3" style="display:none">
+          <div class="wiz-title">Voeg een icoon toe</div>
+          <div style="margin-bottom:14px;padding:10px 11px;background:var(--panel2);border:1px solid var(--line);border-radius:7px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+              <span style="font-size:11px;color:var(--muted)">Kleuren</span>
+              <button id="btnClrReset" style="background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 9px;border-radius:4px;cursor:pointer;font-size:10px;font-family:var(--mono)">Reset naar afzender</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span style="font-size:11px;color:var(--muted);flex:1">Rand</span>
+              <input type="color" id="clrRand" value="#000000" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:11px;color:var(--muted);flex:1">Vul</span>
+              <input type="color" id="clrVul" value="#888888" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
+            </div>
+          </div>
+          <div class="wiz-sectlbl">Kies een symbool</div>
+          <input type="text" id="makerIconSearch" placeholder="Zoek icoon op naam…" style="margin-bottom:7px">
+          <div class="sym-grid" id="symbolenGrid"><span style="color:var(--muted);font-size:11px">—</span></div>
+          <div class="wiz-sectlbl" style="margin-top:10px">Of upload een eigen SVG</div>
+          <input type="file" id="addIcon" accept=".svg,image/svg+xml" style="display:none">
+          <button class="btn ghost" id="btnUploadIcon" style="margin-top:0">↑ SVG uploaden</button>
+          <div class="diag" id="addDiag"></div>
+          <button class="btn ghost" id="clearIcon" style="display:none">× Wis icoon</button>
+          <div class="icon-sliders" id="iconSliders" style="display:none">
+            <div class="slider-row"><span class="slbl">Schaal</span><input type="range" id="slScale" min="25" max="200" value="100"><span class="sval" id="svalScale">100%</span></div>
+            <div class="slider-row"><span class="slbl">Links/rechts</span><input type="range" id="slDx" min="-50" max="50" value="0"><span class="sval" id="svalDx">0</span></div>
+            <div class="slider-row"><span class="slbl">Omhoog/omlaag</span><input type="range" id="slDy" min="-50" max="50" value="0"><span class="sval" id="svalDy">0</span></div>
+            <div class="slider-row" style="margin-top:6px;padding-top:8px;border-top:1px solid var(--line)">
+              <label style="margin:0;display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--ink);font-size:12px;flex:1">
+                <input type="checkbox" id="cbRecolor" style="margin:0;cursor:pointer;accent-color:var(--accent)">
+                Inkleuren als afzender (ink-kleur)
+              </label>
+            </div>
+          </div>
+          <label style="margin-top:14px">Naam van het nieuwe symbool</label>
+          <input type="text" id="addName" placeholder="bv. mobiel_meetstation">
+          <div id="addNameNorm" style="font-size:10px;font-family:var(--mono);color:var(--warn);margin-top:3px;min-height:14px"></div>
+          <button class="btn" id="dlNew" disabled>Download nieuw symbool</button>
+          <button class="btn ghost" id="copyNew" disabled>Kopieer SVG</button>
+          <button class="btn ghost" id="btnExportZip" style="display:none;border-color:var(--ok);color:var(--ok)">Exporteer nieuwe symbolen als ZIP</button>
+          <div class="code" id="addCode">&lt;svg&gt;…&lt;/svg&gt;</div>
+        </div>
+        <!-- Navigatie -->
+        <div class="wiz-nav">
+          <button class="btn ghost" id="wizBack" style="display:none;width:auto;padding:7px 16px;margin-top:0">← Terug</button>
+          <button class="btn" id="wizNext" style="width:auto;padding:7px 18px;margin-top:0">Volgende →</button>
+        </div>
+      </div>
+      <!-- Rechts: live preview -->
+      <div class="col" style="padding:0">
+        <div class="stage">
+          <div id="addPreview"></div>
+          <div class="stagemeta" id="addMeta">Kies een pointer-type om te beginnen</div>
+          <div class="stage-zoom">
+            <span>Zoom</span>
+            <input type="range" id="previewZoom" min="50" max="400" value="100">
+            <span id="previewZoomVal">100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTROLE ===== -->
+  <section class="view" id="view-ctrl">
+    <div class="ctrl">
+      <div class="ctrl-actions">
+        <button class="btnsm" id="btnRunCtrl">Analyseer geladen set</button>
+        <button class="btnsm" id="btnExportManifest" style="background:transparent;border-color:var(--ok);color:var(--ok)">Exporteer manifest.json</button>
+      </div>
+      <div id="ctrlResults"><p style="color:var(--muted);font-size:13px">Laad eerst de set en klik op "Analyseer geladen set".</p></div>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ============================================================
+   MANIFEST — wordt geladen uit lcms-manifest.json via fetch()
+   wanneer de app via een server wordt geserveerd. Bevat de
+   volledige verwachte set van 235 symbolen als "verwachte
+   inhoud". Onder file:// mislukt de fetch stil; drag-&-drop
+   werkt dan als primaire laadroute.
+   ============================================================ */
+let MANIFEST = null;
+
+/* Fallback sender-info (ook in manifest, maar direct beschikbaar zonder fetch) */
+const SENDERS = {
+  algemeen:      {label:"Algemeen",       fill:"#D5D5D5", ink:"#000000"},
+  politie:       {label:"Politie",        fill:"#182866", ink:"#FFFFFF"},
+  brandweer:     {label:"Brandweer",      fill:"#F60000", ink:"#FFFFFF"},
+  GHOR:          {label:"GHOR/Ambulance", fill:"#FFFFFF", ink:"#000000"},
+  kmar:          {label:"KMAR",           fill:"#009EE0", ink:"#FFFFFF"},
+  defensie:      {label:"Defensie",       fill:"#004535", ink:"#FFFFFF"},
+  bevolkingszorg:{label:"Bevolkingszorg", fill:"#E17000", ink:"#FFFFFF"},
+  rws:           {label:"Rijkswaterstaat",fill:"#FFF329", ink:"#000000"},
+  waterschap:    {label:"Waterschap",     fill:"#00CC00", ink:"#000000"},
+};
+
+/* state: geladen SVG-tekst per id ("afzender/categorie/naam") */
+const store = new Map();
+/* eigen symbolen: persistent via localStorage */
+const EIGEN_KEY = 'lcms_mijn_symbolen';
+const eigenSymbolen = new Map();
+
+/* eigen afzenders: persistent via localStorage */
+const EIGEN_SENDERS_KEY = 'lcms_mijn_afzenders';
+const eigenSenders = new Map(); /* key → {label, fill, ink} */
+
+function loadEigenSenders() {
+  try {
+    const raw = localStorage.getItem(EIGEN_SENDERS_KEY);
+    if (!raw) return;
+    const obj = JSON.parse(raw);
+    for (const [key, info] of Object.entries(obj)) {
+      eigenSenders.set(key, info);
+      SENDERS[key] = {...info};
+    }
+  } catch(e) {}
+}
+
+function saveEigenSender(key, info) {
+  eigenSenders.set(key, info);
+  SENDERS[key] = {...info};
+  _persistEigenSenders();
+}
+
+function deleteEigenSender(key) {
+  eigenSenders.delete(key);
+  delete SENDERS[key];
+  _persistEigenSenders();
+}
+
+function _persistEigenSenders() {
+  try {
+    const obj = {};
+    for (const [k, v] of eigenSenders) obj[k] = v;
+    localStorage.setItem(EIGEN_SENDERS_KEY, JSON.stringify(obj));
+  } catch(e) {}
+}
+
+function loadEigenSymbolen() {
+  try {
+    const raw = localStorage.getItem(EIGEN_KEY);
+    if (!raw) return;
+    const obj = JSON.parse(raw);
+    for (const [id, svg] of Object.entries(obj)) {
+      eigenSymbolen.set(id, svg);
+      store.set(id, svg);
+    }
+  } catch(e) {}
+}
+
+function saveEigenSymbool(id, svg) {
+  eigenSymbolen.set(id, svg);
+  store.set(id, svg);
+  _persistEigen();
+}
+
+function deleteEigenSymbool(id) {
+  eigenSymbolen.delete(id);
+  store.delete(id);
+  _persistEigen();
+  rebuild();
+}
+
+function _persistEigen() {
+  try {
+    const obj = {};
+    for (const [k, v] of eigenSymbolen) obj[k] = v;
+    localStorage.setItem(EIGEN_KEY, JSON.stringify(obj));
+  } catch(e) {}
+}
+
+let filterSender="*", filterCat="*", q="";
+
+/* ---------- manifest laden ---------- */
+async function initManifest() {
+  try {
+    const r = await fetch('lcms-manifest.json');
+    if (!r.ok) return;
+    MANIFEST = await r.json();
+    /* Vul SENDERS aan vanuit manifest voor het geval er nieuwe zijn */
+    if (MANIFEST.senders) {
+      Object.assign(SENDERS, MANIFEST.senders);
+    }
+    /* Eigen afzenders mogen niet overschreven worden door manifest */
+    for (const [k, v] of eigenSenders) SENDERS[k] = {...v};
+    /* Server gedetecteerd: toon statusbalk en laad meteen */
+    document.getElementById('lzServer').classList.add('visible');
+    rebuild();
+    fetchTemplates();
+    fetchAssets();
+  } catch(e) {
+    /* file:// of geen manifest — stille fallback naar drag-&-drop */
+  }
+}
+
+/* ---------- laden uit lcms-svgs/ (alleen via server) ---------- */
+async function fetchAssets() {
+  if (!MANIFEST) return;
+  const btn = document.getElementById('btnFetchAssets');
+  const status = document.getElementById('fetchStatus');
+  btn.disabled = true;
+  btn.textContent = 'Laden…';
+  status.textContent = '';
+  let loaded = 0, failed = 0;
+  for (const sym of MANIFEST.symbols) {
+    try {
+      const url = 'lcms-svgs/' + sym.path.split('/').map(encodeURIComponent).join('/');
+      const r = await fetch(url);
+      if (r.ok) {
+        store.set(sym.id, await r.text());
+        loaded++;
+      } else {
+        failed++;
+      }
+    } catch(e) {
+      failed++;
+    }
+  }
+  rebuild();
+  btn.textContent = 'Herladen';
+  btn.disabled = false;
+  status.textContent = `${loaded} geladen${failed ? `, ${failed} ontbreken` : ''}`;
+}
+document.getElementById('btnFetchAssets').onclick = fetchAssets;
+
+/* ---------- tabs ---------- */
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));
+  t.classList.add("active");
+  document.getElementById("view-"+t.dataset.view).classList.add("active");
+  if(t.dataset.view==="add") wizInit();
+  if(t.dataset.view==="ctrl") runCtrl();
+  if(t.dataset.view==="catalog" && !CATALOG.length) loadCatalog();
+});
+
+/* ---------- map/bestanden laden (drag-&-drop + folder-picker) ---------- */
+const lz=document.getElementById("loadzone");
+const folderInput=document.getElementById("folderInput");
+lz.onclick=e=>{
+  /* klik op de laadknop triggert geen folder-picker */
+  if(e.target.closest('.lzserver')) return;
+  folderInput.click();
+};
+lz.ondragover=e=>{e.preventDefault();lz.classList.add("drag");};
+lz.ondragleave=()=>lz.classList.remove("drag");
+lz.ondrop=async e=>{
+  e.preventDefault();lz.classList.remove("drag");
+  const items=[...e.dataTransfer.items].map(i=>i.webkitGetAsEntry&&i.webkitGetAsEntry()).filter(Boolean);
+  if(items.length){ for(const it of items) await walkEntry(it,""); }
+  else { for(const f of e.dataTransfer.files) await readFile(f, f.webkitRelativePath||f.name); }
+  rebuild();
+};
+folderInput.onchange=async e=>{
+  for(const f of e.target.files) await readFile(f, f.webkitRelativePath||f.name);
+  rebuild();
+};
+function walkEntry(entry,prefix){
+  return new Promise(res=>{
+    if(entry.isFile){ entry.file(async f=>{ await readFile(f, prefix+entry.name); res();}); }
+    else if(entry.isDirectory){
+      const rd=entry.createReader();
+      rd.readEntries(async ents=>{ for(const en of ents) await walkEntry(en, prefix+entry.name+"/"); res();});
+    } else res();
+  });
+}
+function readFile(file, relpath){
+  return new Promise(res=>{
+    if(!file.name.toLowerCase().endsWith(".svg")){res();return;}
+    const r=new FileReader();
+    r.onload=()=>{ store.set(idFromPath(relpath), r.result); res(); };
+    r.readAsText(file);
+  });
+}
+/* normaliseer pad → "afzender/categorie/naam" (negeer LCMS SVG-root & __MACOSX) */
+function idFromPath(p){
+  const parts=p.split("/").filter(x=>x && x!=="__MACOSX" && x.toLowerCase()!=="lcms svg");
+  const name=parts.pop().replace(/\.svg$/i,"");
+  const cat=parts.pop()||"(root)";
+  const sender=parts.pop()||"(onbekend)";
+  return `${sender}/${cat}/${name}`;
+}
+
+/* ---------- library render ---------- */
+function matchesFilter(id){
+  const[s,c,n]=id.split("/");
+  if(filterSender==="__eigen__")return eigenSymbolen.has(id)&&(!q||n.toLowerCase().includes(q));
+  if(filterSender!=="*"&&s!==filterSender)return false;
+  if(filterCat!=="*"&&c!==filterCat)return false;
+  if(q&&!n.toLowerCase().includes(q))return false;
+  return true;
+}
+function rebuild(){
+  buildFilters(); renderGrid();
+  const n=store.size;
+  const total=MANIFEST?MANIFEST.total:235;
+  const missing=MANIFEST?MANIFEST.symbols.filter(s=>!store.has(s.id)).length:null;
+  let st=n?`${n} van ${total} geladen`:"Nog niets geladen.";
+  if(missing!==null&&missing>0) st+=` — ${missing} ontbreken`;
+  document.getElementById("statusbar").textContent=st+(n?".":"");
+  if(n) lz.style.display="none";
+}
+function buildFilters(){
+  /* Gebruik manifest als bron voor zender/categorie-lijsten als die beschikbaar is */
+  const allSenders=MANIFEST
+    ?[...new Set([...Object.keys(MANIFEST.senders),...eigenSenders.keys()])].sort()
+    :[...new Set([...[...store.keys()].map(id=>id.split("/")[0]),...eigenSenders.keys()])].sort();
+  const allCats=MANIFEST
+    ?[...new Set(
+        MANIFEST.symbols
+          .filter(s=>filterSender==="*"||s.sender===filterSender)
+          .map(s=>s.category)
+      )].sort()
+    :[...new Set([...store.keys()]
+        .filter(id=>filterSender==="*"||id.split("/")[0]===filterSender)
+        .map(id=>id.split("/")[1]))].sort();
+  const sEl=document.getElementById("senderFilters");
+  const cEl=document.getElementById("catFilters");
+  const countLoaded=(s,c)=>[...store.keys()].filter(id=>{
+    const[a,b]=id.split("/");
+    return(s==="*"||a===s)&&(c==="*"||b===c);
+  }).length;
+  const mk=(label,val,kind,sw)=>{
+    const active=(kind==="s"?filterSender:filterCat)===val;
+    const n=kind==="s"?countLoaded(val,"*"):countLoaded(filterSender,val);
+    return `<div class="fitem ${active?"active":""}" data-kind="${kind}" data-val="${val}">
+      ${sw?`<span class="sw" style="background:${sw}"></span>`:""}${label}
+      <span class="cnt">${n}</span></div>`;
+  };
+  let sh=mk("Alle afzenders","*","s","");
+  allSenders.forEach(s=>sh+=mk(SENDERS[s]?.label||s,s,"s",SENDERS[s]?.fill));
+  if(eigenSymbolen.size>0){
+    const active=filterSender==="__eigen__";
+    sh+=`<div class="fitem ${active?"active":""}" data-kind="s" data-val="__eigen__" style="margin-top:6px;border-top:1px solid var(--line);padding-top:6px">
+      <span class="sw" style="background:var(--ok)"></span>Mijn symbolen
+      <span class="cnt">${eigenSymbolen.size}</span></div>`;
+  }
+  sEl.innerHTML=sh;
+  let ch=mk("Alle categorieën","*","c","");
+  allCats.forEach(c=>ch+=mk(c,c,"c",""));
+  cEl.innerHTML=ch;
+  document.querySelectorAll("#senderFilters .fitem, #catFilters .fitem").forEach(el=>el.onclick=()=>{
+    if(el.dataset.kind==="s") filterSender=el.dataset.val; else filterCat=el.dataset.val;
+    buildFilters(); renderGrid();
+  });
+}
+document.getElementById("search").oninput=e=>{q=e.target.value.toLowerCase();renderGrid();};
+function renderGrid(){
+  const grid=document.getElementById("grid");
+  /* Geladen symbolen die voldoen aan filter */
+  const loadedIds=[...store.keys()].filter(matchesFilter);
+  /* Verwachte-maar-ontbrekende symbolen uit manifest */
+  const missingIds=MANIFEST
+    ?MANIFEST.symbols.filter(s=>!store.has(s.id)&&matchesFilter(s.id)).map(s=>s.id)
+    :[];
+  const allIds=[...new Set([...loadedIds,...missingIds])].sort();
+  document.getElementById("emptyMsg").style.display=allIds.length?"none":"block";
+  grid.innerHTML=allIds.map(id=>{
+    const[s,,n]=id.split("/");
+    const loaded=store.has(id);
+    const isEigen=eigenSymbolen.has(id);
+    let cls="card";
+    if(!loaded) cls+=" missing";
+    if(isEigen) cls+=" eigen-symbol";
+    const delBtn=isEigen?`<button class="card-del" data-id="${id}" title="Verwijder uit Mijn symbolen">×</button>`:"";
+    return `<div class="${cls}"${loaded?` data-id="${id}"`:' title="Niet geladen — verwacht door manifest"'}${isEigen?' title="Eigen symbool (persistent opgeslagen)"':''}>
+      ${delBtn}
+      <div class="thumb">${loaded?store.get(id):""}</div>
+      <div class="nm">${n.replace(/[-_]/g," ")}</div>
+      <div class="meta">${SENDERS[s]?.label||s}</div></div>`;
+  }).join("");
+  grid.querySelectorAll(".card:not(.missing)").forEach(c=>c.onclick=e=>{
+    if(e.target.closest(".card-del"))return;
+    downloadOne(c.dataset.id);
+  });
+  grid.querySelectorAll(".card-del").forEach(btn=>btn.onclick=e=>{
+    e.stopPropagation();
+    const id=btn.dataset.id;
+    if(confirm(`Verwijder "${id.split("/").pop().replace(/[-_]/g," ")}" uit Mijn symbolen?`))deleteEigenSymbool(id);
+  });
+}
+function downloadOne(id){
+  const svg=store.get(id); if(!svg)return;
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([svg],{type:"image/svg+xml"}));
+  a.download=id.split("/").pop()+".svg"; a.click(); URL.revokeObjectURL(a.href);
+}
+
+/* ============================================================
+   NAAM-NORMALISATIE & ZIP-EXPORT (Stap 4)
+   ============================================================ */
+
+function normalizeName(raw){
+  return raw.trim().toLowerCase()
+    .replace(/\s+/g,"_").replace(/-+/g,"_")
+    .replace(/[^a-z0-9_]/g,"").replace(/_+/g,"_")
+    .replace(/^_|_$/g,"");
+}
+
+/* Minimale uncompressed ZIP (geen externe deps) */
+function crc32(buf){
+  let c=0xFFFFFFFF;
+  const t=new Uint32Array(256);
+  for(let i=0;i<256;i++){let v=i;for(let k=0;k<8;k++)v=v&1?(0xEDB88320^(v>>>1)):v>>>1;t[i]=v;}
+  for(let i=0;i<buf.length;i++)c=t[(c^buf[i])&0xFF]^(c>>>8);
+  return (c^0xFFFFFFFF)>>>0;
+}
+function u16le(n){const b=new Uint8Array(2);new DataView(b.buffer).setUint16(0,n,true);return b;}
+function u32le(n){const b=new Uint8Array(4);new DataView(b.buffer).setUint32(0,n,true);return b;}
+function concatU8(...parts){
+  const tot=parts.reduce((a,p)=>a+p.length,0);
+  const out=new Uint8Array(tot); let off=0;
+  for(const p of parts){out.set(p,off);off+=p.length;}
+  return out;
+}
+function buildZip(files){
+  /* files: [{path: string, data: Uint8Array}] */
+  const enc=new TextEncoder();
+  const localHeaders=[];
+  const centralDirs=[];
+  let offset=0;
+  for(const {path,data} of files){
+    const nameBytes=enc.encode(path);
+    const crc=crc32(data);
+    const dosDate=0x5360, dosTime=0x0000; /* 2026-11-01 00:00 */
+    const local=concatU8(
+      new Uint8Array([0x50,0x4B,0x03,0x04]), /* local file sig */
+      u16le(20),u16le(0),u16le(0),           /* version, flags, compression (store) */
+      u16le(dosTime),u16le(dosDate),
+      u32le(crc),u32le(data.length),u32le(data.length),
+      u16le(nameBytes.length),u16le(0),
+      nameBytes,data
+    );
+    const central=concatU8(
+      new Uint8Array([0x50,0x4B,0x01,0x02]), /* central dir sig */
+      u16le(20),u16le(20),u16le(0),u16le(0), /* versions, flags, compression */
+      u16le(dosTime),u16le(dosDate),
+      u32le(crc),u32le(data.length),u32le(data.length),
+      u16le(nameBytes.length),u16le(0),u16le(0),u16le(0),u16le(0),
+      u32le(0),u32le(offset),
+      nameBytes
+    );
+    localHeaders.push(local);
+    centralDirs.push(central);
+    offset+=local.length;
+  }
+  const cdSize=centralDirs.reduce((a,c)=>a+c.length,0);
+  const eocd=concatU8(
+    new Uint8Array([0x50,0x4B,0x05,0x06]),
+    u16le(0),u16le(0),
+    u16le(files.length),u16le(files.length),
+    u32le(cdSize),u32le(offset),
+    u16le(0)
+  );
+  return concatU8(...localHeaders,...centralDirs,eocd);
+}
+
+/* ============================================================
+   ICOON-DETECTIE & SJABLOONANALYSE (Stap 3)
+   ============================================================ */
+
+/*
+ * analyzeTemplate: zoek de icoon-laag in het sjabloon-SVG.
+ *
+ * Strategieën (volgorde van betrouwbaarheid):
+ *   1. laatste directe child van de main-group met transform-attribuut  → high
+ *   2. laatste non-outline child (fill≠"none", geen ongetransformeerde circle) → medium
+ *   3. absolute fallback: laatste child → low
+ *
+ * Geeft terug:
+ *   iconChildIdx   – index in mainGroup.children (om element te verwijderen bij rebuild)
+ *   placeTransform – transform voor de nieuwe icoon-wrapper
+ *   bbox           – {x,y,w,h} van het originele icoon via getBBox()
+ *   confidence     – "high" | "medium" | "low"
+ *   method         – label voor de waarschuwing
+ */
+function analyzeTemplate(svgString) {
+  const doc=new DOMParser().parseFromString(svgString,"image/svg+xml");
+  const svg=doc.querySelector("svg");
+  const mainGroup=svg.querySelector("svg > g")||svg;
+  const children=[...mainGroup.children];
+
+  let iconEl=null, method, confidence;
+
+  // Strategie 1 — hoog vertrouwen
+  for(let i=children.length-1;i>=0;i--){
+    if(children[i].hasAttribute("transform")){
+      iconEl=children[i]; method="transform-attrib"; confidence="high"; break;
+    }
+  }
+  // Strategie 2 — gemiddeld vertrouwen
+  if(!iconEl){
+    for(let i=children.length-1;i>=0;i--){
+      const el=children[i];
+      const f=(el.getAttribute("fill")||"").toLowerCase();
+      if(f==="none") continue;
+      const tag=el.tagName.toLowerCase();
+      if(tag==="circle"&&!el.hasAttribute("transform")) continue;
+      iconEl=el; method="last-non-outline"; confidence="medium"; break;
+    }
+  }
+  // Strategie 3 — laag vertrouwen
+  if(!iconEl&&children.length){
+    iconEl=children[children.length-1]; method="last-child"; confidence="low";
+  }
+
+  const iconChildIdx=iconEl?children.indexOf(iconEl):-1;
+  const rawTransform=iconEl?.getAttribute("transform")||"";
+  const bbox=iconEl?getElBBox(iconEl,svg):{x:12,y:12,w:72,h:72};
+  const placeTransform=rawTransform||`translate(${round(bbox.x)},${round(bbox.y)})`;
+
+  return {iconChildIdx, placeTransform, bbox, confidence, method};
+}
+
+/*
+ * getElBBox: haal getBBox() op via tijdelijke DOM-insertie.
+ * Geeft de bbox in de eigen coördinatenruimte van het element (vóór eigen transform).
+ */
+function getElBBox(el, svgRoot) {
+  const wrap=document.createElementNS("http://www.w3.org/2000/svg","svg");
+  Object.assign(wrap.style,{position:"absolute",opacity:"0",pointerEvents:"none",
+    width:"121px",height:"121px",top:"-9999px",left:"-9999px"});
+  wrap.setAttribute("viewBox","0 0 121 121");
+  const clonedRoot=svgRoot.cloneNode(true);
+  wrap.appendChild(clonedRoot);
+  document.body.appendChild(wrap);
+  const origEls=[...svgRoot.querySelectorAll("*")];
+  const idx=origEls.indexOf(el);
+  let box={x:12,y:12,w:72,h:72};
+  try{
+    const cloneEls=[...clonedRoot.querySelectorAll("*")];
+    if(idx>=0&&cloneEls[idx]){
+      const b=cloneEls[idx].getBBox();
+      if(b.width>1&&b.height>1) box={x:b.x,y:b.y,w:b.width,h:b.height};
+    }
+  }catch(e){}
+  document.body.removeChild(wrap);
+  return box;
+}
+
+/* ============================================================
+   NIEUW SYMBOOL — wizard
+   ============================================================ */
+
+const POINTER_TYPES = {
+  incident:    {label:"Incident",    desc:"Badge met punt",   iconCx:61, iconCy:40, iconSize:52,
+    shape:(vul,rand)=>`<path d="M60.5,6 L115,60.5 L60.5,115 L6,60.5 Z" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
+  eenheid:     {label:"Eenheid",     desc:"Ronde vorm",       iconCx:60, iconCy:60, iconSize:58,
+    shape:(vul,rand)=>`<circle cx="60.5" cy="60.5" r="54" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
+  object:      {label:"Object",      desc:"Spraakballon",     iconCx:61, iconCy:55, iconSize:65,
+    shape:(vul,rand)=>`<rect x="8" y="8" width="105" height="105" rx="12" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
+  gebeurtenis: {label:"Gebeurtenis", desc:"Druppel-ballon",   iconCx:61, iconCy:51, iconSize:58,
+    shape:(vul,rand)=>`<path d="M60.5,116 L31,85 A46,46,0,1,1,90,85 Z" fill="${vul}" stroke="${rand}" stroke-width="3" stroke-linejoin="round"/>`},
+};
+
+/* Kleurt een template-SVG in met twee kleuren:
+   - vul  → elk gekleurd vlak dat NIET zwart en NIET 'none' is (binnenvlak)
+   - rand → het zwarte vlak (#000/#000000/black) = de ring/buitenband
+   Geeft de inner-markup van de SVG terug. */
+function templateShape(svgStr, vul, rand) {
+  let out = svgStr;
+  /* 1. binnenvlak: alles wat NIET zwart en NIET none is → vul */
+  out = out.replace(/\bfill="(?!none|#000(?:000)?|black)([^"]*)"/gi, `fill="${vul}"`);
+  /* 2. ringpad: zwart → rand */
+  out = out.replace(/\bfill="(#000(?:000)?|black)"/gi, `fill="${rand}"`);
+  const inner = out.match(/<svg[^>]*>([\s\S]*?)<\/svg>/i);
+  return inner ? inner[1].trim() : '';
+}
+
+async function fetchTemplates() {
+  const keys = ['incident','eenheid','object','gebeurtenis'];
+  let loaded = 0;
+  for (const key of keys) {
+    try {
+      const r = await fetch(`lcms-svgs/template/${key}.svg`);
+      if (!r.ok) continue;
+      const svg = await r.text();
+      const pt = POINTER_TYPES[key];
+      pt.shape = (vul, rand) => templateShape(svg, vul, rand);
+      loaded++;
+    } catch(e) {}
+  }
+  if (loaded > 0) renderPointerCards();
+}
+
+let wizStep=1, wizPointer=null, wizSender=null;
+let newIconInner=null, newIconVb=null, newIconRootFill=null;
+let iconScaleFactor=1.0, iconDx=0, iconDy=0;
+let recolorToInk=false;
+let vulOverride=null, randOverride=null; /* per-kleur overrides in stap 3; null = volg afzender */
+
+/* Zet de twee kleurkiezers op de effectieve kleuren: per kleur de override
+   indien gezet, anders de afzender-preset (vul=fill, rand=ink). */
+function syncWizPickers(){
+  const s=SENDERS[wizSender];
+  const vEl=document.getElementById("clrVul");
+  const rEl=document.getElementById("clrRand");
+  if(vEl) vEl.value=vulOverride||(s?.fill||"#888888");
+  if(rEl) rEl.value=randOverride||(s?.ink||"#000000");
+}
+
+/* Recolor-on-the-fly: vervang alle harde fill/stroke door currentColor.
+   Werkt op een innerHTML-fragment; geeft een nieuw innerHTML-fragment terug. */
+function applyRecolor(innerSvg){
+  const wrap=`<svg xmlns="http://www.w3.org/2000/svg">${innerSvg}</svg>`;
+  const doc=new DOMParser().parseFromString(wrap,"image/svg+xml");
+  const svg=doc.querySelector("svg");
+  if(!svg) return innerSvg;
+  [...svg.querySelectorAll("[fill]")].forEach(el=>{
+    const f=el.getAttribute("fill"); if(f&&f!=="none") el.setAttribute("fill","currentColor");
+  });
+  [...svg.querySelectorAll("[stroke]")].forEach(el=>{
+    const s=el.getAttribute("stroke"); if(s&&s!=="none") el.setAttribute("stroke","currentColor");
+  });
+  [...svg.querySelectorAll("[style]")].forEach(el=>{
+    let st=el.getAttribute("style");
+    st=st.replace(/fill\s*:\s*([^;]+)/g,(m,v)=>v.trim()==="none"?m:"fill:currentColor");
+    st=st.replace(/stroke\s*:\s*([^;]+)/g,(m,v)=>v.trim()==="none"?m:"stroke:currentColor");
+    el.setAttribute("style",st);
+  });
+  return svg.innerHTML;
+}
+
+function row(k,t){return `<div class="row"><span class="dot ${k}"></span><span>${t}</span></div>`;}
+function round(n){return Math.round(n*1000)/1000;}
+function isLightColor(hex){
+  if(!hex||hex[0]!=="#")return false;
+  const r=parseInt(hex.slice(1,3),16)||0,g=parseInt(hex.slice(3,5),16)||0,b=parseInt(hex.slice(5,7),16)||0;
+  return(0.299*r+0.587*g+0.114*b)>180;
+}
+
+/* ---- icoon-picker (uit de CATALOG, alleen svg-entries) ---- */
+let makerIconSel = null;       /* path van het gekozen catalogus-icoon (voor .sel) */
+let makerIconQ = "";           /* zoekterm op naam */
+
+function renderMakerIconGrid() {
+  const el = document.getElementById('symbolenGrid');
+  if (!el) return;
+  if (!CATALOG.length) {
+    el.innerHTML = '<span style="color:var(--muted);font-size:11px">Catalogus nog niet geladen…</span>';
+    return;
+  }
+  let svgs = CATALOG.filter(e => e.type === 'svg');
+  if (makerIconQ) svgs = svgs.filter(e => e.name.toLowerCase().includes(makerIconQ));
+  if (!svgs.length) {
+    el.innerHTML = '<span style="color:var(--muted);font-size:11px">Geen symbolen gevonden.</span>';
+    return;
+  }
+  el.innerHTML = svgs.map(e => {
+    const lbl = e.name.replace(/[-_]/g, ' ');
+    return `<div class="symcard${makerIconSel===e.path?' sel':''}" data-path="${e.path}">
+      <div class="sym-thumb"><img src="../${e.path}" alt="${e.name}" loading="lazy" style="width:40px;height:40px;object-fit:contain"></div>
+      <div class="sym-lbl">${lbl}</div></div>`;
+  }).join('');
+  el.querySelectorAll('.symcard').forEach(c => c.onclick = async () => {
+    makerIconSel = c.dataset.path;
+    el.querySelectorAll('.symcard').forEach(x => x.classList.toggle('sel', x.dataset.path === makerIconSel));
+    try {
+      const r = await fetch('../' + makerIconSel);
+      if (r.ok) ingestNewIcon(await r.text());
+    } catch (e) {}
+  });
+}
+
+document.getElementById('btnUploadIcon').onclick = () => document.getElementById('addIcon').click();
+document.getElementById('makerIconSearch').oninput = e => { makerIconQ = e.target.value.toLowerCase(); renderMakerIconGrid(); };
+document.getElementById('previewZoom').oninput = e => {
+  document.querySelector('#view-add .stage').style.setProperty('--preview-zoom', e.target.value/100);
+  document.getElementById('previewZoomVal').textContent = e.target.value + '%';
+};
+
+function renderPointerCards(){
+  const el=document.getElementById("pointerCards");
+  el.innerHTML=Object.entries(POINTER_TYPES).map(([key,pt])=>{
+    const preview=pt.shape("#2e3f50","#7bafc7");
+    return `<div class="pcard${wizPointer===key?" sel":""}" data-key="${key}">
+      <svg viewBox="0 0 121 121" xmlns="http://www.w3.org/2000/svg">${preview}</svg>
+      <div class="pcard-lbl">${pt.label}</div><div class="pcard-desc">${pt.desc}</div></div>`;
+  }).join("");
+  el.querySelectorAll(".pcard").forEach(c=>c.onclick=()=>{
+    wizPointer=c.dataset.key;
+    el.querySelectorAll(".pcard").forEach(x=>x.classList.toggle("sel",x.dataset.key===wizPointer));
+    wizUpdateNav(); wizCompose();
+  });
+}
+
+function renderSenderCards(){
+  const el=document.getElementById("senderCards");
+  const cards=Object.entries(SENDERS).map(([key,s])=>{
+    const isCustom=eigenSenders.has(key);
+    const cls="scard"+(wizSender===key?" sel":"")+(isCustom?" custom":"");
+    const del=isCustom?`<button class="scard-del" data-del="${key}" title="Verwijder eigen afzender">×</button>`:"";
+    return `<div class="${cls}" data-key="${key}">
+      ${del}
+      <div class="sender-dot" style="background:${s.fill};border:1px solid ${s.ink||(isLightColor(s.fill)?"var(--line)":"transparent")}"></div>
+      <span class="scard-lbl">${s.label}</span></div>`;
+  }).join("");
+  el.innerHTML=cards+`<div class="scard add" data-add="1"><span style="font-size:14px;line-height:1">＋</span><span class="scard-lbl">Nieuwe afzender</span></div>`;
+  el.querySelectorAll(".scard").forEach(c=>c.onclick=e=>{
+    if(e.target.closest(".scard-del"))return;
+    if(c.dataset.add){
+      document.getElementById("newSenderForm").style.display="block";
+      document.getElementById("newSenderName").focus();
+      return;
+    }
+    wizSender=c.dataset.key;
+    el.querySelectorAll(".scard").forEach(x=>x.classList.toggle("sel",x.dataset.key===wizSender));
+    syncWizPickers(); wizUpdateNav(); wizCompose();
+  });
+  el.querySelectorAll(".scard-del").forEach(btn=>btn.onclick=e=>{
+    e.stopPropagation();
+    const key=btn.dataset.del;
+    if(!confirm(`Verwijder eigen afzender "${SENDERS[key].label}"? Bestaande symbolen die deze afzender gebruiken blijven bestaan.`))return;
+    deleteEigenSender(key);
+    if(wizSender===key) wizSender=null;
+    renderSenderCards(); buildFilters(); wizUpdateNav(); wizCompose();
+  });
+}
+
+function wizGoStep(n){
+  wizStep=n;
+  [1,2,3].forEach(i=>{
+    document.getElementById("wcStep"+i).style.display=i===n?"":"none";
+    const s=document.getElementById("wstep"+i);
+    s.classList.toggle("active",i===n); s.classList.toggle("done",i<n);
+  });
+  if(n===3) syncWizPickers();
+  wizUpdateNav();
+}
+function wizUpdateNav(){
+  const back=document.getElementById("wizBack"),next=document.getElementById("wizNext");
+  back.style.display=wizStep>1?"":"none";
+  next.style.display=wizStep<3?"":"none";
+  next.disabled=(wizStep===1&&!wizPointer)||(wizStep===2&&!wizSender);
+  const dl=document.getElementById("dlNew"),cp=document.getElementById("copyNew");
+  if(dl)dl.disabled=cp.disabled=!(wizPointer&&wizSender);
+}
+function wizInit(){
+  renderPointerCards(); renderSenderCards();
+  renderMakerIconGrid();
+  wizGoStep(wizStep); wizCompose();
+}
+
+document.getElementById("wizBack").onclick=()=>wizGoStep(wizStep-1);
+document.getElementById("wizNext").onclick=()=>wizGoStep(wizStep+1);
+[1,2,3].forEach(i=>document.getElementById("wstep"+i).onclick=()=>{if(i<wizStep)wizGoStep(i);});
+
+function wizCompose(){
+  const pt=POINTER_TYPES[wizPointer];
+  const sender=SENDERS[wizSender];
+  const out=document.getElementById("addPreview");
+  const meta=document.getElementById("addMeta");
+  const code=document.getElementById("addCode");
+  const dl=document.getElementById("dlNew"),cp=document.getElementById("copyNew");
+  if(!pt){
+    out.innerHTML=""; meta.textContent="Kies een pointer-type om te beginnen";
+    if(dl)dl.disabled=cp.disabled=true; return "";
+  }
+  const vul=vulOverride||sender?.fill||"#888888";
+  const rand=randOverride||sender?.ink||"#000000";
+  let iconEl="";
+  if(newIconInner&&newIconVb){
+    const iconW=newIconVb[2]||24,iconH=newIconVb[3]||24;
+    const sc=round(pt.iconSize/Math.max(iconW,iconH)*iconScaleFactor);
+    const tx=round(pt.iconCx-iconW*sc/2+iconDx),ty=round(pt.iconCy-iconH*sc/2+iconDy);
+    if(recolorToInk){
+      const recolored=applyRecolor(newIconInner).replace(/currentColor/gi,rand);
+      iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})" fill="${rand}">${recolored}</g>`;
+    } else {
+      /* origineel icoon behouden: herstel de root-fill van het bron-SVG zodat
+         ongevulde vlakken niet zwart worden, en forceer geen ink-kleur. */
+      const fillAttr=newIconRootFill?` fill="${newIconRootFill}"`:"";
+      iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})"${fillAttr}>${newIconInner}</g>`;
+    }
+  }
+  const result=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121"><g>${pt.shape(vul,rand)}${iconEl}</g></svg>`;
+  out.innerHTML=result;
+  const nm=normalizeName(document.getElementById("addName")?.value||"")||"nieuw_symbool";
+  meta.textContent=`${wizSender||"(afzender)"}/${wizPointer}/${nm}`;
+  if(code)code.textContent=result;
+  if(dl)dl.disabled=cp.disabled=!(wizPointer&&wizSender);
+  return result;
+}
+
+/* ---- icoon laden ---- */
+document.getElementById("addIcon").onchange=e=>{
+  const f=e.target.files[0]; if(!f)return;
+  makerIconSel=null; renderMakerIconGrid();
+  const r=new FileReader(); r.onload=()=>{ingestNewIcon(r.result);}; r.readAsText(f);
+};
+
+function ingestNewIcon(raw){
+  const diagEl=document.getElementById("addDiag");
+  const diags=[];
+  let doc;
+  try{doc=new DOMParser().parseFromString(raw,"image/svg+xml");}
+  catch(e){diagEl.innerHTML=row("err","SVG kon niet worden gelezen: "+e.message);return;}
+  const svg=doc.querySelector("svg");
+  const parseErr=doc.querySelector("parsererror");
+  if(!svg||parseErr){
+    const detail=parseErr?parseErr.textContent.trim().split("\n")[0].slice(0,100):"";
+    diagEl.innerHTML=row("err","Geen geldige SVG"+(detail?": "+detail:"")+"."); return;
+  }
+  let vb=(svg.getAttribute("viewBox")||"0 0 24 24").trim().split(/[ ,]+/).map(Number);
+  if(vb.length!==4){vb=[0,0,24,24];diags.push(["warn","geen viewBox — neem 24×24"]);}
+  else diags.push(["ok",`viewBox ${vb.join(" ")} ✓`]);
+  const hardColors=new Set();
+  [...doc.querySelectorAll("[fill]")].forEach(el=>{const f=el.getAttribute("fill");if(f&&f!=="none")hardColors.add(f);});
+  [...doc.querySelectorAll("[stroke]")].forEach(el=>{const s=el.getAttribute("stroke");if(s&&s!=="none")hardColors.add(s);});
+  [...doc.querySelectorAll("[style]")].forEach(el=>{
+    const st=el.getAttribute("style")||"";
+    const fm=st.match(/fill\s*:\s*([^;]+)/);
+    if(fm&&fm[1].trim()!=="none")hardColors.add(fm[1].trim());
+    const sm=st.match(/stroke\s*:\s*([^;]+)/);
+    if(sm&&sm[1].trim()!=="none")hardColors.add(sm[1].trim());
+  });
+  if(hardColors.size)diags.push(["ok",`originele kleuren behouden: ${[...hardColors].join(", ")}`]);
+  else diags.push(["ok","kleur ✓"]);
+  const extImg=[...doc.querySelectorAll("image")].filter(el=>el.getAttribute("href")||el.getAttribute("xlink:href")).length;
+  const extUse=[...doc.querySelectorAll("use")].filter(el=>{const h=el.getAttribute("href")||el.getAttribute("xlink:href")||"";return h.startsWith("http")||h.startsWith("//");}).length;
+  if(extImg||extUse)diags.push(["warn","bevat externe referenties — output mogelijk niet zelfstandig"]);
+  else diags.push(["ok","zelfstandige SVG ✓"]);
+  newIconVb=vb; newIconInner=svg.innerHTML; newIconRootFill=svg.getAttribute("fill");
+  iconScaleFactor=1.0; iconDx=0; iconDy=0; recolorToInk=false;
+  document.getElementById("slScale").value=100; document.getElementById("svalScale").textContent="100%";
+  document.getElementById("slDx").value=0; document.getElementById("svalDx").textContent="0";
+  document.getElementById("slDy").value=0; document.getElementById("svalDy").textContent="0";
+  document.getElementById("cbRecolor").checked=false;
+  diagEl.innerHTML=diags.map(d=>row(d[0],d[1])).join("");
+  document.getElementById("clearIcon").style.display="block";
+  document.getElementById("iconSliders").style.display="block";
+  wizCompose();
+}
+
+document.getElementById("clearIcon").onclick=()=>{
+  newIconInner=null; newIconVb=null; newIconRootFill=null;
+  makerIconSel=null; renderMakerIconGrid();
+  document.getElementById("addDiag").innerHTML="";
+  document.getElementById("clearIcon").style.display="none";
+  document.getElementById("addIcon").value="";
+  document.getElementById("iconSliders").style.display="none";
+  iconScaleFactor=1.0; iconDx=0; iconDy=0; recolorToInk=false;
+  document.getElementById("slScale").value=100; document.getElementById("svalScale").textContent="100%";
+  document.getElementById("slDx").value=0; document.getElementById("svalDx").textContent="0";
+  document.getElementById("slDy").value=0; document.getElementById("svalDy").textContent="0";
+  document.getElementById("cbRecolor").checked=false;
+  wizCompose();
+};
+
+document.getElementById("slScale").oninput=e=>{iconScaleFactor=e.target.value/100;document.getElementById("svalScale").textContent=e.target.value+"%";wizCompose();};
+document.getElementById("slDx").oninput=e=>{iconDx=+e.target.value;document.getElementById("svalDx").textContent=e.target.value;wizCompose();};
+document.getElementById("slDy").oninput=e=>{iconDy=+e.target.value;document.getElementById("svalDy").textContent=e.target.value;wizCompose();};
+document.getElementById("cbRecolor").onchange=e=>{recolorToInk=e.target.checked;wizCompose();};
+
+document.getElementById("clrVul").oninput=e=>{vulOverride=e.target.value;wizCompose();};
+document.getElementById("clrRand").oninput=e=>{randOverride=e.target.value;wizCompose();};
+document.getElementById("btnClrReset").onclick=()=>{
+  vulOverride=randOverride=null;
+  syncWizPickers();
+  wizCompose();
+};
+
+document.getElementById("newSenderSave").onclick=()=>{
+  const name=document.getElementById("newSenderName").value.trim();
+  if(!name){alert("Geef een naam op.");return;}
+  const fill=document.getElementById("newSenderFill").value;
+  const ink=document.getElementById("newSenderInk").value;
+  const key=normalizeName(name);
+  if(!key){alert("Naam levert geen geldige sleutel op.");return;}
+  if(SENDERS[key]&&!eigenSenders.has(key)){
+    if(!confirm(`Een standaard-afzender met sleutel "${key}" bestaat al. Vervangen met je eigen versie?`))return;
+  }
+  saveEigenSender(key,{label:name,fill,ink});
+  wizSender=key;
+  document.getElementById("newSenderForm").style.display="none";
+  document.getElementById("newSenderName").value="";
+  renderSenderCards(); buildFilters(); wizUpdateNav(); wizCompose();
+};
+
+document.getElementById("newSenderCancel").onclick=()=>{
+  document.getElementById("newSenderForm").style.display="none";
+  document.getElementById("newSenderName").value="";
+};
+
+document.getElementById("addName").oninput=()=>{
+  const raw=document.getElementById("addName").value,norm=normalizeName(raw);
+  document.getElementById("addNameNorm").textContent=(raw&&norm!==raw)?`→ opgeslagen als: ${norm}`:"";
+  wizCompose();
+};
+
+document.getElementById("dlNew").onclick=()=>{
+  const result=wizCompose(); if(!result||!wizPointer||!wizSender)return;
+  const nm=normalizeName(document.getElementById("addName").value)||"nieuw_symbool";
+  const id=`${wizSender}/${wizPointer}/${nm}`;
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([result],{type:"image/svg+xml"}));
+  a.download=nm+".svg"; a.click(); URL.revokeObjectURL(a.href);
+  saveEigenSymbool(id, result); rebuild();
+  const dl=document.getElementById("dlNew"),prev=dl.textContent;
+  dl.textContent="Opgeslagen ✓"; setTimeout(()=>dl.textContent=prev,1500);
+  document.getElementById("btnExportZip").style.display="block";
+};
+
+document.getElementById("copyNew").onclick=()=>{
+  const result=wizCompose(); if(!result)return;
+  navigator.clipboard.writeText(result).then(()=>{
+    const cp=document.getElementById("copyNew");
+    cp.textContent="Gekopieerd ✓"; setTimeout(()=>cp.textContent="Kopieer SVG",1200);
+  });
+};
+
+/* ============================================================
+   CONTROLE & VALIDATIE (Stap 5)
+   ============================================================ */
+
+function runCtrl(){
+  const out=document.getElementById("ctrlResults");
+  if(!store.size){
+    out.innerHTML='<p style="color:var(--muted);font-size:13px">Laad eerst de set.</p>'; return;
+  }
+  const ids=[...store.keys()];
+  const sections=[];
+
+  /* 1. Ontbrekende symbolen t.o.v. manifest */
+  if(MANIFEST){
+    const missing=MANIFEST.symbols.filter(s=>!store.has(s.id));
+    sections.push({title:"Ontbrekende symbolen (verwacht door manifest)",
+      badge:missing.length===0?"ok":"warn", count:missing.length,
+      items:missing.map(s=>s.id)});
+  } else {
+    sections.push({title:"Ontbrekende symbolen",badge:"warn",count:null,
+      items:["Manifest niet geladen — serveer via python -m http.server voor volledige controle"]});
+  }
+
+  /* 2. Vergeten kopieën */
+  const copies=ids.filter(id=>{
+    const n=id.split("/").pop().toLowerCase();
+    return /[_ -]copy(\s|$|\.)|^copy[_ ]/.test(n)||n.includes(" copy")||n.endsWith("_copy");
+  });
+  sections.push({title:'Vergeten kopieën ("copy" in naam)',
+    badge:copies.length===0?"ok":"warn", count:copies.length, items:copies});
+
+  /* 3. Naam-inconsistenties (koppelteken én underscore) */
+  const mixed=ids.filter(id=>{const n=id.split("/").pop(); return n.includes("-")&&n.includes("_");});
+  sections.push({title:"Naam-inconsistenties (koppelteken én underscore gemengd)",
+    badge:mixed.length===0?"ok":"warn", count:mixed.length, items:mixed});
+
+  /* 4. Afwijkende viewBox */
+  const badVb=[];
+  for(const [id,svg] of store){
+    try{
+      const doc=new DOMParser().parseFromString(svg,"image/svg+xml");
+      if(doc.querySelector("parsererror")) continue;
+      const vb=(doc.querySelector("svg")?.getAttribute("viewBox")||"").trim();
+      if(vb!=="0 0 121 121") badVb.push(`${id}  →  "${vb||"(geen)"}" `);
+    }catch(e){}
+  }
+  sections.push({title:"Afwijkende viewBox (verwacht: 0 0 121 121)",
+    badge:badVb.length===0?"ok":"warn", count:badVb.length, items:badVb});
+
+  /* 5. Ongeldige SVG's */
+  const invalid=[];
+  for(const [id,svg] of store){
+    try{
+      const doc=new DOMParser().parseFromString(svg,"image/svg+xml");
+      if(doc.querySelector("parsererror")) invalid.push(id);
+    }catch(e){ invalid.push(id); }
+  }
+  sections.push({title:"Ongeldige SVG's (parse-fout)",
+    badge:invalid.length===0?"ok":"err", count:invalid.length, items:invalid});
+
+  /* 6. Externe referenties (niet zelfstandig) */
+  const extRefs=[];
+  for(const [id,svg] of store){
+    try{
+      const doc=new DOMParser().parseFromString(svg,"image/svg+xml");
+      if(doc.querySelector("parsererror")) continue;
+      const hasExtImg=[...doc.querySelectorAll("image")].some(el=>el.getAttribute("href")||el.getAttribute("xlink:href"));
+      const hasExtUse=[...doc.querySelectorAll("use")].some(el=>{
+        const h=el.getAttribute("href")||el.getAttribute("xlink:href")||"";
+        return h.startsWith("http")||h.startsWith("//");
+      });
+      if(hasExtImg||hasExtUse) extRefs.push(id);
+    }catch(e){}
+  }
+  sections.push({title:"Externe referenties (niet zelfstandig als ExternalGraphic)",
+    badge:extRefs.length===0?"ok":"err", count:extRefs.length, items:extRefs});
+
+  /* render */
+  out.innerHTML=sections.map(sec=>{
+    const badgeTxt=sec.count===null?"?":sec.count===0?"✓ geen":String(sec.count);
+    const itemsHtml=sec.items.length
+      ?`<div class="ctrl-items">${sec.items.map(i=>`<div class="ctrl-item"><b>${i}</b></div>`).join("")}</div>`
+      :"";
+    return `<div class="ctrl-section">
+      <div class="ctrl-title">${sec.title}&ensp;<span class="ctrl-badge ${sec.badge}">${badgeTxt}</span></div>
+      ${itemsHtml}</div>`;
+  }).join("")+
+  `<p style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-top:6px">${ids.length} symbolen geanalyseerd — puur signalerend, geen automatische wijzigingen.</p>`;
+}
+
+document.getElementById("btnRunCtrl").onclick=runCtrl;
+
+/* ---------- manifest-export (Stap 6) ---------- */
+document.getElementById("btnExportManifest").onclick=()=>{
+  if(!store.size){ alert("Laad eerst de set."); return; }
+  const senders={};
+  for(const id of store.keys()){
+    const s=id.split("/")[0];
+    if(SENDERS[s]&&!senders[s]) senders[s]={...SENDERS[s]};
+  }
+  const symbols=[...store.keys()].sort().map(id=>{
+    const [sender,category,name]=id.split("/");
+    return {id,sender,category,name,path:`${sender}/${category}/${name}.svg`};
+  });
+  const manifest={
+    generated:new Date().toISOString(),
+    total:symbols.length,
+    senders,
+    symbols
+  };
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(manifest,null,2)],{type:"application/json"}));
+  a.download="lcms-manifest.json"; a.click(); URL.revokeObjectURL(a.href);
+};
+
+/* ---------- ZIP-export nieuwe symbolen ---------- */
+document.getElementById("btnExportZip").onclick=()=>{
+  if(!eigenSymbolen.size)return;
+  const enc=new TextEncoder();
+  const files=[...eigenSymbolen.entries()].map(([id,svg])=>{
+    /* id = "afzender/categorie/naam" → pad voor de ZIP */
+    const parts=id.split("/");
+    const path=parts.join("/")+".svg";
+    return {path, data:enc.encode(svg)};
+  });
+  const zip=buildZip(files);
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([zip],{type:"application/zip"}));
+  a.download=`lcms-nieuw-${new Date().toISOString().slice(0,10)}.zip`;
+  a.click(); URL.revokeObjectURL(a.href);
+};
+
+/* ============================================================
+   CATALOGUS (functionaliteit 1) — repo-brede svg/png browser
+   ============================================================ */
+const PAGES_BASE = 'https://imroi.github.io/diversen/';
+const RAW_BASE = 'https://raw.githubusercontent.com/imroi/diversen/main/';
+
+let CATALOG = [];
+let catSearchQ = "";
+let catTypeFilter = "all";   /* all | svg | png */
+let catBronFilter = "*";
+let catAfzFilter = "*";
+let catCatFilter = "*";
+
+/* afgeleide velden uit het pad — afzender/categorie alleen voor LCMS-symbolen
+   (lcms-bibliotheek/lcms-svgs/<afzender>/<categorie>/<naam>.svg) */
+function catBron(e){ return e.path.split('/')[0]; }
+function catAfz(e){ const p=e.path.split('/'); return (p[0]==='lcms-bibliotheek' && p[1]==='lcms-svgs' && p.length>=5) ? p[2] : null; }
+function catCat(e){ const p=e.path.split('/'); return (p[0]==='lcms-bibliotheek' && p[1]==='lcms-svgs' && p.length>=5) ? p[3] : null; }
+function afzLabel(k){ return (typeof SENDERS!=='undefined' && SENDERS[k] && SENDERS[k].label) ? SENDERS[k].label : k; }
+function catLabel(k){ return k ? k.charAt(0).toUpperCase()+k.slice(1).replace(/[-_]/g,' ') : k; }
+
+async function loadCatalog() {
+  const status = document.getElementById('catStatus');
+  try {
+    const r = await fetch('catalog-manifest.json');
+    if (!r.ok) { status.textContent = 'Kon catalog-manifest.json niet laden (' + r.status + ').'; return; }
+    CATALOG = await r.json();
+  } catch (e) {
+    status.textContent = 'Kon catalog-manifest.json niet laden.';
+    return;
+  }
+  buildCatFilters();
+  renderCatalog();
+  renderMakerIconGrid();
+}
+
+function buildCatFilters() {
+  const bronnen = [...new Set(CATALOG.map(catBron))].sort();
+  const afz = [...new Set(CATALOG.map(catAfz).filter(Boolean))].sort();
+  const cats = [...new Set(CATALOG.map(catCat).filter(Boolean))].sort();
+  renderFilterList('catBronFilters', bronnen, v => v, 'Alle bronnen',
+    () => catBronFilter, v => { catBronFilter = v; });
+  renderFilterList('catAfzFilters', afz, afzLabel, 'Alle afzenders',
+    () => catAfzFilter, v => { catAfzFilter = v; });
+  renderFilterList('catCatFilters', cats, catLabel, 'Alle categorieën',
+    () => catCatFilter, v => { catCatFilter = v; });
+}
+
+function renderFilterList(containerId, values, labelFn, allLabel, getCur, setCur) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const mk = (label, val) =>
+    `<div class="fitem${getCur() === val ? ' active' : ''}" data-val="${val}">${label}</div>`;
+  let html = mk(allLabel, '*');
+  values.forEach(v => { html += mk(labelFn(v), v); });
+  el.innerHTML = html;
+  el.querySelectorAll('.fitem').forEach(it => it.onclick = () => {
+    setCur(it.dataset.val);
+    buildCatFilters();
+    renderCatalog();
+  });
+}
+
+function catMatches(entry) {
+  if (catTypeFilter !== 'all' && entry.type !== catTypeFilter) return false;
+  if (catBronFilter !== '*' && catBron(entry) !== catBronFilter) return false;
+  if (catAfzFilter !== '*' && catAfz(entry) !== catAfzFilter) return false;
+  if (catCatFilter !== '*' && catCat(entry) !== catCatFilter) return false;
+  if (catSearchQ && !entry.name.toLowerCase().includes(catSearchQ)) return false;
+  return true;
+}
+
+function renderCatalog() {
+  const all = CATALOG.length;
+  const svgCount = CATALOG.filter(e => e.type === 'svg').length;
+  const pngCount = CATALOG.filter(e => e.type === 'png').length;
+  document.getElementById('catCntAll').textContent = all;
+  document.getElementById('catCntSvg').textContent = svgCount;
+  document.getElementById('catCntPng').textContent = pngCount;
+
+  const shown = CATALOG.filter(catMatches);
+  const grid = document.getElementById('catGrid');
+  document.getElementById('catEmpty').style.display = shown.length ? 'none' : 'block';
+  document.getElementById('catStatus').textContent = `${shown.length} van ${all} getoond.`;
+  grid.innerHTML = shown.map((e, i) => {
+    const lbl = e.name.replace(/[-_]/g, ' ');
+    return `<div class="card" data-catidx="${CATALOG.indexOf(e)}">
+      <div class="thumb"><img src="../${e.path}" alt="${e.name}" loading="lazy"></div>
+      <div class="nm">${lbl}</div>
+      <div class="meta">${e.type.toUpperCase()}</div></div>`;
+  }).join('');
+  grid.querySelectorAll('.card').forEach(c => c.onclick = () => {
+    const entry = CATALOG[Number(c.dataset.catidx)];
+    if (entry) showCatalogDetail(entry);
+  });
+}
+
+document.getElementById('catSearch').oninput = e => {
+  catSearchQ = e.target.value.toLowerCase();
+  renderCatalog();
+};
+document.querySelectorAll('#catTypeFilters .fitem').forEach(it => it.onclick = () => {
+  catTypeFilter = it.dataset.cattype;
+  document.querySelectorAll('#catTypeFilters .fitem')
+    .forEach(x => x.classList.toggle('active', x.dataset.cattype === catTypeFilter));
+  renderCatalog();
+});
+
+function showCatalogDetail(entry) {
+  const pagesUrl = PAGES_BASE + entry.path;
+  const rawUrl = RAW_BASE + entry.path;
+  document.getElementById('catDetailPreview').innerHTML =
+    `<img src="../${entry.path}" alt="${entry.name}">`;
+  document.getElementById('catDetailName').textContent = entry.name + '.' + entry.type;
+  document.getElementById('catPagesUrl').value = pagesUrl;
+  document.getElementById('catRawUrl').value = rawUrl;
+  document.getElementById('catDetail').classList.add('open');
+}
+
+function copyToClipboard(text, btn) {
+  const done = () => {
+    const old = btn.textContent;
+    btn.textContent = 'Gekopieerd';
+    setTimeout(() => { btn.textContent = old; }, 1200);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => done());
+  } else {
+    done();
+  }
+}
+
+document.getElementById('catCopyPages').onclick = () =>
+  copyToClipboard(document.getElementById('catPagesUrl').value, document.getElementById('catCopyPages'));
+document.getElementById('catCopyRaw').onclick = () =>
+  copyToClipboard(document.getElementById('catRawUrl').value, document.getElementById('catCopyRaw'));
+document.getElementById('catDetailClose').onclick = () =>
+  document.getElementById('catDetail').classList.remove('open');
+document.getElementById('catDetail').onclick = e => {
+  if (e.target.id === 'catDetail') document.getElementById('catDetail').classList.remove('open');
+};
+
+/* ---------- thema (licht standaard, met toggle) ---------- */
+(function initTheme(){
+  const saved = localStorage.getItem('lcms_theme');
+  if (saved === 'dark') document.body.classList.remove('light');
+  else if (saved === 'light') document.body.classList.add('light');
+})();
+function syncThemeBtn(){
+  const b = document.getElementById('themeToggle');
+  if (b) b.textContent = document.body.classList.contains('light') ? 'Donker' : 'Licht';
+}
+syncThemeBtn();
+document.getElementById('themeToggle').onclick = () => {
+  document.body.classList.toggle('light');
+  localStorage.setItem('lcms_theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  syncThemeBtn();
+};
+
+/* ---------- init ---------- */
+loadEigenSymbolen();
+loadEigenSenders();
+initManifest();
+rebuild();
+wizInit();
+loadCatalog();
+if(eigenSymbolen.size>0) document.getElementById("btnExportZip").style.display="block";
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <path fill="none" stroke="#ffffff" stroke-width="7.5" stroke-linecap="round" stroke-miterlimit="10" d="M 104.64,41.256 L 104.047,83.076"/>
+  <path fill="#b700bf" stroke="#ffffff" stroke-width="4.048" stroke-miterlimit="10" d="M 23.091,47.515 l 1.236,25.988 c 0.121,2.622 0.03,4.199 4.018,6.118 l 16.856,8.277 c 8.177,3.245 17.258,3.446 25.576,0.573 l 19.93,-8.971 c 2.321,-1.326 3.687,-3.174 3.777,-5.605 l 1.045,-26.862"/>
+  <path fill="none" stroke="#b700bf" stroke-width="4.048" stroke-linecap="round" stroke-miterlimit="10" d="M 104.64,41.256 L 104.047,83.076"/>
+  <path fill="#b700bf" stroke="#ffffff" stroke-width="3.4" stroke-miterlimit="10" d="M 104.188,81.338 l 0,0 c 4.058,0 7.353,3.295 7.353,7.353 l 0,12.969 l -14.697,0 l 0,-12.969 c 0,-4.058 3.295,-7.353 7.353,-7.353 l -0.01,0 Z"/>
+  <path fill="#b700bf" stroke="#ffffff" stroke-width="3.034" stroke-miterlimit="10" d="M 54.433,61.126 l -45.074,-18.855 c -1.788,-0.743 -1.778,-3.275 0.02,-4.008 l 47.063,-19.207 c 2.331,-0.954 4.932,-0.954 7.263,0 l 46.802,19.016 c 1.959,0.794 1.959,3.566 0,4.36 l -46.269,18.755 c -3.144,1.276 -6.66,1.256 -9.794,-0.05 l -0.01,0 Z"/>
+</svg>

@@ -1,0 +1,6536 @@
+[
+  {
+    "name": "501-grijs",
+    "folder": "brandkranen",
+    "path": "brandkranen/501-grijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "501",
+    "folder": "brandkranen",
+    "path": "brandkranen/501.svg",
+    "type": "svg"
+  },
+  {
+    "name": "502-grijs",
+    "folder": "brandkranen",
+    "path": "brandkranen/502-grijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "502",
+    "folder": "brandkranen",
+    "path": "brandkranen/502.svg",
+    "type": "svg"
+  },
+  {
+    "name": "airport",
+    "folder": "buitenland",
+    "path": "buitenland/airport.png",
+    "type": "png"
+  },
+  {
+    "name": "culturalheritage",
+    "folder": "buitenland",
+    "path": "buitenland/culturalheritage.png",
+    "type": "png"
+  },
+  {
+    "name": "datacenter",
+    "folder": "buitenland",
+    "path": "buitenland/datacenter.png",
+    "type": "png"
+  },
+  {
+    "name": "firestation",
+    "folder": "buitenland",
+    "path": "buitenland/firestation.png",
+    "type": "png"
+  },
+  {
+    "name": "fuel",
+    "folder": "buitenland",
+    "path": "buitenland/fuel.png",
+    "type": "png"
+  },
+  {
+    "name": "hospital",
+    "folder": "buitenland",
+    "path": "buitenland/hospital.png",
+    "type": "png"
+  },
+  {
+    "name": "largebuilding",
+    "folder": "buitenland",
+    "path": "buitenland/largebuilding.png",
+    "type": "png"
+  },
+  {
+    "name": "military",
+    "folder": "buitenland",
+    "path": "buitenland/military.png",
+    "type": "png"
+  },
+  {
+    "name": "nursinghome",
+    "folder": "buitenland",
+    "path": "buitenland/nursinghome.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "buitenland",
+    "path": "buitenland/object.png",
+    "type": "png"
+  },
+  {
+    "name": "policestation",
+    "folder": "buitenland",
+    "path": "buitenland/policestation.png",
+    "type": "png"
+  },
+  {
+    "name": "powerplant",
+    "folder": "buitenland",
+    "path": "buitenland/powerplant.png",
+    "type": "png"
+  },
+  {
+    "name": "wastewaterplant",
+    "folder": "buitenland",
+    "path": "buitenland/wastewaterplant.png",
+    "type": "png"
+  },
+  {
+    "name": "windturbine",
+    "folder": "buitenland",
+    "path": "buitenland/windturbine.png",
+    "type": "png"
+  },
+  {
+    "name": "avg",
+    "folder": "datalekt",
+    "path": "datalekt/avg.png",
+    "type": "png"
+  },
+  {
+    "name": "bec",
+    "folder": "datalekt",
+    "path": "datalekt/bec.png",
+    "type": "png"
+  },
+  {
+    "name": "ddos",
+    "folder": "datalekt",
+    "path": "datalekt/ddos.png",
+    "type": "png"
+  },
+  {
+    "name": "extern",
+    "folder": "datalekt",
+    "path": "datalekt/extern.png",
+    "type": "png"
+  },
+  {
+    "name": "intern",
+    "folder": "datalekt",
+    "path": "datalekt/intern.png",
+    "type": "png"
+  },
+  {
+    "name": "ransomware",
+    "folder": "datalekt",
+    "path": "datalekt/ransomware.png",
+    "type": "png"
+  },
+  {
+    "name": "transparantie",
+    "folder": "datalekt",
+    "path": "datalekt/transparantie.png",
+    "type": "png"
+  },
+  {
+    "name": "elec_onderbreking",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/elec_onderbreking.svg",
+    "type": "svg"
+  },
+  {
+    "name": "elec_onderbreking_groen",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/elec_onderbreking_groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "elec_onderbreking_oranje",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/elec_onderbreking_oranje.svg",
+    "type": "svg"
+  },
+  {
+    "name": "elec_onderbreking_rood",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/elec_onderbreking_rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "electriciteit",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/electriciteit.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gas_onderbreking",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/gas_onderbreking.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gas_onderbreking_groen",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/gas_onderbreking_groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gas_onderbreking_oranje",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/gas_onderbreking_oranje.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gas_onderbreking_rood",
+    "folder": "energieonderbrekingen",
+    "path": "energieonderbrekingen/gas_onderbreking_rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "blauw",
+    "folder": "jaarwisseling",
+    "path": "jaarwisseling/blauw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "geel",
+    "folder": "jaarwisseling",
+    "path": "jaarwisseling/geel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "groen",
+    "folder": "jaarwisseling",
+    "path": "jaarwisseling/groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "oranje",
+    "folder": "jaarwisseling",
+    "path": "jaarwisseling/oranje.svg",
+    "type": "svg"
+  },
+  {
+    "name": "rood",
+    "folder": "jaarwisseling",
+    "path": "jaarwisseling/rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zwart",
+    "folder": "jaarwisseling",
+    "path": "jaarwisseling/zwart.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_ambulancepost",
+    "folder": "kel",
+    "path": "kel/kel_ambulancepost.png",
+    "type": "png"
+  },
+  {
+    "name": "kel_bedrijfsbrandweerkazerne",
+    "folder": "kel",
+    "path": "kel/kel_bedrijfsbrandweerkazerne.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_brandweer",
+    "folder": "kel",
+    "path": "kel/kel_brandweer.png",
+    "type": "png"
+  },
+  {
+    "name": "kel_brandweerkazerne",
+    "folder": "kel",
+    "path": "kel/kel_brandweerkazerne.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_brandweerkazerne_overig",
+    "folder": "kel",
+    "path": "kel/kel_brandweerkazerne_overig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_knrm",
+    "folder": "kel",
+    "path": "kel/kel_knrm.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_meldkamer",
+    "folder": "kel",
+    "path": "kel/kel_meldkamer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_politie",
+    "folder": "kel",
+    "path": "kel/kel_politie.png",
+    "type": "png"
+  },
+  {
+    "name": "kel_reddingsbrigade",
+    "folder": "kel",
+    "path": "kel/kel_reddingsbrigade.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_regionaal_opleidingscentrum_brandweer",
+    "folder": "kel",
+    "path": "kel/kel_regionaal_opleidingscentrum_brandweer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kel_vestiging_veiligheidsregio",
+    "folder": "kel",
+    "path": "kel/kel_vestiging_veiligheidsregio.png",
+    "type": "png"
+  },
+  {
+    "name": "kel_vestiging_vr",
+    "folder": "kel",
+    "path": "kel/kel_vestiging_vr.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gladheid",
+    "folder": "knmi",
+    "path": "knmi/gladheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "halfbewolkt",
+    "folder": "knmi",
+    "path": "knmi/halfbewolkt.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hitte",
+    "folder": "knmi",
+    "path": "knmi/hitte.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hozen",
+    "folder": "knmi",
+    "path": "knmi/hozen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "onweer",
+    "folder": "knmi",
+    "path": "knmi/onweer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vorst",
+    "folder": "knmi",
+    "path": "knmi/vorst.svg",
+    "type": "svg"
+  },
+  {
+    "name": "windstoten",
+    "folder": "knmi",
+    "path": "knmi/windstoten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zicht",
+    "folder": "knmi",
+    "path": "knmi/zicht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zwareregen",
+    "folder": "knmi",
+    "path": "knmi/zwareregen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "BRT_Camping",
+    "folder": "kro",
+    "path": "kro/BRT_Camping.svg",
+    "type": "svg"
+  },
+  {
+    "name": "BRT_Gemaal",
+    "folder": "kro",
+    "path": "kro/BRT_Gemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "BRT_Haven",
+    "folder": "kro",
+    "path": "kro/BRT_Haven.svg",
+    "type": "svg"
+  },
+  {
+    "name": "BRT_Station",
+    "folder": "kro",
+    "path": "kro/BRT_Station.svg",
+    "type": "svg"
+  },
+  {
+    "name": "BRT_Tankstation",
+    "folder": "kro",
+    "path": "kro/BRT_Tankstation.svg",
+    "type": "svg"
+  },
+  {
+    "name": "BRT_Windturbine",
+    "folder": "kro",
+    "path": "kro/BRT_Windturbine.svg",
+    "type": "svg"
+  },
+  {
+    "name": "DJI_Inrichting",
+    "folder": "kro",
+    "path": "kro/DJI_Inrichting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_A",
+    "folder": "kro",
+    "path": "kro/HR_A.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_B",
+    "folder": "kro",
+    "path": "kro/HR_B.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_C",
+    "folder": "kro",
+    "path": "kro/HR_C.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_D",
+    "folder": "kro",
+    "path": "kro/HR_D.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_E",
+    "folder": "kro",
+    "path": "kro/HR_E.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_F",
+    "folder": "kro",
+    "path": "kro/HR_F.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_G",
+    "folder": "kro",
+    "path": "kro/HR_G.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_H",
+    "folder": "kro",
+    "path": "kro/HR_H.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_I",
+    "folder": "kro",
+    "path": "kro/HR_I.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_J",
+    "folder": "kro",
+    "path": "kro/HR_J.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_K",
+    "folder": "kro",
+    "path": "kro/HR_K.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_L",
+    "folder": "kro",
+    "path": "kro/HR_L.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_M",
+    "folder": "kro",
+    "path": "kro/HR_M.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_N",
+    "folder": "kro",
+    "path": "kro/HR_N.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_O",
+    "folder": "kro",
+    "path": "kro/HR_O.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_P",
+    "folder": "kro",
+    "path": "kro/HR_P.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_Q",
+    "folder": "kro",
+    "path": "kro/HR_Q.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_R",
+    "folder": "kro",
+    "path": "kro/HR_R.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_S",
+    "folder": "kro",
+    "path": "kro/HR_S.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_T",
+    "folder": "kro",
+    "path": "kro/HR_T.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR_U",
+    "folder": "kro",
+    "path": "kro/HR_U.svg",
+    "type": "svg"
+  },
+  {
+    "name": "KEL_Ambulancepost",
+    "folder": "kro",
+    "path": "kro/KEL_Ambulancepost.svg",
+    "type": "svg"
+  },
+  {
+    "name": "KEL_Brandweerkazerne",
+    "folder": "kro",
+    "path": "kro/KEL_Brandweerkazerne.svg",
+    "type": "svg"
+  },
+  {
+    "name": "KEL_Meldkamer",
+    "folder": "kro",
+    "path": "kro/KEL_Meldkamer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "KEL_Politielocatie",
+    "folder": "kro",
+    "path": "kro/KEL_Politielocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "KEL_Vestiging_VR",
+    "folder": "kro",
+    "path": "kro/KEL_Vestiging_VR.svg",
+    "type": "svg"
+  },
+  {
+    "name": "LRK_Buitenschoolse_opvang",
+    "folder": "kro",
+    "path": "kro/LRK_Buitenschoolse_opvang.svg",
+    "type": "svg"
+  },
+  {
+    "name": "LRK_Kinderdagverblijf",
+    "folder": "kro",
+    "path": "kro/LRK_Kinderdagverblijf.svg",
+    "type": "svg"
+  },
+  {
+    "name": "OSM_Parkeergarage",
+    "folder": "kro",
+    "path": "kro/OSM_Parkeergarage.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_AardgasstationMijnbouw",
+    "folder": "kro",
+    "path": "kro/REV_AardgasstationMijnbouw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_AmmoniakKoelinstallatie",
+    "folder": "kro",
+    "path": "kro/REV_AmmoniakKoelinstallatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_Emplacement",
+    "folder": "kro",
+    "path": "kro/REV_Emplacement.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_Installatie",
+    "folder": "kro",
+    "path": "kro/REV_Installatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_Opslag",
+    "folder": "kro",
+    "path": "kro/REV_Opslag.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_OpstellenVoertuigen",
+    "folder": "kro",
+    "path": "kro/REV_OpstellenVoertuigen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_Seveso",
+    "folder": "kro",
+    "path": "kro/REV_Seveso.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_TankenEnBrandstof",
+    "folder": "kro",
+    "path": "kro/REV_TankenEnBrandstof.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_Vuurwerk",
+    "folder": "kro",
+    "path": "kro/REV_Vuurwerk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "REV_Windturbine",
+    "folder": "kro",
+    "path": "kro/REV_Windturbine.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Ambulancezorg",
+    "folder": "kro",
+    "path": "kro/WK-Ambulancezorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Categoralewoonvormen",
+    "folder": "kro",
+    "path": "kro/WK-Categoralewoonvormen.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-GGD",
+    "folder": "kro",
+    "path": "kro/WK-GGD.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-GGZ",
+    "folder": "kro",
+    "path": "kro/WK-GGZ.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Gehandicaptenzorg",
+    "folder": "kro",
+    "path": "kro/WK-Gehandicaptenzorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Huisartsen",
+    "folder": "kro",
+    "path": "kro/WK-Huisartsen.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Jeugdzorg",
+    "folder": "kro",
+    "path": "kro/WK-Jeugdzorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-NRK",
+    "folder": "kro",
+    "path": "kro/WK-NRK.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Rest",
+    "folder": "kro",
+    "path": "kro/WK-Rest.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Revalidatiecentra",
+    "folder": "kro",
+    "path": "kro/WK-Revalidatiecentra.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Thuiszorg",
+    "folder": "kro",
+    "path": "kro/WK-Thuiszorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Verloskundigen",
+    "folder": "kro",
+    "path": "kro/WK-Verloskundigen.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Verpleegzorg",
+    "folder": "kro",
+    "path": "kro/WK-Verpleegzorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK_Apothekers",
+    "folder": "kro",
+    "path": "kro/WK_Apothekers.png",
+    "type": "png"
+  },
+  {
+    "name": "NHR01",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR01.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR02",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR02.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR03",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR03.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR06",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR06.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR08",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR08.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR09",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR09.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR10",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR10.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR11",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR11.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR12",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR12.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR13",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR13.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR14",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR14.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR15",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR15.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR16",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR16.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR17",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR17.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR18",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR18.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR19",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR19.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR20",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR20.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR21",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR21.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR22",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR22.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR23",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR23.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR24",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR24.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR25",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR25.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR26",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR26.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR27",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR27.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR28",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR28.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR29",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR29.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR30",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR30.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR31",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR31.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR32",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR32.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR33",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR33.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR35",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR35.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR36",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR36.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR37",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR37.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR38",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR38.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR39",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR39.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR41",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR41.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR42",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR42.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR43",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR43.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR45",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR45.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR46",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR46.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR47",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR47.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR49",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR49.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR50",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR50.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR51",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR51.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR52",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR52.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR53",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR53.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR55",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR55.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR56",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR56.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR58",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR58.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR59",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR59.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR60",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR60.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR61",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR61.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR62",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR62.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR63",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR63.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR64",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR64.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR65",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR65.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR66",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR66.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR68",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR68.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR69",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR69.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR70",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR70.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR71",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR71.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR72",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR72.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR73",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR73.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR74",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR74.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR75",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR75.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR77",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR77.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR78",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR78.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR79",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR79.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR80",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR80.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR81",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR81.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR82",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR82.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR84",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR84.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR85",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR85.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR86",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR86.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR87",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR87.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR88",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR88.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR90",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR90.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR91",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR91.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR92",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR92.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR93",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR93.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR94",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR94.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR95",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR95.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR96",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR96.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR97",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR97.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR98",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR98.svg",
+    "type": "svg"
+  },
+  {
+    "name": "NHR99",
+    "folder": "kro_gebruik_nhr",
+    "path": "kro_gebruik_nhr/NHR99.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ag",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/ag.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bk",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/bk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "id",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/id.svg",
+    "type": "svg"
+  },
+  {
+    "name": "is",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/is.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ka",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/ka.svg",
+    "type": "svg"
+  },
+  {
+    "name": "lo",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/lo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "nu",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/nu.svg",
+    "type": "svg"
+  },
+  {
+    "name": "on",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/on.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ov",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/ov.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sp",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/sp.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ve",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/ve.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wi",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/wi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wo",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/wo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wz",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/wz.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zg",
+    "folder": "kro_objecttyperingen_aanzien",
+    "path": "kro_objecttyperingen_aanzien/zg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ag",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/ag.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bk",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/bk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "id",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/id.svg",
+    "type": "svg"
+  },
+  {
+    "name": "is",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/is.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ka",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/ka.svg",
+    "type": "svg"
+  },
+  {
+    "name": "lo",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/lo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "nu",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/nu.svg",
+    "type": "svg"
+  },
+  {
+    "name": "on",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/on.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ov",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/ov.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sp",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/sp.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ve",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/ve.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wi",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/wi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wo",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/wo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wz",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/wz.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zg",
+    "folder": "kro_objecttyperingen_gebruik",
+    "path": "kro_objecttyperingen_gebruik/zg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-A",
+    "folder": "kvk",
+    "path": "kvk/HR-A.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-B",
+    "folder": "kvk",
+    "path": "kvk/HR-B.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-C",
+    "folder": "kvk",
+    "path": "kvk/HR-C.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-D",
+    "folder": "kvk",
+    "path": "kvk/HR-D.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-E",
+    "folder": "kvk",
+    "path": "kvk/HR-E.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-F",
+    "folder": "kvk",
+    "path": "kvk/HR-F.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-G",
+    "folder": "kvk",
+    "path": "kvk/HR-G.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-H",
+    "folder": "kvk",
+    "path": "kvk/HR-H.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-I",
+    "folder": "kvk",
+    "path": "kvk/HR-I.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-J",
+    "folder": "kvk",
+    "path": "kvk/HR-J.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-K",
+    "folder": "kvk",
+    "path": "kvk/HR-K.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-L",
+    "folder": "kvk",
+    "path": "kvk/HR-L.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-M",
+    "folder": "kvk",
+    "path": "kvk/HR-M.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-N",
+    "folder": "kvk",
+    "path": "kvk/HR-N.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-O",
+    "folder": "kvk",
+    "path": "kvk/HR-O.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-P",
+    "folder": "kvk",
+    "path": "kvk/HR-P.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-Q",
+    "folder": "kvk",
+    "path": "kvk/HR-Q.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-R",
+    "folder": "kvk",
+    "path": "kvk/HR-R.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-S",
+    "folder": "kvk",
+    "path": "kvk/HR-S.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-T",
+    "folder": "kvk",
+    "path": "kvk/HR-T.svg",
+    "type": "svg"
+  },
+  {
+    "name": "HR-U",
+    "folder": "kvk",
+    "path": "kvk/HR-U.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "behandellocatie_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/gebeurtenissen/behandellocatie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ehbo",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/gebeurtenissen/ehbo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms-bibliotheek/lcms-svgs/GHOR/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/GHOR/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/eenheden/voertuig_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "cado",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/cado.svg",
+    "type": "svg"
+  },
+  {
+    "name": "copi",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/copi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gebeurtenis",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/gebeurtenis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/mast_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/plaats_delict.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ramptoeristen_pers",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/ramptoeristen_pers.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/slachtoffer_dodelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/slachtoffer_gewond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "alarm",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/alarm.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bezitsaantasting",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/bezitsaantasting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brand",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/brand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dienstverlening",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/dienstverlening.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gezondheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/gezondheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "incident",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/incident.svg",
+    "type": "svg"
+  },
+  {
+    "name": "leefmilieu",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/leefmilieu.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ongeval",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/ongeval.svg",
+    "type": "svg"
+  },
+  {
+    "name": "veiligheid_openbare_orde",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/veiligheid_openbare_orde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verkeer",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/verkeer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "cado",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/cado.svg",
+    "type": "svg"
+  },
+  {
+    "name": "klachtenmelding",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/klachtenmelding.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/mast_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/bevolkingszorg/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms-bibliotheek/lcms-svgs/brandweer/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/brandweer/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/bus_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "commit",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/commit.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/hond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "landmacht",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/landmacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "luchtmacht",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/luchtmacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "marine",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/marine.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/mast_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_vast copy",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/objecten/mast_vast copy.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/defensie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/defensie/objecten/verzamelplaats_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beredenen",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/beredenen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus_gepantserd",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/bus_gepantserd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/hond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "pakketbus",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/pakketbus.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/voertuig_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "melder_getuige",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/melder_getuige.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/plaats_delict.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/slachtoffer_dodelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/slachtoffer_gewond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verdachte",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/verdachte.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "insluitingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/insluitingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "safehouse",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/safehouse.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/verzamelplaats_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzegeld_pand",
+    "folder": "lcms-bibliotheek/lcms-svgs/kmar/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/kmar/objecten/verzegeld_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beredenen",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/beredenen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus_gepantserd",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/bus_gepantserd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/hond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "pakketbus",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/pakketbus.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/voertuig_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "melder_getuige",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/melder_getuige.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/plaats_delict.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/slachtoffer_dodelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/slachtoffer_gewond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verdachte",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/verdachte.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "insluitingslocatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/insluitingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "safehouse",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/safehouse.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/verzamelplaats_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzegeld_pand",
+    "folder": "lcms-bibliotheek/lcms-svgs/politie/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/politie/objecten/verzegeld_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beperking_scheepvaart",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/beperking_scheepvaart.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beperking_wegverkeer",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/beperking_wegverkeer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "crisisoverleg",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/crisisoverleg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dode_dieren",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/dode_dieren.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "noodmaatregel",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/noodmaatregel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "schip",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/schip.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterverontreiniging_drijfvuil",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/waterverontreiniging_drijfvuil.svg",
+    "type": "svg"
+  },
+  {
+    "name": "werkzaamheden",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/gebeurtenissen/werkzaamheden.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ankerplaats_haven",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/ankerplaats_haven.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aquaduct",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/aquaduct.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beweegbare_brug",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/beweegbare_brug.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/dijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gemaal",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/gemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "innamepunt_drinkwater",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/innamepunt_drinkwater.svg",
+    "type": "svg"
+  },
+  {
+    "name": "iv_systeem",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/iv_systeem.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ligplaats",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/ligplaats.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_pand",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/object_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "recreatiegebied",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/recreatiegebied.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sluis",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/sluis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tunnel",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/tunnel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaste_brug",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/vaste_brug.svg",
+    "type": "svg"
+  },
+  {
+    "name": "viaduct",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/viaduct.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterkering",
+    "folder": "lcms-bibliotheek/lcms-svgs/rws/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/rws/objecten/waterkering.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/template",
+    "path": "lcms-bibliotheek/lcms-svgs/template/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gebeurtenis",
+    "folder": "lcms-bibliotheek/lcms-svgs/template",
+    "path": "lcms-bibliotheek/lcms-svgs/template/gebeurtenis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "incident",
+    "folder": "lcms-bibliotheek/lcms-svgs/template",
+    "path": "lcms-bibliotheek/lcms-svgs/template/incident.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/template",
+    "path": "lcms-bibliotheek/lcms-svgs/template/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beperking-scheepvaart",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/beperking-scheepvaart.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dode_dieren",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/dode_dieren.svg",
+    "type": "svg"
+  },
+  {
+    "name": "infra",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/infra.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-hoog-impact-en-urgent",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/maatregel-hoog-impact-en-urgent.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-hoog-impact-of-urgent",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/maatregel-hoog-impact-of-urgent.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-laag-urgent-weinig-impact",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/maatregel-laag-urgent-weinig-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-uitgevoerd",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/maatregel-uitgevoerd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "noodmaatregel",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/noodmaatregel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "persleidingbreuk",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/persleidingbreuk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tijdelijke-peilscheiding",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/tijdelijke-peilscheiding.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tijdelijke-pompinstallatie",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/tijdelijke-pompinstallatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "watergang",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/watergang.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterkering",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/waterkering.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterverontreiniging_drijfvuil",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/waterverontreiniging_drijfvuil.svg",
+    "type": "svg"
+  },
+  {
+    "name": "werkzaamheden",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/werkzaamheden.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zandzakken-bigbags",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/gebeurtenissen/zandzakken-bigbags.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dreiging-stabiel",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten/dreiging-stabiel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "falende-waterkering",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten/falende-waterkering.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hoog-urgent-en-veel-impact",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten/hoog-urgent-en-veel-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hoog-urgent-of-veel-impact",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten/hoog-urgent-of-veel-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "infra",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten/infra.svg",
+    "type": "svg"
+  },
+  {
+    "name": "laag-urgent-weinig-impact",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/incidenten/laag-urgent-weinig-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "appendage",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/appendage.svg",
+    "type": "svg"
+  },
+  {
+    "name": "awzi",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/awzi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brug",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/brug.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dam",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/dam.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dijk",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/dijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "duiker",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/duiker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gemaal",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/gemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "innamepunt_drinkwater",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/innamepunt_drinkwater.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_pand",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/object_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "persleiding",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/persleiding.svg",
+    "type": "svg"
+  },
+  {
+    "name": "rioolgemaal",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/rioolgemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sluis",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/sluis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "stuw",
+    "folder": "lcms-bibliotheek/lcms-svgs/waterschap/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/waterschap/objecten/stuw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bench",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/bench.svg",
+    "type": "svg"
+  },
+  {
+    "name": "buurt_gemeenschapshuis",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/buurt_gemeenschapshuis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "electriciteit",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/electriciteit.svg",
+    "type": "svg"
+  },
+  {
+    "name": "energie_oov_pois",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/energie_oov_pois.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementenhal_optie_1",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/evenementenhal_optie_1.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementenhal_optie_2",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/evenementenhal_optie_2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "fietsknooppunt_netwerken",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/fietsknooppunt_netwerken.svg",
+    "type": "svg"
+  },
+  {
+    "name": "forensische_en_geestelijke_zorg_oov_pois",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/forensische_en_geestelijke_zorg_oov_pois.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ggz",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/ggz.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hectopunten",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/hectopunten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hoger_en_wetenschappelijk_onderwijs",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/hoger_en_wetenschappelijk_onderwijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "incidenten_in_gebouwen_hoger_dan_20m",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/incidenten_in_gebouwen_hoger_dan_20m.svg",
+    "type": "svg"
+  },
+  {
+    "name": "jusitie",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/jusitie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "knmi_waarneemstations",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/knmi_waarneemstations.svg",
+    "type": "svg"
+  },
+  {
+    "name": "logo",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/logo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "middelbaar_beroepsonderwijs_mbo",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/middelbaar_beroepsonderwijs_mbo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "natuurbrand",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/natuurbrand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "oliepompinstallatie",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/oliepompinstallatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "overige_onderwijsinstelling",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/overige_onderwijsinstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "prorail_station",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/prorail_station.svg",
+    "type": "svg"
+  },
+  {
+    "name": "speciaal_onderwijs",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/speciaal_onderwijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verkeerslichten",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/verkeerslichten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms/algemeen/eenheden",
+    "path": "lcms/algemeen/eenheden/vaartuig.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms/algemeen/eenheden",
+    "path": "lcms/algemeen/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/algemeen/eenheden",
+    "path": "lcms/algemeen/eenheden/voertuig.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/algemeen/eenheden",
+    "path": "lcms/algemeen/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms/algemeen/eenheden",
+    "path": "lcms/algemeen/eenheden/voertuig_groot.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms/algemeen/eenheden",
+    "path": "lcms/algemeen/eenheden/voertuig_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/actie_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/afzetting.png",
+    "type": "png"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "cado",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/cado.png",
+    "type": "png"
+  },
+  {
+    "name": "cado",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/cado.svg",
+    "type": "svg"
+  },
+  {
+    "name": "copi",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/copi.png",
+    "type": "png"
+  },
+  {
+    "name": "copi",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/copi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_tijdelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/mast_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "mast_tijdelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/mast_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/mobiele_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/ontsmettingslocatie.png",
+    "type": "png"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/plaats_delict.png",
+    "type": "png"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/plaats_delict.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ramptoeristen_pers",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/ramptoeristen_pers.png",
+    "type": "png"
+  },
+  {
+    "name": "ramptoeristen_pers",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/ramptoeristen_pers.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/slachtoffer_dodelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/slachtoffer_dodelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/slachtoffer_gewond.png",
+    "type": "png"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/slachtoffer_gewond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/verzamelplaats_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/algemeen/gebeurtenissen",
+    "path": "lcms/algemeen/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "alarm",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/alarm.png",
+    "type": "png"
+  },
+  {
+    "name": "alarm",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/alarm.svg",
+    "type": "svg"
+  },
+  {
+    "name": "alarm_blauw",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/alarm_blauw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "alarm_groen",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/alarm_groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "alarm_rood",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/alarm_rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bezitsaantasting",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/bezitsaantasting.png",
+    "type": "png"
+  },
+  {
+    "name": "bezitsaantasting",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/bezitsaantasting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brand",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/brand.png",
+    "type": "png"
+  },
+  {
+    "name": "brand",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/brand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dienstverlening",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/dienstverlening.png",
+    "type": "png"
+  },
+  {
+    "name": "dienstverlening",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/dienstverlening.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gezondheid",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/gezondheid.png",
+    "type": "png"
+  },
+  {
+    "name": "gezondheid",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/gezondheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "grip",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/grip.svg",
+    "type": "svg"
+  },
+  {
+    "name": "incident",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/incident.png",
+    "type": "png"
+  },
+  {
+    "name": "incident",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/incident.svg",
+    "type": "svg"
+  },
+  {
+    "name": "leefmilieu",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/leefmilieu.png",
+    "type": "png"
+  },
+  {
+    "name": "leefmilieu",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/leefmilieu.svg",
+    "type": "svg"
+  },
+  {
+    "name": "natuur",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/natuur.png",
+    "type": "png"
+  },
+  {
+    "name": "natuurbrand",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/natuurbrand.png",
+    "type": "png"
+  },
+  {
+    "name": "natuurbrand",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/natuurbrand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "nieuw",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/nieuw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ongeval",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/ongeval.png",
+    "type": "png"
+  },
+  {
+    "name": "ongeval",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/ongeval.svg",
+    "type": "svg"
+  },
+  {
+    "name": "veiligheid_openbare_orde",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/veiligheid_openbare_orde.png",
+    "type": "png"
+  },
+  {
+    "name": "veiligheid_openbare_orde",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/veiligheid_openbare_orde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verkeer",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/verkeer.png",
+    "type": "png"
+  },
+  {
+    "name": "verkeer",
+    "folder": "lcms/algemeen/incidenten",
+    "path": "lcms/algemeen/incidenten/verkeer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/actie_vast.png",
+    "type": "png"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "cado",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/cado.png",
+    "type": "png"
+  },
+  {
+    "name": "cado",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/cado.svg",
+    "type": "svg"
+  },
+  {
+    "name": "klachtenmelding",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/klachtenmelding.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_vast",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/mast_vast.png",
+    "type": "png"
+  },
+  {
+    "name": "mast_vast",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/mast_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/uitgangsstelling.png",
+    "type": "png"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/helicopter.png",
+    "type": "png"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/ovd.png",
+    "type": "png"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/vaartuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/voertuig_groot_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/voertuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/ambulance/eenheden",
+    "path": "lcms/ambulance/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "behandellocatie_tijdelijk",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/behandellocatie_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "behandellocatie_tijdelijk",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/behandellocatie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ehbo",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/ehbo.png",
+    "type": "png"
+  },
+  {
+    "name": "ehbo",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/ehbo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/mobiele_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/ambulance/gebeurtenissen",
+    "path": "lcms/ambulance/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/ambulance/objecten",
+    "path": "lcms/ambulance/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/ambulance/objecten",
+    "path": "lcms/ambulance/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/ambulance/objecten",
+    "path": "lcms/ambulance/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/ambulance/objecten",
+    "path": "lcms/ambulance/objecten/uitgangsstelling.png",
+    "type": "png"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/ambulance/objecten",
+    "path": "lcms/ambulance/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/drone.png",
+    "type": "png"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/ovd.png",
+    "type": "png"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/vaartuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/voertuig_groot_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/voertuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/brandweer/eenheden",
+    "path": "lcms/brandweer/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms/brandweer/gebeurtenissen",
+    "path": "lcms/brandweer/gebeurtenissen/meetwaarde.png",
+    "type": "png"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms/brandweer/gebeurtenissen",
+    "path": "lcms/brandweer/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/brandweer/gebeurtenissen",
+    "path": "lcms/brandweer/gebeurtenissen/mobiele_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/brandweer/gebeurtenissen",
+    "path": "lcms/brandweer/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/brandweer/gebeurtenissen",
+    "path": "lcms/brandweer/gebeurtenissen/ontsmettingslocatie.png",
+    "type": "png"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/brandweer/gebeurtenissen",
+    "path": "lcms/brandweer/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/brandweer/objecten",
+    "path": "lcms/brandweer/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/brandweer/objecten",
+    "path": "lcms/brandweer/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/brandweer/objecten",
+    "path": "lcms/brandweer/objecten/uitgangsstelling.png",
+    "type": "png"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/brandweer/objecten",
+    "path": "lcms/brandweer/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus_opvallend",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/bus_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "commit",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/commit.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dmo",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/dmo.png",
+    "type": "png"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/helicopter.png",
+    "type": "png"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/hond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "landmacht",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/landmacht.png",
+    "type": "png"
+  },
+  {
+    "name": "landmacht",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/landmacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "luchtmacht",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/luchtmacht.png",
+    "type": "png"
+  },
+  {
+    "name": "luchtmacht",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/luchtmacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "marine",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/marine.png",
+    "type": "png"
+  },
+  {
+    "name": "marine",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/marine.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms/defensie/eenheden",
+    "path": "lcms/defensie/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_tijdelijk",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/mast_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "mast_tijdelijk",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/mast_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/defensie/gebeurtenissen",
+    "path": "lcms/defensie/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/aangewezen_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mast_vast copy",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/mast_vast copy.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/uitgangsstelling.png",
+    "type": "png"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms/defensie/objecten",
+    "path": "lcms/defensie/objecten/verzamelplaats_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/gemeente/eenheden",
+    "path": "lcms/gemeente/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/gemeente/gebeurtenissen",
+    "path": "lcms/gemeente/gebeurtenissen/afzetting.png",
+    "type": "png"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/gemeente/objecten",
+    "path": "lcms/gemeente/objecten/aangewezen_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/gemeente/objecten",
+    "path": "lcms/gemeente/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "beredenen",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/beredenen.png",
+    "type": "png"
+  },
+  {
+    "name": "beredenen",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/beredenen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/biker.png",
+    "type": "png"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus_gepantserd",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/bus_gepantserd.png",
+    "type": "png"
+  },
+  {
+    "name": "bus_gepantserd",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/bus_gepantserd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/drone.png",
+    "type": "png"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/helicopter.png",
+    "type": "png"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/hond.png",
+    "type": "png"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/hond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/motor.png",
+    "type": "png"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/ovd.png",
+    "type": "png"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "pakketbus",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/pakketbus.png",
+    "type": "png"
+  },
+  {
+    "name": "pakketbus",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/pakketbus.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/vaartuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig_groot.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig_groot_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voetsurveillance.png",
+    "type": "png"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms/koninklijk marechaussee/eenheden",
+    "path": "lcms/koninklijk marechaussee/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/actie_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/afzetting.png",
+    "type": "png"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "melder_getuige",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/melder_getuige.png",
+    "type": "png"
+  },
+  {
+    "name": "melder_getuige",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/melder_getuige.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/mobiele_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/ontsmettingslocatie.png",
+    "type": "png"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/plaats_delict.png",
+    "type": "png"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/plaats_delict.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/slachtoffer_dodelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/slachtoffer_dodelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/slachtoffer_gewond.png",
+    "type": "png"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/slachtoffer_gewond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verdachte",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/verdachte.png",
+    "type": "png"
+  },
+  {
+    "name": "verdachte",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/verdachte.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/verzamelplaats_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/koninklijk marechaussee/gebeurtenissen",
+    "path": "lcms/koninklijk marechaussee/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/actie_vast.png",
+    "type": "png"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "insluitingslocatie",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/insluitingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "safehouse",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/safehouse.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/uitgangsstelling.png",
+    "type": "png"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/verzamelplaats_vast.png",
+    "type": "png"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/verzamelplaats_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzegeld_pand",
+    "folder": "lcms/koninklijk marechaussee/objecten",
+    "path": "lcms/koninklijk marechaussee/objecten/verzegeld_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "demonstratie_aandacht",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/demonstratie_aandacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "demonstratie_overig",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/demonstratie_overig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "demonstratie_regulier",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/demonstratie_regulier.svg",
+    "type": "svg"
+  },
+  {
+    "name": "demonstratie_risico",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/demonstratie_risico.svg",
+    "type": "svg"
+  },
+  {
+    "name": "energie_object",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/energie_object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementen_aandacht",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/evenementen_aandacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementen_overig",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/evenementen_overig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementen_regulier",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/evenementen_regulier.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementen_risico",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/evenementen_risico.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ggz",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/ggz.svg",
+    "type": "svg"
+  },
+  {
+    "name": "justitie",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/justitie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meldkamer",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/meldkamer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "min_jenv",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/min_jenv.svg",
+    "type": "svg"
+  },
+  {
+    "name": "overheid",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/overheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "reddingsbrigade",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/reddingsbrigade.svg",
+    "type": "svg"
+  },
+  {
+    "name": "veiligheidsregio",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/veiligheidsregio.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ziekenhuis",
+    "folder": "lcms/overig/objecten",
+    "path": "lcms/overig/objecten/ziekenhuis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beredenen",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/beredenen.png",
+    "type": "png"
+  },
+  {
+    "name": "beredenen",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/beredenen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/biker.png",
+    "type": "png"
+  },
+  {
+    "name": "biker",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/biker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus_gepantserd",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/bus_gepantserd.png",
+    "type": "png"
+  },
+  {
+    "name": "bus_gepantserd",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/bus_gepantserd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/drone.png",
+    "type": "png"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/helicopter.png",
+    "type": "png"
+  },
+  {
+    "name": "helicopter",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/helicopter.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/hond.png",
+    "type": "png"
+  },
+  {
+    "name": "hond",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/hond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/motor.png",
+    "type": "png"
+  },
+  {
+    "name": "motor",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/motor.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/ovd.png",
+    "type": "png"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "pakketbus",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/pakketbus.png",
+    "type": "png"
+  },
+  {
+    "name": "pakketbus",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/pakketbus.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/vaartuig.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/vaartuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig_groot.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig_groot_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_groot_opvallend",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig_groot_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voetsurveillance.png",
+    "type": "png"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms/politie/eenheden",
+    "path": "lcms/politie/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/actie_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "actie_tijdelijk",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/actie_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/afzetting.png",
+    "type": "png"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "melder_getuige",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/melder_getuige.png",
+    "type": "png"
+  },
+  {
+    "name": "melder_getuige",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/melder_getuige.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/mobiele_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/ontsmettingslocatie.png",
+    "type": "png"
+  },
+  {
+    "name": "ontsmettingslocatie",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/ontsmettingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/plaats_delict.png",
+    "type": "png"
+  },
+  {
+    "name": "plaats_delict",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/plaats_delict.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/slachtoffer_dodelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "slachtoffer_dodelijk",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/slachtoffer_dodelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/slachtoffer_gewond.png",
+    "type": "png"
+  },
+  {
+    "name": "slachtoffer_gewond",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/slachtoffer_gewond.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verdachte",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/verdachte.png",
+    "type": "png"
+  },
+  {
+    "name": "verdachte",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/verdachte.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/verzamelplaats_tijdelijk.png",
+    "type": "png"
+  },
+  {
+    "name": "verzamelplaats_tijdelijk",
+    "folder": "lcms/politie/gebeurtenissen",
+    "path": "lcms/politie/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/aangewezen_locatie.png",
+    "type": "png"
+  },
+  {
+    "name": "aangewezen_locatie",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/aangewezen_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/actie_vast.png",
+    "type": "png"
+  },
+  {
+    "name": "actie_vast",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/actie_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "insluitingslocatie",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/insluitingslocatie.png",
+    "type": "png"
+  },
+  {
+    "name": "insluitingslocatie",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/insluitingslocatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "safehouse",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/safehouse.png",
+    "type": "png"
+  },
+  {
+    "name": "safehouse",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/safehouse.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/uitgangsstelling.png",
+    "type": "png"
+  },
+  {
+    "name": "uitgangsstelling",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/uitgangsstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/verzamelplaats_vast.png",
+    "type": "png"
+  },
+  {
+    "name": "verzamelplaats_vast",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/verzamelplaats_vast.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verzegeld_pand",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/verzegeld_pand.png",
+    "type": "png"
+  },
+  {
+    "name": "verzegeld_pand",
+    "folder": "lcms/politie/objecten",
+    "path": "lcms/politie/objecten/verzegeld_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/drone.png",
+    "type": "png"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/eenheid.png",
+    "type": "png"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/ovd.png",
+    "type": "png"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/vaartuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "vaartuig_opvallend",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/vaartuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/voertuig_opvallend.png",
+    "type": "png"
+  },
+  {
+    "name": "voertuig_opvallend",
+    "folder": "lcms/rijkswaterstaat/eenheden",
+    "path": "lcms/rijkswaterstaat/eenheden/voertuig_opvallend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/afzetting.png",
+    "type": "png"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beperking_scheepvaart",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/beperking_scheepvaart.png",
+    "type": "png"
+  },
+  {
+    "name": "beperking_scheepvaart",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/beperking_scheepvaart.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beperking_wegverkeer",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/beperking_wegverkeer.png",
+    "type": "png"
+  },
+  {
+    "name": "beperking_wegverkeer",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/beperking_wegverkeer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "crisisoverleg",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/crisisoverleg.png",
+    "type": "png"
+  },
+  {
+    "name": "crisisoverleg",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/crisisoverleg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dode_dieren",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/dode_dieren.png",
+    "type": "png"
+  },
+  {
+    "name": "dode_dieren",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/dode_dieren.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/meetwaarde.png",
+    "type": "png"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "noodmaatregel",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/noodmaatregel.png",
+    "type": "png"
+  },
+  {
+    "name": "noodmaatregel",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/noodmaatregel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "schip",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/schip.png",
+    "type": "png"
+  },
+  {
+    "name": "schip",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/schip.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterverontreiniging_drijfvuil",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/waterverontreiniging_drijfvuil.png",
+    "type": "png"
+  },
+  {
+    "name": "waterverontreiniging_drijfvuil",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/waterverontreiniging_drijfvuil.svg",
+    "type": "svg"
+  },
+  {
+    "name": "werkzaamheden",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/werkzaamheden.png",
+    "type": "png"
+  },
+  {
+    "name": "werkzaamheden",
+    "folder": "lcms/rijkswaterstaat/gebeurtenissen",
+    "path": "lcms/rijkswaterstaat/gebeurtenissen/werkzaamheden.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ankerplaats_haven",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/ankerplaats_haven.png",
+    "type": "png"
+  },
+  {
+    "name": "ankerplaats_haven",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/ankerplaats_haven.svg",
+    "type": "svg"
+  },
+  {
+    "name": "aquaduct",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/aquaduct.png",
+    "type": "png"
+  },
+  {
+    "name": "aquaduct",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/aquaduct.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beweegbare_brug",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/beweegbare_brug.png",
+    "type": "png"
+  },
+  {
+    "name": "beweegbare_brug",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/beweegbare_brug.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dijk",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/dijk.png",
+    "type": "png"
+  },
+  {
+    "name": "dijk",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/dijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gemaal",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/gemaal.png",
+    "type": "png"
+  },
+  {
+    "name": "gemaal",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/gemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "innamepunt_drinkwater",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/innamepunt_drinkwater.png",
+    "type": "png"
+  },
+  {
+    "name": "innamepunt_drinkwater",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/innamepunt_drinkwater.svg",
+    "type": "svg"
+  },
+  {
+    "name": "iv_systeem",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/iv_systeem.png",
+    "type": "png"
+  },
+  {
+    "name": "iv_systeem",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/iv_systeem.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ligplaats",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/ligplaats.png",
+    "type": "png"
+  },
+  {
+    "name": "ligplaats",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/ligplaats.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/object.png",
+    "type": "png"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_pand",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/object_pand.png",
+    "type": "png"
+  },
+  {
+    "name": "object_pand",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/object_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "recreatiegebied",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/recreatiegebied.png",
+    "type": "png"
+  },
+  {
+    "name": "recreatiegebied",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/recreatiegebied.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sluis",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/sluis.png",
+    "type": "png"
+  },
+  {
+    "name": "sluis",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/sluis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tunnel",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/tunnel.png",
+    "type": "png"
+  },
+  {
+    "name": "tunnel",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/tunnel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaste_brug",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/vaste_brug.png",
+    "type": "png"
+  },
+  {
+    "name": "vaste_brug",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/vaste_brug.svg",
+    "type": "svg"
+  },
+  {
+    "name": "viaduct",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/viaduct.png",
+    "type": "png"
+  },
+  {
+    "name": "viaduct",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/viaduct.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterkering",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/waterkering.png",
+    "type": "png"
+  },
+  {
+    "name": "waterkering",
+    "folder": "lcms/rijkswaterstaat/objecten",
+    "path": "lcms/rijkswaterstaat/objecten/waterkering.svg",
+    "type": "svg"
+  },
+  {
+    "name": "drone",
+    "folder": "lcms/waterschap/eenheden",
+    "path": "lcms/waterschap/eenheden/drone.svg",
+    "type": "svg"
+  },
+  {
+    "name": "eenheid",
+    "folder": "lcms/waterschap/eenheden",
+    "path": "lcms/waterschap/eenheden/eenheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "lcms/waterschap/eenheden",
+    "path": "lcms/waterschap/eenheden/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voertuig",
+    "folder": "lcms/waterschap/eenheden",
+    "path": "lcms/waterschap/eenheden/voertuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetsurveillance",
+    "folder": "lcms/waterschap/eenheden",
+    "path": "lcms/waterschap/eenheden/voetsurveillance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afzetting",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/afzetting.svg",
+    "type": "svg"
+  },
+  {
+    "name": "beperking-scheepvaart",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/beperking-scheepvaart.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dode_dieren",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/dode_dieren.svg",
+    "type": "svg"
+  },
+  {
+    "name": "infra",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/infra.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-hoog-impact-en-urgent",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/maatregel-hoog-impact-en-urgent.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-hoog-impact-of-urgent",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/maatregel-hoog-impact-of-urgent.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-laag-urgent-weinig-impact",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/maatregel-laag-urgent-weinig-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "maatregel-uitgevoerd",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/maatregel-uitgevoerd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "meetwaarde",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/meetwaarde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "mobiele_locatie",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/mobiele_locatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "noodmaatregel",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/noodmaatregel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "persleidingbreuk",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/persleidingbreuk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tijdelijke-peilscheiding",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/tijdelijke-peilscheiding.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tijdelijke-pompinstallatie",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/tijdelijke-pompinstallatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "watergang",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/watergang.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterkering",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/waterkering.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterverontreiniging_drijfvuil",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/waterverontreiniging_drijfvuil.svg",
+    "type": "svg"
+  },
+  {
+    "name": "werkzaamheden",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/werkzaamheden.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zandzakken-bigbags",
+    "folder": "lcms/waterschap/gebeurtenissen",
+    "path": "lcms/waterschap/gebeurtenissen/zandzakken-bigbags.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dreiging-stabiel",
+    "folder": "lcms/waterschap/incidenten",
+    "path": "lcms/waterschap/incidenten/dreiging-stabiel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "falende-waterkering",
+    "folder": "lcms/waterschap/incidenten",
+    "path": "lcms/waterschap/incidenten/falende-waterkering.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hoog-urgent-en-veel-impact",
+    "folder": "lcms/waterschap/incidenten",
+    "path": "lcms/waterschap/incidenten/hoog-urgent-en-veel-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hoog-urgent-of-veel-impact",
+    "folder": "lcms/waterschap/incidenten",
+    "path": "lcms/waterschap/incidenten/hoog-urgent-of-veel-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "infra",
+    "folder": "lcms/waterschap/incidenten",
+    "path": "lcms/waterschap/incidenten/infra.svg",
+    "type": "svg"
+  },
+  {
+    "name": "laag-urgent-weinig-impact",
+    "folder": "lcms/waterschap/incidenten",
+    "path": "lcms/waterschap/incidenten/laag-urgent-weinig-impact.svg",
+    "type": "svg"
+  },
+  {
+    "name": "appendage",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/appendage.svg",
+    "type": "svg"
+  },
+  {
+    "name": "awzi",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/awzi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brug",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/brug.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dam",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/dam.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dijk",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/dijk.svg",
+    "type": "svg"
+  },
+  {
+    "name": "duiker",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/duiker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gemaal",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/gemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "innamepunt_drinkwater",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/innamepunt_drinkwater.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/object.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_pand",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/object_pand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "persleiding",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/persleiding.svg",
+    "type": "svg"
+  },
+  {
+    "name": "rioolgemaal",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/rioolgemaal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sluis",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/sluis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "stuw",
+    "folder": "lcms/waterschap/objecten",
+    "path": "lcms/waterschap/objecten/stuw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "railway-event",
+    "folder": "melvin",
+    "path": "melvin/railway-event.svg",
+    "type": "svg"
+  },
+  {
+    "name": "railway-project",
+    "folder": "melvin",
+    "path": "melvin/railway-project.svg",
+    "type": "svg"
+  },
+  {
+    "name": "railway-work",
+    "folder": "melvin",
+    "path": "melvin/railway-work.svg",
+    "type": "svg"
+  },
+  {
+    "name": "road-event",
+    "folder": "melvin",
+    "path": "melvin/road-event.svg",
+    "type": "svg"
+  },
+  {
+    "name": "road-project",
+    "folder": "melvin",
+    "path": "melvin/road-project.svg",
+    "type": "svg"
+  },
+  {
+    "name": "road-work",
+    "folder": "melvin",
+    "path": "melvin/road-work.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterway-event",
+    "folder": "melvin",
+    "path": "melvin/waterway-event.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterway-project",
+    "folder": "melvin",
+    "path": "melvin/waterway-project.svg",
+    "type": "svg"
+  },
+  {
+    "name": "waterway-work",
+    "folder": "melvin",
+    "path": "melvin/waterway-work.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brand",
+    "folder": "orm",
+    "path": "orm/brand.svg",
+    "type": "svg"
+  },
+  {
+    "name": "dienstverlening",
+    "folder": "orm",
+    "path": "orm/dienstverlening.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gezondheid",
+    "folder": "orm",
+    "path": "orm/gezondheid.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_pand",
+    "folder": "orm",
+    "path": "orm/object_pand.png",
+    "type": "png"
+  },
+  {
+    "name": "warning-icon",
+    "folder": "orm",
+    "path": "orm/warning-icon.svg",
+    "type": "svg"
+  },
+  {
+    "name": "afsluitingen",
+    "folder": "rwsverkeersinfo",
+    "path": "rwsverkeersinfo/afsluitingen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "files",
+    "folder": "rwsverkeersinfo",
+    "path": "rwsverkeersinfo/files.svg",
+    "type": "svg"
+  },
+  {
+    "name": "incidenten",
+    "folder": "rwsverkeersinfo",
+    "path": "rwsverkeersinfo/incidenten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "wegwerkzaamheden",
+    "folder": "rwsverkeersinfo",
+    "path": "rwsverkeersinfo/wegwerkzaamheden.svg",
+    "type": "svg"
+  },
+  {
+    "name": "gespannen",
+    "folder": "sfeerimpressie",
+    "path": "sfeerimpressie/gespannen.png",
+    "type": "png"
+  },
+  {
+    "name": "gespannen",
+    "folder": "sfeerimpressie",
+    "path": "sfeerimpressie/gespannen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "neutraal",
+    "folder": "sfeerimpressie",
+    "path": "sfeerimpressie/neutraal.png",
+    "type": "png"
+  },
+  {
+    "name": "neutraal",
+    "folder": "sfeerimpressie",
+    "path": "sfeerimpressie/neutraal.svg",
+    "type": "svg"
+  },
+  {
+    "name": "uitstekend",
+    "folder": "sfeerimpressie",
+    "path": "sfeerimpressie/uitstekend.png",
+    "type": "png"
+  },
+  {
+    "name": "uitstekend",
+    "folder": "sfeerimpressie",
+    "path": "sfeerimpressie/uitstekend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ari",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/ari.png",
+    "type": "png"
+  },
+  {
+    "name": "bn",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/bn.png",
+    "type": "png"
+  },
+  {
+    "name": "bus",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/bus.svg",
+    "type": "svg"
+  },
+  {
+    "name": "est",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/est.png",
+    "type": "png"
+  },
+  {
+    "name": "icd",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/icd.png",
+    "type": "png"
+  },
+  {
+    "name": "ice",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/ice.png",
+    "type": "png"
+  },
+  {
+    "name": "int",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/int.png",
+    "type": "png"
+  },
+  {
+    "name": "nsr-ic",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/nsr-ic.png",
+    "type": "png"
+  },
+  {
+    "name": "nsr-spr",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/nsr-spr.png",
+    "type": "png"
+  },
+  {
+    "name": "rnet",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/rnet.png",
+    "type": "png"
+  },
+  {
+    "name": "rrr",
+    "folder": "spoorkaart",
+    "path": "spoorkaart/rrr.png",
+    "type": "png"
+  },
+  {
+    "name": "airplane",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/airplane.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ambulance",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/ambulance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "boat",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/boat.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brandweer",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/brandweer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "chinook",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/chinook.svg",
+    "type": "svg"
+  },
+  {
+    "name": "heli_blauw",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/heli_blauw.svg",
+    "type": "svg"
+  },
+  {
+    "name": "heli_geel",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/heli_geel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "heli_groen",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/heli_groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "heli_oranje",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/heli_oranje.svg",
+    "type": "svg"
+  },
+  {
+    "name": "kustwacht",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/kustwacht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "lifeliner",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/lifeliner.svg",
+    "type": "svg"
+  },
+  {
+    "name": "politieheli",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/politieheli.svg",
+    "type": "svg"
+  },
+  {
+    "name": "auto",
+    "folder": "vps",
+    "path": "vps/auto.svg",
+    "type": "svg"
+  },
+  {
+    "name": "bus",
+    "folder": "vps",
+    "path": "vps/bus.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ovd",
+    "folder": "vps",
+    "path": "vps/ovd.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ts",
+    "folder": "vps",
+    "path": "vps/ts.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ts_blue",
+    "folder": "vps",
+    "path": "vps/ts_blue.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ts_circle",
+    "folder": "vps",
+    "path": "vps/ts_circle.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ts_green",
+    "folder": "vps",
+    "path": "vps/ts_green.svg",
+    "type": "svg"
+  },
+  {
+    "name": "ts_red",
+    "folder": "vps",
+    "path": "vps/ts_red.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vrachtwagen",
+    "folder": "vps",
+    "path": "vps/vrachtwagen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "buurt_gemeenschapshuis",
+    "folder": "vraa",
+    "path": "vraa/buurt_gemeenschapshuis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "electriciteit",
+    "folder": "vraa",
+    "path": "vraa/electriciteit.svg",
+    "type": "svg"
+  },
+  {
+    "name": "energie",
+    "folder": "vraa",
+    "path": "vraa/energie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "energie_oov_pois",
+    "folder": "vraa",
+    "path": "vraa/energie_oov_pois.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementenhal_optie_1",
+    "folder": "vraa",
+    "path": "vraa/evenementenhal_optie_1.svg",
+    "type": "svg"
+  },
+  {
+    "name": "evenementenhal_optie_2",
+    "folder": "vraa",
+    "path": "vraa/evenementenhal_optie_2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "fietsknooppunt_netwerken",
+    "folder": "vraa",
+    "path": "vraa/fietsknooppunt_netwerken.svg",
+    "type": "svg"
+  },
+  {
+    "name": "forensische_en_geestelijke_zorg_oov_pois",
+    "folder": "vraa",
+    "path": "vraa/forensische_en_geestelijke_zorg_oov_pois.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hectopunten",
+    "folder": "vraa",
+    "path": "vraa/hectopunten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hoger_en_wetenschappelijk_onderwijs",
+    "folder": "vraa",
+    "path": "vraa/hoger_en_wetenschappelijk_onderwijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "incidenten_in_gebouwen_hoger_dan_20m",
+    "folder": "vraa",
+    "path": "vraa/incidenten_in_gebouwen_hoger_dan_20m.svg",
+    "type": "svg"
+  },
+  {
+    "name": "knmi_waarneemstations",
+    "folder": "vraa",
+    "path": "vraa/knmi_waarneemstations.svg",
+    "type": "svg"
+  },
+  {
+    "name": "middelbaar_beroepsonderwijs_mbo",
+    "folder": "vraa",
+    "path": "vraa/middelbaar_beroepsonderwijs_mbo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_buurthuis",
+    "folder": "vraa",
+    "path": "vraa/object_buurthuis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_energie",
+    "folder": "vraa",
+    "path": "vraa/object_energie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_energie_poi",
+    "folder": "vraa",
+    "path": "vraa/object_energie_poi.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_evenementenhal1",
+    "folder": "vraa",
+    "path": "vraa/object_evenementenhal1.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_evenementenhal2",
+    "folder": "vraa",
+    "path": "vraa/object_evenementenhal2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_forensisch_ggz",
+    "folder": "vraa",
+    "path": "vraa/object_forensisch_ggz.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_hectopunten",
+    "folder": "vraa",
+    "path": "vraa/object_hectopunten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_hoger_wo",
+    "folder": "vraa",
+    "path": "vraa/object_hoger_wo.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_oliepompinstallatie",
+    "folder": "vraa",
+    "path": "vraa/object_oliepompinstallatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_prorail",
+    "folder": "vraa",
+    "path": "vraa/object_prorail.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_speciaal_onderwijs",
+    "folder": "vraa",
+    "path": "vraa/object_speciaal_onderwijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_vaartuig",
+    "folder": "vraa",
+    "path": "vraa/object_vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_verkeerslicht",
+    "folder": "vraa",
+    "path": "vraa/object_verkeerslicht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "oliepompinstallatie",
+    "folder": "vraa",
+    "path": "vraa/oliepompinstallatie.svg",
+    "type": "svg"
+  },
+  {
+    "name": "overige_onderwijsinstelling",
+    "folder": "vraa",
+    "path": "vraa/overige_onderwijsinstelling.svg",
+    "type": "svg"
+  },
+  {
+    "name": "prorail_station",
+    "folder": "vraa",
+    "path": "vraa/prorail_station.svg",
+    "type": "svg"
+  },
+  {
+    "name": "speciaal_onderwijs",
+    "folder": "vraa",
+    "path": "vraa/speciaal_onderwijs.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vaartuig",
+    "folder": "vraa",
+    "path": "vraa/vaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "verkeerslichten",
+    "folder": "vraa",
+    "path": "vraa/verkeerslichten.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Ambulance2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Ambulance2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Apothekers",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Apothekers.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Apothekers",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Apothekers.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Apothekers2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Apothekers2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Categoralewoonvormen",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Categoralewoonvormen.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Categoralewoonvormen",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Categoralewoonvormen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Categoralewoonvormen2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Categoralewoonvormen2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-GGD",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-GGD.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-GGD",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-GGD.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-GGD2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-GGD2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-GGZ",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-GGZ.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-GGZ",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-GGZ.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-GGZ2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-GGZ2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Gehandicaptenzorg",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Gehandicaptenzorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Gehandicaptenzorg",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Gehandicaptenzorg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Gehandicaptenzorg2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Gehandicaptenzorg2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Huisartsen",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Huisartsen.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Huisartsen",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Huisartsen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Huisartsen2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Huisartsen2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Jeugdzorg",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Jeugdzorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Jeugdzorg",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Jeugdzorg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Jeugdzorg2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Jeugdzorg2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-NRK",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-NRK.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-NRK",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-NRK.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-NRK2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-NRK2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-RAV",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-RAV.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-RAV",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-RAV.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-RAV2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-RAV2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Revalidatiecentra",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Revalidatiecentra.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Revalidatiecentra",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Revalidatiecentra.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Revalidatiecentra2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Revalidatiecentra2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Thuiszorg",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Thuiszorg.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Thuiszorg",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Thuiszorg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Thuiszorg2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Thuiszorg2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Verloskunde",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Verloskunde.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Verloskunde",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Verloskunde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Verloskunde2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Verloskunde2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Verpleging",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Verpleging.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Verpleging",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Verpleging.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Verpleging2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Verpleging2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Ziekenhuis",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Ziekenhuis.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-Ziekenhuis",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Ziekenhuis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Ziekenhuis2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-Ziekenhuis2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-rest",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-rest.png",
+    "type": "png"
+  },
+  {
+    "name": "WK-rest",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-rest.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-rest2",
+    "folder": "wittekaart",
+    "path": "wittekaart/WK-rest2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Ambulance",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Ambulance.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Apothekers",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Apothekers.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Categoralewoonvormen",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Categoralewoonvormen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-GGD",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-GGD.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-GGZ",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-GGZ.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Gehandicaptenzorg",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Gehandicaptenzorg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Huisartsen",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Huisartsen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Jeugdzorg",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Jeugdzorg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-NRK",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-NRK.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-RAV",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-RAV.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Revalidatiecentra",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Revalidatiecentra.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Thuiszorg",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Thuiszorg.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Verloskunde",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Verloskunde.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Verpleging",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Verpleging.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-Ziekenhuis",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-Ziekenhuis.svg",
+    "type": "svg"
+  },
+  {
+    "name": "WK-rest",
+    "folder": "wittekaart/nieuw",
+    "path": "wittekaart/nieuw/WK-rest.svg",
+    "type": "svg"
+  }
+]
