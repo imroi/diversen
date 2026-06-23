@@ -315,10 +315,6 @@
               <button id="btnClrReset" style="background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 9px;border-radius:4px;cursor:pointer;font-size:10px;font-family:var(--mono)">Reset naar afzender</button>
             </div>
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-              <span style="font-size:11px;color:var(--muted);flex:1">Buitenrand</span>
-              <input type="color" id="clrBuiten" value="#000000" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
               <span style="font-size:11px;color:var(--muted);flex:1">Rand</span>
               <input type="color" id="clrRand" value="#000000" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
             </div>
@@ -392,9 +388,7 @@
    ============================================================ */
 let MANIFEST = null;
 
-/* Fallback sender-info (ook in manifest, maar direct beschikbaar zonder fetch).
-   Optioneel veld `buitenrand` per afzender; afwezig → default '#000' (gelezen in
-   de maker als `sender.buitenrand || '#000'`). Geen manifest-wijziging nodig. */
+/* Fallback sender-info (ook in manifest, maar direct beschikbaar zonder fetch) */
 const SENDERS = {
   algemeen:      {label:"Algemeen",       fill:"#D5D5D5", ink:"#000000"},
   politie:       {label:"Politie",        fill:"#182866", ink:"#FFFFFF"},
@@ -857,30 +851,25 @@ function getElBBox(el, svgRoot) {
 
 const POINTER_TYPES = {
   incident:    {label:"Incident",    desc:"Badge met punt",   iconCx:61, iconCy:40, iconSize:52,
-    shape:(vul,rand,buitenrand)=>`<path d="M60.5,6 L115,60.5 L60.5,115 L6,60.5 Z" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
+    shape:(vul,rand)=>`<path d="M60.5,6 L115,60.5 L60.5,115 L6,60.5 Z" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
   eenheid:     {label:"Eenheid",     desc:"Ronde vorm",       iconCx:60, iconCy:60, iconSize:58,
-    shape:(vul,rand,buitenrand)=>`<circle cx="60.5" cy="60.5" r="54" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
+    shape:(vul,rand)=>`<circle cx="60.5" cy="60.5" r="54" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
   object:      {label:"Object",      desc:"Spraakballon",     iconCx:61, iconCy:55, iconSize:65,
-    shape:(vul,rand,buitenrand)=>`<rect x="8" y="8" width="105" height="105" rx="12" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
+    shape:(vul,rand)=>`<rect x="8" y="8" width="105" height="105" rx="12" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
   gebeurtenis: {label:"Gebeurtenis", desc:"Druppel-ballon",   iconCx:61, iconCy:51, iconSize:58,
-    shape:(vul,rand,buitenrand)=>`<path d="M60.5,116 L31,85 A46,46,0,1,1,90,85 Z" fill="${vul}" stroke="${rand}" stroke-width="3" stroke-linejoin="round"/>`},
+    shape:(vul,rand)=>`<path d="M60.5,116 L31,85 A46,46,0,1,1,90,85 Z" fill="${vul}" stroke="${rand}" stroke-width="3" stroke-linejoin="round"/>`},
 };
 
-/* Kleurt een template-SVG in met drie onafhankelijke kleuren:
-   - vul        → elk gekleurd vlak dat NIET zwart en NIET 'none' is (binnenvlak)
-   - rand       → het zwarte vlak (#000/#000000/black) = de ringband
-   - buitenrand → als dunne buitenlijn op datzelfde zwarte (ring)pad, via stroke
-   De templates hebben twee paden: een zwart ringpad en een binnenvlak; de
-   buitenrand bestaat niet als eigen vlak en wordt daarom als stroke op het
-   ringpad gerealiseerd (stroke-width 2). Geeft de inner-markup van de SVG terug. */
-function templateShape(svgStr, vul, rand, buitenrand) {
+/* Kleurt een template-SVG in met twee kleuren:
+   - vul  → elk gekleurd vlak dat NIET zwart en NIET 'none' is (binnenvlak)
+   - rand → het zwarte vlak (#000/#000000/black) = de ring/buitenband
+   Geeft de inner-markup van de SVG terug. */
+function templateShape(svgStr, vul, rand) {
   let out = svgStr;
   /* 1. binnenvlak: alles wat NIET zwart en NIET none is → vul */
   out = out.replace(/\bfill="(?!none|#000(?:000)?|black)([^"]*)"/gi, `fill="${vul}"`);
-  /* 2. ringpad: zwart → rand, en voeg meteen de buitenrand-stroke toe op datzelfde
-        element (één regex-vervanging zodat de stroke alleen op de ring(en) landt) */
-  out = out.replace(/\bfill="(#000(?:000)?|black)"/gi,
-    `fill="${rand}" stroke="${buitenrand}" stroke-width="2"`);
+  /* 2. ringpad: zwart → rand */
+  out = out.replace(/\bfill="(#000(?:000)?|black)"/gi, `fill="${rand}"`);
   const inner = out.match(/<svg[^>]*>([\s\S]*?)<\/svg>/i);
   return inner ? inner[1].trim() : '';
 }
@@ -894,7 +883,7 @@ async function fetchTemplates() {
       if (!r.ok) continue;
       const svg = await r.text();
       const pt = POINTER_TYPES[key];
-      pt.shape = (vul, rand, buitenrand) => templateShape(svg, vul, rand, buitenrand);
+      pt.shape = (vul, rand) => templateShape(svg, vul, rand);
       loaded++;
     } catch(e) {}
   }
@@ -905,18 +894,16 @@ let wizStep=1, wizPointer=null, wizSender=null;
 let newIconInner=null, newIconVb=null;
 let iconScaleFactor=1.0, iconDx=0, iconDy=0;
 let recolorToInk=false;
-let vulOverride=null, randOverride=null, buitenOverride=null; /* per-kleur overrides in stap 3; null = volg afzender */
+let vulOverride=null, randOverride=null; /* per-kleur overrides in stap 3; null = volg afzender */
 
-/* Zet de drie kleurkiezers op de effectieve kleuren: per kleur de override
-   indien gezet, anders de afzender-preset (vul=fill, rand=ink, buitenrand=buitenrand||#000). */
+/* Zet de twee kleurkiezers op de effectieve kleuren: per kleur de override
+   indien gezet, anders de afzender-preset (vul=fill, rand=ink). */
 function syncWizPickers(){
   const s=SENDERS[wizSender];
   const vEl=document.getElementById("clrVul");
   const rEl=document.getElementById("clrRand");
-  const bEl=document.getElementById("clrBuiten");
   if(vEl) vEl.value=vulOverride||(s?.fill||"#888888");
   if(rEl) rEl.value=randOverride||(s?.ink||"#000000");
-  if(bEl) bEl.value=buitenOverride||(s?.buitenrand||"#000000");
 }
 
 /* Recolor-on-the-fly: vervang alle harde fill/stroke door currentColor.
@@ -988,7 +975,7 @@ document.getElementById('makerIconSearch').oninput = e => { makerIconQ = e.targe
 function renderPointerCards(){
   const el=document.getElementById("pointerCards");
   el.innerHTML=Object.entries(POINTER_TYPES).map(([key,pt])=>{
-    const preview=pt.shape("#2e3f50","#7bafc7","#16202b");
+    const preview=pt.shape("#2e3f50","#7bafc7");
     return `<div class="pcard${wizPointer===key?" sel":""}" data-key="${key}">
       <svg viewBox="0 0 121 121" xmlns="http://www.w3.org/2000/svg">${preview}</svg>
       <div class="pcard-lbl">${pt.label}</div><div class="pcard-desc">${pt.desc}</div></div>`;
@@ -1074,7 +1061,6 @@ function wizCompose(){
   }
   const vul=vulOverride||sender?.fill||"#888888";
   const rand=randOverride||sender?.ink||"#000000";
-  const buitenrand=buitenOverride||sender?.buitenrand||"#000000";
   let iconEl="";
   if(newIconInner&&newIconVb){
     const iconW=newIconVb[2]||24,iconH=newIconVb[3]||24;
@@ -1088,7 +1074,7 @@ function wizCompose(){
       iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})">${inner}</g>`;
     }
   }
-  const result=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121"><g>${pt.shape(vul,rand,buitenrand)}${iconEl}</g></svg>`;
+  const result=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121"><g>${pt.shape(vul,rand)}${iconEl}</g></svg>`;
   out.innerHTML=result;
   const nm=normalizeName(document.getElementById("addName")?.value||"")||"nieuw_symbool";
   meta.textContent=`${wizSender||"(afzender)"}/${wizPointer}/${nm}`;
@@ -1169,9 +1155,8 @@ document.getElementById("cbRecolor").onchange=e=>{recolorToInk=e.target.checked;
 
 document.getElementById("clrVul").oninput=e=>{vulOverride=e.target.value;wizCompose();};
 document.getElementById("clrRand").oninput=e=>{randOverride=e.target.value;wizCompose();};
-document.getElementById("clrBuiten").oninput=e=>{buitenOverride=e.target.value;wizCompose();};
 document.getElementById("btnClrReset").onclick=()=>{
-  vulOverride=randOverride=buitenOverride=null;
+  vulOverride=randOverride=null;
   syncWizPickers();
   wizCompose();
 };
