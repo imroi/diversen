@@ -45,14 +45,6 @@
   .fitem .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;opacity:.7}
 
   .gridwrap{overflow-y:auto;padding:18px 22px}
-  .loadzone{border:1.5px dashed var(--line);border-radius:10px;padding:20px 24px;color:var(--muted);margin-bottom:18px;cursor:pointer}
-  .loadzone.drag{border-color:var(--accent);background:#12222c;color:var(--ink)}
-  .loadzone input{display:none}
-  .loadzone b{color:var(--ink)}
-  .lzdrop{font-size:13px}
-  .lznote{font-size:11px;margin-top:4px;line-height:1.5}
-  .lzserver{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;display:none;align-items:center;gap:10px}
-  .lzserver.visible{display:flex}
   .btnsm{padding:5px 13px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#06121c;font-weight:600;font-size:12px;cursor:pointer}
   .btnsm:disabled{opacity:.5;cursor:not-allowed}
   .btnsm:hover:not(:disabled){filter:brightness(1.1)}
@@ -151,20 +143,6 @@
   .sym-thumb svg{width:40px!important;height:40px!important;display:block}
   .sym-lbl{font-size:9px;margin-top:4px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:var(--mono)}
 
-  /* ---- controle ---- */
-  #view-ctrl{overflow-y:auto}
-  .ctrl{padding:24px 28px;max-width:860px}
-  .ctrl-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
-  .ctrl-section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:12px}
-  .ctrl-title{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 0;display:flex;align-items:center;gap:9px}
-  .ctrl-badge{font-family:var(--mono);font-size:11px;padding:1px 8px;border-radius:4px;font-weight:700;line-height:1.5}
-  .ctrl-badge.ok{background:rgba(70,211,154,.15);color:var(--ok);border:1px solid rgba(70,211,154,.3)}
-  .ctrl-badge.warn{background:rgba(245,185,69,.15);color:var(--warn);border:1px solid rgba(245,185,69,.3)}
-  .ctrl-badge.err{background:rgba(255,107,107,.15);color:var(--err);border:1px solid rgba(255,107,107,.3)}
-  .ctrl-items{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
-  .ctrl-item{font-size:11.5px;font-family:var(--mono);padding:3px 0;color:var(--muted);border-bottom:1px solid rgba(42,52,62,.6)}
-  .ctrl-item:last-child{border-bottom:none}
-  .ctrl-item b{color:var(--ink)}
   /* ---- catalogus detail ---- */
   .cat-detail{display:none;position:fixed;inset:0;background:rgba(6,12,18,.72);z-index:50;align-items:center;justify-content:center;padding:24px}
   .cat-detail.open{display:flex}
@@ -236,37 +214,6 @@
     </div>
   </section>
 
-  <!-- ===== LIBRARY ===== -->
-  <section class="view" id="view-library">
-    <div class="lib">
-      <aside class="filters">
-        <input class="search" id="search" placeholder="Zoek op naam…">
-        <h2>Afzender</h2>
-        <div id="senderFilters"></div>
-        <h2>Categorie</h2>
-        <div id="catFilters"></div>
-      </aside>
-      <div class="gridwrap">
-        <div class="loadzone" id="loadzone">
-          <input type="file" id="folderInput" webkitdirectory directory multiple accept=".svg">
-          <div class="lzdrop">Sleep je <b>LCMS SVG</b>-map hier of <b>klik</b> om een map te kiezen.</div>
-          <div class="lznote">
-            De app verwacht 235 symbolen in 9 afzendermappen. Niet-geladen symbolen worden grijs getoond.<br>
-            <span style="color:var(--muted)">Via een server (<code style="font-family:var(--mono)">python -m http.server</code>) worden de symbolen automatisch geladen uit <code style="font-family:var(--mono)">lcms-svgs/</code>. Via <b>file://</b> gebruik je drag-&amp;drop hieronder.</span>
-          </div>
-          <div class="lzserver" id="lzServer">
-            <span style="color:var(--ok);font-size:16px;line-height:1">●</span>
-            <span style="color:var(--muted)">Server actief</span>
-            <button class="btnsm" id="btnFetchAssets">Herladen</button>
-            <span id="fetchStatus" style="font-family:var(--mono);color:var(--muted)"></span>
-          </div>
-        </div>
-        <div class="statusbar" id="statusbar">Nog niets geladen.</div>
-        <div class="grid" id="grid"></div>
-        <div class="empty" id="emptyMsg" style="display:none">Geen symbolen die aan de filters voldoen.</div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== ADD ===== -->
   <section class="view" id="view-add">
@@ -373,16 +320,6 @@
     </div>
   </section>
 
-  <!-- ===== CONTROLE ===== -->
-  <section class="view" id="view-ctrl">
-    <div class="ctrl">
-      <div class="ctrl-actions">
-        <button class="btnsm" id="btnRunCtrl">Analyseer geladen set</button>
-        <button class="btnsm" id="btnExportManifest" style="background:transparent;border-color:var(--ok);color:var(--ok)">Exporteer manifest.json</button>
-      </div>
-      <div id="ctrlResults"><p style="color:var(--muted);font-size:13px">Laad eerst de set en klik op "Analyseer geladen set".</p></div>
-    </div>
-  </section>
 </main>
 
 <script>
@@ -472,7 +409,6 @@ function deleteEigenSymbool(id) {
   eigenSymbolen.delete(id);
   store.delete(id);
   _persistEigen();
-  rebuild();
 }
 
 function _persistEigen() {
@@ -485,57 +421,24 @@ function _persistEigen() {
 
 let filterSender="*", filterCat="*", q="";
 
-/* ---------- manifest laden ---------- */
+/* ---------- manifest laden (alleen nog voor afzender-presets + templates) ---------- */
 async function initManifest() {
   try {
     const r = await fetch('lcms-manifest.json');
-    if (!r.ok) return;
-    MANIFEST = await r.json();
-    /* Vul SENDERS aan vanuit manifest voor het geval er nieuwe zijn */
-    if (MANIFEST.senders) {
-      Object.assign(SENDERS, MANIFEST.senders);
+    if (r.ok) {
+      MANIFEST = await r.json();
+      /* Vul SENDERS aan vanuit manifest voor het geval er nieuwe zijn */
+      if (MANIFEST.senders) Object.assign(SENDERS, MANIFEST.senders);
+      /* Eigen afzenders mogen niet overschreven worden door manifest */
+      for (const [k, v] of eigenSenders) SENDERS[k] = {...v};
     }
-    /* Eigen afzenders mogen niet overschreven worden door manifest */
-    for (const [k, v] of eigenSenders) SENDERS[k] = {...v};
-    /* Server gedetecteerd: toon statusbalk en laad meteen */
-    document.getElementById('lzServer').classList.add('visible');
-    rebuild();
-    fetchTemplates();
-    fetchAssets();
   } catch(e) {
-    /* file:// of geen manifest — stille fallback naar drag-&-drop */
+    /* file:// of geen manifest — afzender-fallback in SENDERS blijft gelden */
   }
+  /* Templates zijn nodig voor de maker; los van het manifest proberen te laden */
+  fetchTemplates();
 }
 
-/* ---------- laden uit lcms-svgs/ (alleen via server) ---------- */
-async function fetchAssets() {
-  if (!MANIFEST) return;
-  const btn = document.getElementById('btnFetchAssets');
-  const status = document.getElementById('fetchStatus');
-  btn.disabled = true;
-  btn.textContent = 'Laden…';
-  status.textContent = '';
-  let loaded = 0, failed = 0;
-  for (const sym of MANIFEST.symbols) {
-    try {
-      const url = 'lcms-svgs/' + sym.path.split('/').map(encodeURIComponent).join('/');
-      const r = await fetch(url);
-      if (r.ok) {
-        store.set(sym.id, await r.text());
-        loaded++;
-      } else {
-        failed++;
-      }
-    } catch(e) {
-      failed++;
-    }
-  }
-  rebuild();
-  btn.textContent = 'Herladen';
-  btn.disabled = false;
-  status.textContent = `${loaded} geladen${failed ? `, ${failed} ontbreken` : ''}`;
-}
-document.getElementById('btnFetchAssets').onclick = fetchAssets;
 
 /* ---------- tabs ---------- */
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
@@ -544,161 +447,10 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
   t.classList.add("active");
   document.getElementById("view-"+t.dataset.view).classList.add("active");
   if(t.dataset.view==="add") wizInit();
-  if(t.dataset.view==="ctrl") runCtrl();
   if(t.dataset.view==="catalog" && !CATALOG.length) loadCatalog();
 });
 
-/* ---------- map/bestanden laden (drag-&-drop + folder-picker) ---------- */
-const lz=document.getElementById("loadzone");
-const folderInput=document.getElementById("folderInput");
-lz.onclick=e=>{
-  /* klik op de laadknop triggert geen folder-picker */
-  if(e.target.closest('.lzserver')) return;
-  folderInput.click();
-};
-lz.ondragover=e=>{e.preventDefault();lz.classList.add("drag");};
-lz.ondragleave=()=>lz.classList.remove("drag");
-lz.ondrop=async e=>{
-  e.preventDefault();lz.classList.remove("drag");
-  const items=[...e.dataTransfer.items].map(i=>i.webkitGetAsEntry&&i.webkitGetAsEntry()).filter(Boolean);
-  if(items.length){ for(const it of items) await walkEntry(it,""); }
-  else { for(const f of e.dataTransfer.files) await readFile(f, f.webkitRelativePath||f.name); }
-  rebuild();
-};
-folderInput.onchange=async e=>{
-  for(const f of e.target.files) await readFile(f, f.webkitRelativePath||f.name);
-  rebuild();
-};
-function walkEntry(entry,prefix){
-  return new Promise(res=>{
-    if(entry.isFile){ entry.file(async f=>{ await readFile(f, prefix+entry.name); res();}); }
-    else if(entry.isDirectory){
-      const rd=entry.createReader();
-      rd.readEntries(async ents=>{ for(const en of ents) await walkEntry(en, prefix+entry.name+"/"); res();});
-    } else res();
-  });
-}
-function readFile(file, relpath){
-  return new Promise(res=>{
-    if(!file.name.toLowerCase().endsWith(".svg")){res();return;}
-    const r=new FileReader();
-    r.onload=()=>{ store.set(idFromPath(relpath), r.result); res(); };
-    r.readAsText(file);
-  });
-}
-/* normaliseer pad → "afzender/categorie/naam" (negeer LCMS SVG-root & __MACOSX) */
-function idFromPath(p){
-  const parts=p.split("/").filter(x=>x && x!=="__MACOSX" && x.toLowerCase()!=="lcms svg");
-  const name=parts.pop().replace(/\.svg$/i,"");
-  const cat=parts.pop()||"(root)";
-  const sender=parts.pop()||"(onbekend)";
-  return `${sender}/${cat}/${name}`;
-}
 
-/* ---------- library render ---------- */
-function matchesFilter(id){
-  const[s,c,n]=id.split("/");
-  if(filterSender==="__eigen__")return eigenSymbolen.has(id)&&(!q||n.toLowerCase().includes(q));
-  if(filterSender!=="*"&&s!==filterSender)return false;
-  if(filterCat!=="*"&&c!==filterCat)return false;
-  if(q&&!n.toLowerCase().includes(q))return false;
-  return true;
-}
-function rebuild(){
-  buildFilters(); renderGrid();
-  const n=store.size;
-  const total=MANIFEST?MANIFEST.total:235;
-  const missing=MANIFEST?MANIFEST.symbols.filter(s=>!store.has(s.id)).length:null;
-  let st=n?`${n} van ${total} geladen`:"Nog niets geladen.";
-  if(missing!==null&&missing>0) st+=` — ${missing} ontbreken`;
-  document.getElementById("statusbar").textContent=st+(n?".":"");
-  if(n) lz.style.display="none";
-}
-function buildFilters(){
-  /* Gebruik manifest als bron voor zender/categorie-lijsten als die beschikbaar is */
-  const allSenders=MANIFEST
-    ?[...new Set([...Object.keys(MANIFEST.senders),...eigenSenders.keys()])].sort()
-    :[...new Set([...[...store.keys()].map(id=>id.split("/")[0]),...eigenSenders.keys()])].sort();
-  const allCats=MANIFEST
-    ?[...new Set(
-        MANIFEST.symbols
-          .filter(s=>filterSender==="*"||s.sender===filterSender)
-          .map(s=>s.category)
-      )].sort()
-    :[...new Set([...store.keys()]
-        .filter(id=>filterSender==="*"||id.split("/")[0]===filterSender)
-        .map(id=>id.split("/")[1]))].sort();
-  const sEl=document.getElementById("senderFilters");
-  const cEl=document.getElementById("catFilters");
-  const countLoaded=(s,c)=>[...store.keys()].filter(id=>{
-    const[a,b]=id.split("/");
-    return(s==="*"||a===s)&&(c==="*"||b===c);
-  }).length;
-  const mk=(label,val,kind,sw)=>{
-    const active=(kind==="s"?filterSender:filterCat)===val;
-    const n=kind==="s"?countLoaded(val,"*"):countLoaded(filterSender,val);
-    return `<div class="fitem ${active?"active":""}" data-kind="${kind}" data-val="${val}">
-      ${sw?`<span class="sw" style="background:${sw}"></span>`:""}${label}
-      <span class="cnt">${n}</span></div>`;
-  };
-  let sh=mk("Alle afzenders","*","s","");
-  allSenders.forEach(s=>sh+=mk(SENDERS[s]?.label||s,s,"s",SENDERS[s]?.fill));
-  if(eigenSymbolen.size>0){
-    const active=filterSender==="__eigen__";
-    sh+=`<div class="fitem ${active?"active":""}" data-kind="s" data-val="__eigen__" style="margin-top:6px;border-top:1px solid var(--line);padding-top:6px">
-      <span class="sw" style="background:var(--ok)"></span>Mijn symbolen
-      <span class="cnt">${eigenSymbolen.size}</span></div>`;
-  }
-  sEl.innerHTML=sh;
-  let ch=mk("Alle categorieën","*","c","");
-  allCats.forEach(c=>ch+=mk(c,c,"c",""));
-  cEl.innerHTML=ch;
-  document.querySelectorAll("#senderFilters .fitem, #catFilters .fitem").forEach(el=>el.onclick=()=>{
-    if(el.dataset.kind==="s") filterSender=el.dataset.val; else filterCat=el.dataset.val;
-    buildFilters(); renderGrid();
-  });
-}
-document.getElementById("search").oninput=e=>{q=e.target.value.toLowerCase();renderGrid();};
-function renderGrid(){
-  const grid=document.getElementById("grid");
-  /* Geladen symbolen die voldoen aan filter */
-  const loadedIds=[...store.keys()].filter(matchesFilter);
-  /* Verwachte-maar-ontbrekende symbolen uit manifest */
-  const missingIds=MANIFEST
-    ?MANIFEST.symbols.filter(s=>!store.has(s.id)&&matchesFilter(s.id)).map(s=>s.id)
-    :[];
-  const allIds=[...new Set([...loadedIds,...missingIds])].sort();
-  document.getElementById("emptyMsg").style.display=allIds.length?"none":"block";
-  grid.innerHTML=allIds.map(id=>{
-    const[s,,n]=id.split("/");
-    const loaded=store.has(id);
-    const isEigen=eigenSymbolen.has(id);
-    let cls="card";
-    if(!loaded) cls+=" missing";
-    if(isEigen) cls+=" eigen-symbol";
-    const delBtn=isEigen?`<button class="card-del" data-id="${id}" title="Verwijder uit Mijn symbolen">×</button>`:"";
-    return `<div class="${cls}"${loaded?` data-id="${id}"`:' title="Niet geladen — verwacht door manifest"'}${isEigen?' title="Eigen symbool (persistent opgeslagen)"':''}>
-      ${delBtn}
-      <div class="thumb">${loaded?store.get(id):""}</div>
-      <div class="nm">${n.replace(/[-_]/g," ")}</div>
-      <div class="meta">${SENDERS[s]?.label||s}</div></div>`;
-  }).join("");
-  grid.querySelectorAll(".card:not(.missing)").forEach(c=>c.onclick=e=>{
-    if(e.target.closest(".card-del"))return;
-    downloadOne(c.dataset.id);
-  });
-  grid.querySelectorAll(".card-del").forEach(btn=>btn.onclick=e=>{
-    e.stopPropagation();
-    const id=btn.dataset.id;
-    if(confirm(`Verwijder "${id.split("/").pop().replace(/[-_]/g," ")}" uit Mijn symbolen?`))deleteEigenSymbool(id);
-  });
-}
-function downloadOne(id){
-  const svg=store.get(id); if(!svg)return;
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(new Blob([svg],{type:"image/svg+xml"}));
-  a.download=id.split("/").pop()+".svg"; a.click(); URL.revokeObjectURL(a.href);
-}
 
 /* ============================================================
    NAAM-NORMALISATIE & ZIP-EXPORT (Stap 4)
@@ -1027,7 +779,7 @@ function renderSenderCards(){
     if(!confirm(`Verwijder eigen afzender "${SENDERS[key].label}"? Bestaande symbolen die deze afzender gebruiken blijven bestaan.`))return;
     deleteEigenSender(key);
     if(wizSender===key) wizSender=null;
-    renderSenderCards(); buildFilters(); wizUpdateNav(); wizCompose();
+    renderSenderCards(); wizUpdateNav(); wizCompose();
   });
 }
 
@@ -1188,7 +940,7 @@ document.getElementById("newSenderSave").onclick=()=>{
   wizSender=key;
   document.getElementById("newSenderForm").style.display="none";
   document.getElementById("newSenderName").value="";
-  renderSenderCards(); buildFilters(); wizUpdateNav(); wizCompose();
+  renderSenderCards(); wizUpdateNav(); wizCompose();
 };
 
 document.getElementById("newSenderCancel").onclick=()=>{
@@ -1209,7 +961,7 @@ document.getElementById("dlNew").onclick=()=>{
   const a=document.createElement("a");
   a.href=URL.createObjectURL(new Blob([result],{type:"image/svg+xml"}));
   a.download=nm+".svg"; a.click(); URL.revokeObjectURL(a.href);
-  saveEigenSymbool(id, result); rebuild();
+  saveEigenSymbool(id, result);
   const dl=document.getElementById("dlNew"),prev=dl.textContent;
   dl.textContent="Opgeslagen ✓"; setTimeout(()=>dl.textContent=prev,1500);
   document.getElementById("btnExportZip").style.display="block";
@@ -1221,121 +973,6 @@ document.getElementById("copyNew").onclick=()=>{
     const cp=document.getElementById("copyNew");
     cp.textContent="Gekopieerd ✓"; setTimeout(()=>cp.textContent="Kopieer SVG",1200);
   });
-};
-
-/* ============================================================
-   CONTROLE & VALIDATIE (Stap 5)
-   ============================================================ */
-
-function runCtrl(){
-  const out=document.getElementById("ctrlResults");
-  if(!store.size){
-    out.innerHTML='<p style="color:var(--muted);font-size:13px">Laad eerst de set.</p>'; return;
-  }
-  const ids=[...store.keys()];
-  const sections=[];
-
-  /* 1. Ontbrekende symbolen t.o.v. manifest */
-  if(MANIFEST){
-    const missing=MANIFEST.symbols.filter(s=>!store.has(s.id));
-    sections.push({title:"Ontbrekende symbolen (verwacht door manifest)",
-      badge:missing.length===0?"ok":"warn", count:missing.length,
-      items:missing.map(s=>s.id)});
-  } else {
-    sections.push({title:"Ontbrekende symbolen",badge:"warn",count:null,
-      items:["Manifest niet geladen — serveer via python -m http.server voor volledige controle"]});
-  }
-
-  /* 2. Vergeten kopieën */
-  const copies=ids.filter(id=>{
-    const n=id.split("/").pop().toLowerCase();
-    return /[_ -]copy(\s|$|\.)|^copy[_ ]/.test(n)||n.includes(" copy")||n.endsWith("_copy");
-  });
-  sections.push({title:'Vergeten kopieën ("copy" in naam)',
-    badge:copies.length===0?"ok":"warn", count:copies.length, items:copies});
-
-  /* 3. Naam-inconsistenties (koppelteken én underscore) */
-  const mixed=ids.filter(id=>{const n=id.split("/").pop(); return n.includes("-")&&n.includes("_");});
-  sections.push({title:"Naam-inconsistenties (koppelteken én underscore gemengd)",
-    badge:mixed.length===0?"ok":"warn", count:mixed.length, items:mixed});
-
-  /* 4. Afwijkende viewBox */
-  const badVb=[];
-  for(const [id,svg] of store){
-    try{
-      const doc=new DOMParser().parseFromString(svg,"image/svg+xml");
-      if(doc.querySelector("parsererror")) continue;
-      const vb=(doc.querySelector("svg")?.getAttribute("viewBox")||"").trim();
-      if(vb!=="0 0 121 121") badVb.push(`${id}  →  "${vb||"(geen)"}" `);
-    }catch(e){}
-  }
-  sections.push({title:"Afwijkende viewBox (verwacht: 0 0 121 121)",
-    badge:badVb.length===0?"ok":"warn", count:badVb.length, items:badVb});
-
-  /* 5. Ongeldige SVG's */
-  const invalid=[];
-  for(const [id,svg] of store){
-    try{
-      const doc=new DOMParser().parseFromString(svg,"image/svg+xml");
-      if(doc.querySelector("parsererror")) invalid.push(id);
-    }catch(e){ invalid.push(id); }
-  }
-  sections.push({title:"Ongeldige SVG's (parse-fout)",
-    badge:invalid.length===0?"ok":"err", count:invalid.length, items:invalid});
-
-  /* 6. Externe referenties (niet zelfstandig) */
-  const extRefs=[];
-  for(const [id,svg] of store){
-    try{
-      const doc=new DOMParser().parseFromString(svg,"image/svg+xml");
-      if(doc.querySelector("parsererror")) continue;
-      const hasExtImg=[...doc.querySelectorAll("image")].some(el=>el.getAttribute("href")||el.getAttribute("xlink:href"));
-      const hasExtUse=[...doc.querySelectorAll("use")].some(el=>{
-        const h=el.getAttribute("href")||el.getAttribute("xlink:href")||"";
-        return h.startsWith("http")||h.startsWith("//");
-      });
-      if(hasExtImg||hasExtUse) extRefs.push(id);
-    }catch(e){}
-  }
-  sections.push({title:"Externe referenties (niet zelfstandig als ExternalGraphic)",
-    badge:extRefs.length===0?"ok":"err", count:extRefs.length, items:extRefs});
-
-  /* render */
-  out.innerHTML=sections.map(sec=>{
-    const badgeTxt=sec.count===null?"?":sec.count===0?"✓ geen":String(sec.count);
-    const itemsHtml=sec.items.length
-      ?`<div class="ctrl-items">${sec.items.map(i=>`<div class="ctrl-item"><b>${i}</b></div>`).join("")}</div>`
-      :"";
-    return `<div class="ctrl-section">
-      <div class="ctrl-title">${sec.title}&ensp;<span class="ctrl-badge ${sec.badge}">${badgeTxt}</span></div>
-      ${itemsHtml}</div>`;
-  }).join("")+
-  `<p style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-top:6px">${ids.length} symbolen geanalyseerd — puur signalerend, geen automatische wijzigingen.</p>`;
-}
-
-document.getElementById("btnRunCtrl").onclick=runCtrl;
-
-/* ---------- manifest-export (Stap 6) ---------- */
-document.getElementById("btnExportManifest").onclick=()=>{
-  if(!store.size){ alert("Laad eerst de set."); return; }
-  const senders={};
-  for(const id of store.keys()){
-    const s=id.split("/")[0];
-    if(SENDERS[s]&&!senders[s]) senders[s]={...SENDERS[s]};
-  }
-  const symbols=[...store.keys()].sort().map(id=>{
-    const [sender,category,name]=id.split("/");
-    return {id,sender,category,name,path:`${sender}/${category}/${name}.svg`};
-  });
-  const manifest={
-    generated:new Date().toISOString(),
-    total:symbols.length,
-    senders,
-    symbols
-  };
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(new Blob([JSON.stringify(manifest,null,2)],{type:"application/json"}));
-  a.download="lcms-manifest.json"; a.click(); URL.revokeObjectURL(a.href);
 };
 
 /* ---------- ZIP-export nieuwe symbolen ---------- */
@@ -1518,7 +1155,6 @@ document.getElementById('themeToggle').onclick = () => {
 loadEigenSymbolen();
 loadEigenSenders();
 initManifest();
-rebuild();
 wizInit();
 loadCatalog();
 if(eigenSymbolen.size>0) document.getElementById("btnExportZip").style.display="block";
