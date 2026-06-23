@@ -157,6 +157,20 @@
   .ctrl-item{font-size:11.5px;font-family:var(--mono);padding:3px 0;color:var(--muted);border-bottom:1px solid rgba(42,52,62,.6)}
   .ctrl-item:last-child{border-bottom:none}
   .ctrl-item b{color:var(--ink)}
+  /* ---- catalogus detail ---- */
+  .cat-detail{display:none;position:fixed;inset:0;background:rgba(6,12,18,.72);z-index:50;align-items:center;justify-content:center;padding:24px}
+  .cat-detail.open{display:flex}
+  .cat-detail-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;width:min(460px,92vw);position:relative}
+  .cat-detail-close{position:absolute;top:10px;right:12px;width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:16px;line-height:1;cursor:pointer}
+  .cat-detail-close:hover{border-color:var(--accent)}
+  .cat-detail-preview{height:200px;display:flex;align-items:center;justify-content:center;border-radius:9px;margin-bottom:14px;
+    background:linear-gradient(45deg,#11161b 25%,transparent 25%),linear-gradient(-45deg,#11161b 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#11161b 75%),linear-gradient(-45deg,transparent 75%,#11161b 75%);
+    background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
+  .cat-detail-preview img{max-width:170px;max-height:170px}
+  .cat-detail-name{font-size:14px;font-weight:600;margin-bottom:6px;word-break:break-word}
+  .cat-copyrow{display:flex;gap:8px;margin-bottom:6px}
+  .cat-copyrow input{flex:1;font-family:var(--mono);font-size:11px}
+  #view-catalog .card .thumb img{max-width:74px;max-height:74px}
 </style>
 </head>
 <body>
@@ -164,15 +178,55 @@
   <h1>LCMS Symbool Bibliotheek</h1>
   <span class="sub" id="hdrSub">laad je <b>LCMS SVG</b>-map om te beginnen</span>
   <div class="tabs">
-    <div class="tab active" data-view="library">Bibliotheek</div>
+    <div class="tab active" data-view="catalog">Catalogus</div>
+    <div class="tab" data-view="library">Bibliotheek</div>
     <div class="tab" data-view="add">Nieuw symbool</div>
     <div class="tab" data-view="ctrl">Controle</div>
   </div>
 </header>
 
 <main>
+  <!-- ===== CATALOGUS ===== -->
+  <section class="view active" id="view-catalog">
+    <div class="lib">
+      <aside class="filters">
+        <input class="search" id="catSearch" placeholder="Zoek op naam…">
+        <h2>Type</h2>
+        <div id="catTypeFilters">
+          <div class="fitem active" data-cattype="all">Alle <span class="cnt" id="catCntAll"></span></div>
+          <div class="fitem" data-cattype="svg">SVG <span class="cnt" id="catCntSvg"></span></div>
+          <div class="fitem" data-cattype="png">PNG <span class="cnt" id="catCntPng"></span></div>
+        </div>
+        <h2>Map</h2>
+        <div id="catFolderFilters"></div>
+      </aside>
+      <div class="gridwrap">
+        <div class="statusbar" id="catStatus">Catalogus laden…</div>
+        <div class="grid" id="catGrid"></div>
+        <div class="empty" id="catEmpty" style="display:none">Geen symbolen die aan de filters voldoen.</div>
+      </div>
+    </div>
+    <div class="cat-detail" id="catDetail">
+      <div class="cat-detail-card">
+        <button class="cat-detail-close" id="catDetailClose" title="Sluiten">×</button>
+        <div class="cat-detail-preview" id="catDetailPreview"></div>
+        <div class="cat-detail-name" id="catDetailName"></div>
+        <label>Pages-URL</label>
+        <div class="cat-copyrow">
+          <input type="text" id="catPagesUrl" readonly>
+          <button class="btnsm" id="catCopyPages">Kopieer</button>
+        </div>
+        <label>raw-URL</label>
+        <div class="cat-copyrow">
+          <input type="text" id="catRawUrl" readonly>
+          <button class="btnsm" id="catCopyRaw">Kopieer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== LIBRARY ===== -->
-  <section class="view active" id="view-library">
+  <section class="view" id="view-library">
     <div class="lib">
       <aside class="filters">
         <input class="search" id="search" placeholder="Zoek op naam…">
@@ -466,6 +520,7 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
   document.getElementById("view-"+t.dataset.view).classList.add("active");
   if(t.dataset.view==="add") wizInit();
   if(t.dataset.view==="ctrl") runCtrl();
+  if(t.dataset.view==="catalog" && !CATALOG.length) loadCatalog();
 });
 
 /* ---------- map/bestanden laden (drag-&-drop + folder-picker) ---------- */
@@ -1290,12 +1345,131 @@ document.getElementById("btnExportZip").onclick=()=>{
   a.click(); URL.revokeObjectURL(a.href);
 };
 
+/* ============================================================
+   CATALOGUS (functionaliteit 1) — repo-brede svg/png browser
+   ============================================================ */
+const PAGES_BASE = 'https://imroi.github.io/diversen/';
+const RAW_BASE = 'https://raw.githubusercontent.com/imroi/diversen/main/';
+
+let CATALOG = [];
+let catSearchQ = "";
+let catTypeFilter = "all";   /* all | svg | png */
+let catFolderFilter = "*";
+
+async function loadCatalog() {
+  const status = document.getElementById('catStatus');
+  try {
+    const r = await fetch('catalog-manifest.json');
+    if (!r.ok) { status.textContent = 'Kon catalog-manifest.json niet laden (' + r.status + ').'; return; }
+    CATALOG = await r.json();
+  } catch (e) {
+    status.textContent = 'Kon catalog-manifest.json niet laden.';
+    return;
+  }
+  buildCatFolderFilters();
+  renderCatalog();
+}
+
+function buildCatFolderFilters() {
+  const folders = [...new Set(CATALOG.map(e => e.folder))].sort();
+  const el = document.getElementById('catFolderFilters');
+  const mk = (label, val) =>
+    `<div class="fitem${catFolderFilter === val ? ' active' : ''}" data-catfolder="${val}">${label}</div>`;
+  let html = mk('Alle mappen', '*');
+  folders.forEach(f => { html += mk(f, f); });
+  el.innerHTML = html;
+  el.querySelectorAll('.fitem').forEach(it => it.onclick = () => {
+    catFolderFilter = it.dataset.catfolder;
+    buildCatFolderFilters();
+    renderCatalog();
+  });
+}
+
+function catMatches(entry) {
+  if (catTypeFilter !== 'all' && entry.type !== catTypeFilter) return false;
+  if (catFolderFilter !== '*' && entry.folder !== catFolderFilter) return false;
+  if (catSearchQ && !entry.name.toLowerCase().includes(catSearchQ)) return false;
+  return true;
+}
+
+function renderCatalog() {
+  const all = CATALOG.length;
+  const svgCount = CATALOG.filter(e => e.type === 'svg').length;
+  const pngCount = CATALOG.filter(e => e.type === 'png').length;
+  document.getElementById('catCntAll').textContent = all;
+  document.getElementById('catCntSvg').textContent = svgCount;
+  document.getElementById('catCntPng').textContent = pngCount;
+
+  const shown = CATALOG.filter(catMatches);
+  const grid = document.getElementById('catGrid');
+  document.getElementById('catEmpty').style.display = shown.length ? 'none' : 'block';
+  document.getElementById('catStatus').textContent =
+    `${shown.length} van ${all} getoond` + (catFolderFilter !== '*' ? ` — map ${catFolderFilter}` : '') + '.';
+  grid.innerHTML = shown.map((e, i) => {
+    const lbl = e.name.replace(/[-_]/g, ' ');
+    return `<div class="card" data-catidx="${CATALOG.indexOf(e)}">
+      <div class="thumb"><img src="../${e.path}" alt="${e.name}" loading="lazy"></div>
+      <div class="nm">${lbl}</div>
+      <div class="meta">${e.type.toUpperCase()}</div></div>`;
+  }).join('');
+  grid.querySelectorAll('.card').forEach(c => c.onclick = () => {
+    const entry = CATALOG[Number(c.dataset.catidx)];
+    if (entry) showCatalogDetail(entry);
+  });
+}
+
+document.getElementById('catSearch').oninput = e => {
+  catSearchQ = e.target.value.toLowerCase();
+  renderCatalog();
+};
+document.querySelectorAll('#catTypeFilters .fitem').forEach(it => it.onclick = () => {
+  catTypeFilter = it.dataset.cattype;
+  document.querySelectorAll('#catTypeFilters .fitem')
+    .forEach(x => x.classList.toggle('active', x.dataset.cattype === catTypeFilter));
+  renderCatalog();
+});
+
+function showCatalogDetail(entry) {
+  const pagesUrl = PAGES_BASE + entry.path;
+  const rawUrl = RAW_BASE + entry.path;
+  document.getElementById('catDetailPreview').innerHTML =
+    `<img src="../${entry.path}" alt="${entry.name}">`;
+  document.getElementById('catDetailName').textContent = entry.name + '.' + entry.type;
+  document.getElementById('catPagesUrl').value = pagesUrl;
+  document.getElementById('catRawUrl').value = rawUrl;
+  document.getElementById('catDetail').classList.add('open');
+}
+
+function copyToClipboard(text, btn) {
+  const done = () => {
+    const old = btn.textContent;
+    btn.textContent = 'Gekopieerd';
+    setTimeout(() => { btn.textContent = old; }, 1200);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => done());
+  } else {
+    done();
+  }
+}
+
+document.getElementById('catCopyPages').onclick = () =>
+  copyToClipboard(document.getElementById('catPagesUrl').value, document.getElementById('catCopyPages'));
+document.getElementById('catCopyRaw').onclick = () =>
+  copyToClipboard(document.getElementById('catRawUrl').value, document.getElementById('catCopyRaw'));
+document.getElementById('catDetailClose').onclick = () =>
+  document.getElementById('catDetail').classList.remove('open');
+document.getElementById('catDetail').onclick = e => {
+  if (e.target.id === 'catDetail') document.getElementById('catDetail').classList.remove('open');
+};
+
 /* ---------- init ---------- */
 loadEigenSymbolen();
 loadEigenSenders();
 initManifest();
 rebuild();
 wizInit();
+loadCatalog();
 if(eigenSymbolen.size>0) document.getElementById("btnExportZip").style.display="block";
 </script>
 </body>
