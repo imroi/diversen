@@ -20,9 +20,17 @@ binnen het `diversen`-project en uitbreiden zodat SVG-iconen uit de map
   externe JS-bestanden.
 - De tool laadt zijn 235 LCMS-symbolen via `fetch()` op basis van
   `lcms-manifest.json` (server-modus) of via drag-&-drop (`file://`).
-- De "nieuw symbool"-wizard (stap 3 "Icoon") accepteert nu alleen een handmatig
-  geüpload SVG-bestand. De verwerking gebeurt in `ingestNewIcon()`: viewBox-detectie
-  (fallback 24×24), behoud van harde kleuren, en sliders voor schaal/verschuiving/recolor.
+- De "nieuw symbool"-wizard (stap 3 "Icoon") heeft naast de upload-knop **al een
+  miniatuur-grid** (`renderSymbolenGrid()`, regel 885) dat iconen uit `symbolen/`
+  toont; klik → `ingestNewIcon()`. De verwerking in `ingestNewIcon()` doet
+  viewBox-detectie (fallback 24×24), behoud van harde kleuren, en sliders voor
+  schaal/verschuiving/recolor — voor zowel grid- als upload-iconen.
+- **Blokkade voor publicatie:** `loadSymbolen()` (regel 869) vult dat grid door
+  `fetch('symbolen/')` te doen en de HTML directory-listing te schrapen op
+  `<a href="*.svg">`. Dat werkt onder `python -m http.server` (auto-index), maar
+  **niet op GitHub Pages**, dat geen directory-listings serveert (404). Daardoor
+  blijft het grid leeg op de gepubliceerde URL. Dit ontwerp lost dat op met een
+  gegenereerd manifest.
 - De map `lcms-bibliotheek/symbolen/` bevat ~25 losse SVG's met wisselende viewBoxes
   (o.a. 1200×1200, 400×400, 121×121) en harde kleuren.
 
@@ -33,7 +41,8 @@ binnen het `diversen`-project en uitbreiden zodat SVG-iconen uit de map
 | Bronmap voor iconen | Alleen `lcms-bibliotheek/symbolen/` |
 | Index-strategie | Gegenereerd manifest via een generator-script |
 | Taal generator | Python (geen dependencies, `python build_symbolen.py`) |
-| Icoon-keuze UI | Doorzoekbaar miniatuur-grid náást de bestaande upload-knop |
+| Icoon-keuze UI | Bestaand miniatuur-grid (geen zoekveld) náást de upload-knop |
+| Laad-route | Manifest eerst; directory-scrape als lokale fallback |
 | Publicatie-scope | Werkend op de gepubliceerde URL **en** vindbaar via een link |
 
 ## Architectuur & data-flow
@@ -67,12 +76,12 @@ recolor/schaal/verschuif-sliders identiek voor beide routes.
 - Gegenereerd artefact, wordt gecommit.
 
 ### `lcms-bibliotheek/index.html` (wijziging)
-- Bij laden in server-modus naast `lcms-manifest.json` ook `symbolen-manifest.json`
-  fetchen.
-- In wizard-stap 3: een doorzoekbaar miniatuur-grid ("Kies uit bibliotheek")
-  boven de bestaande "↑ SVG uploaden"-knop. Stijl volgt het bestaande `.sym-grid`.
-- Klik op een tegel: fetch de SVG-tekst van het bijbehorende `path` en geef die
-  door aan `ingestNewIcon()`. Preview verschijnt direct.
+- `loadSymbolen()` ombouwen: eerst `symbolen-manifest.json` fetchen en de daarin
+  vermelde paden laden in `symbolenCache` (werkt op GitHub Pages). Mislukt het
+  manifest, dan terugvallen op de huidige directory-scrape (`fetch('symbolen/')`)
+  zodat lokaal draaien zonder script-run blijft werken.
+- Het bestaande grid (`renderSymbolenGrid()`) en de klik → `ingestNewIcon()`-route
+  blijven ongewijzigd; ze werken zodra `symbolenCache` gevuld is. Geen zoekveld.
 
 ### Hoofd-`index.html` (project-root, wijziging)
 - Een zichtbare link naar de tool (`lcms-bibliotheek/`) toevoegen vanuit de
@@ -92,3 +101,4 @@ context (het doel van dit ontwerp) werkt het grid gewoon.
 - Automatisch (her)genereren van `lcms-manifest.json`.
 - Een CI-stap of build-pipeline voor het generator-script.
 - Drag-&-drop ondersteuning voor het grid (upload dekt de `file://`-route al).
+- Een zoekveld boven het grid (bij ~25 iconen niet nodig).
