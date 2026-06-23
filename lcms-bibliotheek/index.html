@@ -309,10 +309,23 @@
         <!-- Stap 3 -->
         <div id="wcStep3" style="display:none">
           <div class="wiz-title">Voeg een icoon toe</div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:8px 11px;background:var(--panel2);border:1px solid var(--line);border-radius:7px">
-            <span style="font-size:11px;color:var(--muted);flex:1">Buitenrandkleur</span>
-            <input type="color" id="clrOuter" value="#000000" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
-            <button id="btnOuterReset" style="background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 9px;border-radius:4px;cursor:pointer;font-size:10px;font-family:var(--mono)">Reset</button>
+          <div style="margin-bottom:14px;padding:10px 11px;background:var(--panel2);border:1px solid var(--line);border-radius:7px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+              <span style="font-size:11px;color:var(--muted)">Kleuren</span>
+              <button id="btnClrReset" style="background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 9px;border-radius:4px;cursor:pointer;font-size:10px;font-family:var(--mono)">Reset naar afzender</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span style="font-size:11px;color:var(--muted);flex:1">Buitenrand</span>
+              <input type="color" id="clrBuiten" value="#000000" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span style="font-size:11px;color:var(--muted);flex:1">Rand</span>
+              <input type="color" id="clrRand" value="#000000" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:11px;color:var(--muted);flex:1">Vul</span>
+              <input type="color" id="clrVul" value="#888888" style="width:42px;height:26px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:transparent;padding:1px">
+            </div>
           </div>
           <div class="wiz-sectlbl">Kies een symbool</div>
           <div class="sym-grid" id="symbolenGrid"><span style="color:var(--muted);font-size:11px">—</span></div>
@@ -892,12 +905,18 @@ let wizStep=1, wizPointer=null, wizSender=null;
 let newIconInner=null, newIconVb=null;
 let iconScaleFactor=1.0, iconDx=0, iconDy=0;
 let recolorToInk=false;
-let outerRingOverride=null; /* override voor de buitenrand-kleur in stap 3 */
+let vulOverride=null, randOverride=null, buitenOverride=null; /* per-kleur overrides in stap 3; null = volg afzender */
 
-function syncOuterPicker(){
-  const p=document.getElementById("clrOuter");
-  if(!p)return;
-  p.value=outerRingOverride||(SENDERS[wizSender]?.ink||"#000000");
+/* Zet de drie kleurkiezers op de effectieve kleuren: per kleur de override
+   indien gezet, anders de afzender-preset (vul=fill, rand=ink, buitenrand=buitenrand||#000). */
+function syncWizPickers(){
+  const s=SENDERS[wizSender];
+  const vEl=document.getElementById("clrVul");
+  const rEl=document.getElementById("clrRand");
+  const bEl=document.getElementById("clrBuiten");
+  if(vEl) vEl.value=vulOverride||(s?.fill||"#888888");
+  if(rEl) rEl.value=randOverride||(s?.ink||"#000000");
+  if(bEl) bEl.value=buitenOverride||(s?.buitenrand||"#000000");
 }
 
 /* Recolor-on-the-fly: vervang alle harde fill/stroke door currentColor.
@@ -996,7 +1015,7 @@ document.getElementById('btnUploadIcon').onclick = () => document.getElementById
 function renderPointerCards(){
   const el=document.getElementById("pointerCards");
   el.innerHTML=Object.entries(POINTER_TYPES).map(([key,pt])=>{
-    const preview=pt.shape("#2e3f50","#7bafc7");
+    const preview=pt.shape("#2e3f50","#7bafc7","#16202b");
     return `<div class="pcard${wizPointer===key?" sel":""}" data-key="${key}">
       <svg viewBox="0 0 121 121" xmlns="http://www.w3.org/2000/svg">${preview}</svg>
       <div class="pcard-lbl">${pt.label}</div><div class="pcard-desc">${pt.desc}</div></div>`;
@@ -1029,7 +1048,7 @@ function renderSenderCards(){
     }
     wizSender=c.dataset.key;
     el.querySelectorAll(".scard").forEach(x=>x.classList.toggle("sel",x.dataset.key===wizSender));
-    wizUpdateNav(); wizCompose();
+    syncWizPickers(); wizUpdateNav(); wizCompose();
   });
   el.querySelectorAll(".scard-del").forEach(btn=>btn.onclick=e=>{
     e.stopPropagation();
@@ -1048,7 +1067,7 @@ function wizGoStep(n){
     const s=document.getElementById("wstep"+i);
     s.classList.toggle("active",i===n); s.classList.toggle("done",i<n);
   });
-  if(n===3) syncOuterPicker();
+  if(n===3) syncWizPickers();
   wizUpdateNav();
 }
 function wizUpdateNav(){
@@ -1079,23 +1098,23 @@ function wizCompose(){
     out.innerHTML=""; meta.textContent="Kies een pointer-type om te beginnen";
     if(dl)dl.disabled=cp.disabled=true; return "";
   }
-  const fill=sender?.fill||"#888888";
-  const senderInk=sender?.ink||"#000000";
-  const outerInk=outerRingOverride||senderInk;
+  const vul=vulOverride||sender?.fill||"#888888";
+  const rand=randOverride||sender?.ink||"#000000";
+  const buitenrand=buitenOverride||sender?.buitenrand||"#000000";
   let iconEl="";
   if(newIconInner&&newIconVb){
     const iconW=newIconVb[2]||24,iconH=newIconVb[3]||24;
     const sc=round(pt.iconSize/Math.max(iconW,iconH)*iconScaleFactor);
     const tx=round(pt.iconCx-iconW*sc/2+iconDx),ty=round(pt.iconCy-iconH*sc/2+iconDy);
     if(recolorToInk){
-      const recolored=applyRecolor(newIconInner).replace(/currentColor/gi,senderInk);
-      iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})" fill="${senderInk}">${recolored}</g>`;
+      const recolored=applyRecolor(newIconInner).replace(/currentColor/gi,rand);
+      iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})" fill="${rand}">${recolored}</g>`;
     } else {
-      const inner=newIconInner.replace(/currentColor/gi,senderInk);
+      const inner=newIconInner.replace(/currentColor/gi,rand);
       iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})">${inner}</g>`;
     }
   }
-  const result=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121"><g>${pt.shape(fill,outerInk)}${iconEl}</g></svg>`;
+  const result=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121"><g>${pt.shape(vul,rand,buitenrand)}${iconEl}</g></svg>`;
   out.innerHTML=result;
   const nm=normalizeName(document.getElementById("addName")?.value||"")||"nieuw_symbool";
   meta.textContent=`${wizSender||"(afzender)"}/${wizPointer}/${nm}`;
@@ -1174,8 +1193,14 @@ document.getElementById("slDx").oninput=e=>{iconDx=+e.target.value;document.getE
 document.getElementById("slDy").oninput=e=>{iconDy=+e.target.value;document.getElementById("svalDy").textContent=e.target.value;wizCompose();};
 document.getElementById("cbRecolor").onchange=e=>{recolorToInk=e.target.checked;wizCompose();};
 
-document.getElementById("clrOuter").oninput=e=>{outerRingOverride=e.target.value;wizCompose();};
-document.getElementById("btnOuterReset").onclick=()=>{outerRingOverride=null;syncOuterPicker();wizCompose();};
+document.getElementById("clrVul").oninput=e=>{vulOverride=e.target.value;wizCompose();};
+document.getElementById("clrRand").oninput=e=>{randOverride=e.target.value;wizCompose();};
+document.getElementById("clrBuiten").oninput=e=>{buitenOverride=e.target.value;wizCompose();};
+document.getElementById("btnClrReset").onclick=()=>{
+  vulOverride=randOverride=buitenOverride=null;
+  syncWizPickers();
+  wizCompose();
+};
 
 document.getElementById("newSenderSave").onclick=()=>{
   const name=document.getElementById("newSenderName").value.trim();
