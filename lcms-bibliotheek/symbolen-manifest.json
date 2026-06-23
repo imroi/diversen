@@ -1,0 +1,94 @@
+[
+  {
+    "name": "bench",
+    "path": "symbolen/bench.svg"
+  },
+  {
+    "name": "buurt_gemeenschapshuis",
+    "path": "symbolen/buurt_gemeenschapshuis.svg"
+  },
+  {
+    "name": "electriciteit",
+    "path": "symbolen/electriciteit.svg"
+  },
+  {
+    "name": "energie_oov_pois",
+    "path": "symbolen/energie_oov_pois.svg"
+  },
+  {
+    "name": "evenementenhal_optie_1",
+    "path": "symbolen/evenementenhal_optie_1.svg"
+  },
+  {
+    "name": "evenementenhal_optie_2",
+    "path": "symbolen/evenementenhal_optie_2.svg"
+  },
+  {
+    "name": "fietsknooppunt_netwerken",
+    "path": "symbolen/fietsknooppunt_netwerken.svg"
+  },
+  {
+    "name": "forensische_en_geestelijke_zorg_oov_pois",
+    "path": "symbolen/forensische_en_geestelijke_zorg_oov_pois.svg"
+  },
+  {
+    "name": "ggz",
+    "path": "symbolen/ggz.svg"
+  },
+  {
+    "name": "hectopunten",
+    "path": "symbolen/hectopunten.svg"
+  },
+  {
+    "name": "hoger_en_wetenschappelijk_onderwijs",
+    "path": "symbolen/hoger_en_wetenschappelijk_onderwijs.svg"
+  },
+  {
+    "name": "incidenten_in_gebouwen_hoger_dan_20m",
+    "path": "symbolen/incidenten_in_gebouwen_hoger_dan_20m.svg"
+  },
+  {
+    "name": "jusitie",
+    "path": "symbolen/jusitie.svg"
+  },
+  {
+    "name": "knmi_waarneemstations",
+    "path": "symbolen/knmi_waarneemstations.svg"
+  },
+  {
+    "name": "logo",
+    "path": "symbolen/logo.svg"
+  },
+  {
+    "name": "middelbaar_beroepsonderwijs_mbo",
+    "path": "symbolen/middelbaar_beroepsonderwijs_mbo.svg"
+  },
+  {
+    "name": "natuurbrand",
+    "path": "symbolen/natuurbrand.svg"
+  },
+  {
+    "name": "oliepompinstallatie",
+    "path": "symbolen/oliepompinstallatie.svg"
+  },
+  {
+    "name": "overige_onderwijsinstelling",
+    "path": "symbolen/overige_onderwijsinstelling.svg"
+  },
+  {
+    "name": "prorail_station",
+    "path": "symbolen/prorail_station.svg"
+  },
+  {
+    "name": "speciaal_onderwijs",
+    "path": "symbolen/speciaal_onderwijs.svg"
+  },
+  {
+    "name": "vaartuig",
+    "path": "symbolen/vaartuig.svg"
+  },
+  {
+    "name": "verkeerslichten",
+    "path": "symbolen/verkeerslichten.svg"
+  }
+]
