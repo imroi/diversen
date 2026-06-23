@@ -378,7 +378,9 @@
    ============================================================ */
 let MANIFEST = null;
 
-/* Fallback sender-info (ook in manifest, maar direct beschikbaar zonder fetch) */
+/* Fallback sender-info (ook in manifest, maar direct beschikbaar zonder fetch).
+   Optioneel veld `buitenrand` per afzender; afwezig → default '#000' (gelezen in
+   de maker als `sender.buitenrand || '#000'`). Geen manifest-wijziging nodig. */
 const SENDERS = {
   algemeen:      {label:"Algemeen",       fill:"#D5D5D5", ink:"#000000"},
   politie:       {label:"Politie",        fill:"#182866", ink:"#FFFFFF"},
@@ -842,26 +844,30 @@ function getElBBox(el, svgRoot) {
 
 const POINTER_TYPES = {
   incident:    {label:"Incident",    desc:"Badge met punt",   iconCx:61, iconCy:40, iconSize:52,
-    shape:(f,s)=>`<path d="M60.5,6 L115,60.5 L60.5,115 L6,60.5 Z" fill="${f}" stroke="${s}" stroke-width="3"/>`},
+    shape:(vul,rand,buitenrand)=>`<path d="M60.5,6 L115,60.5 L60.5,115 L6,60.5 Z" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
   eenheid:     {label:"Eenheid",     desc:"Ronde vorm",       iconCx:60, iconCy:60, iconSize:58,
-    shape:(f,s)=>`<circle cx="60.5" cy="60.5" r="54" fill="${f}" stroke="${s}" stroke-width="3"/>`},
+    shape:(vul,rand,buitenrand)=>`<circle cx="60.5" cy="60.5" r="54" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
   object:      {label:"Object",      desc:"Spraakballon",     iconCx:61, iconCy:55, iconSize:65,
-    shape:(f,s)=>`<rect x="8" y="8" width="105" height="105" rx="12" fill="${f}" stroke="${s}" stroke-width="3"/>`},
+    shape:(vul,rand,buitenrand)=>`<rect x="8" y="8" width="105" height="105" rx="12" fill="${vul}" stroke="${rand}" stroke-width="3"/>`},
   gebeurtenis: {label:"Gebeurtenis", desc:"Druppel-ballon",   iconCx:61, iconCy:51, iconSize:58,
-    shape:(f,s)=>`<path d="M60.5,116 L31,85 A46,46,0,1,1,90,85 Z" fill="${f}" stroke="${s}" stroke-width="3" stroke-linejoin="round"/>`},
+    shape:(vul,rand,buitenrand)=>`<path d="M60.5,116 L31,85 A46,46,0,1,1,90,85 Z" fill="${vul}" stroke="${rand}" stroke-width="3" stroke-linejoin="round"/>`},
 };
 
-/* vervangt de vul- en randkleur in een template SVG met de afzenderkleuren.
-   Template-conventie: het zwarte vlak (#000/#000000/black) is de rand,
-   het overige gekleurde vlak (niet 'none') is de vulling. */
-function templateShape(svgStr, fill, ink) {
+/* Kleurt een template-SVG in met drie onafhankelijke kleuren:
+   - vul        → elk gekleurd vlak dat NIET zwart en NIET 'none' is (binnenvlak)
+   - rand       → het zwarte vlak (#000/#000000/black) = de ringband
+   - buitenrand → als dunne buitenlijn op datzelfde zwarte (ring)pad, via stroke
+   De templates hebben twee paden: een zwart ringpad en een binnenvlak; de
+   buitenrand bestaat niet als eigen vlak en wordt daarom als stroke op het
+   ringpad gerealiseerd (stroke-width 2). Geeft de inner-markup van de SVG terug. */
+function templateShape(svgStr, vul, rand, buitenrand) {
   let out = svgStr;
-  /* eerst inner-fill: alles wat NIET zwart en NIET none is */
-  out = out.replace(/\bfill="(?!none|#000(?:000)?|black)([^"]*)"/gi, `fill="${fill}"`);
-  /* daarna de rand: zwart → ink */
-  if (ink) {
-    out = out.replace(/\bfill="(#000(?:000)?|black)"/gi, `fill="${ink}"`);
-  }
+  /* 1. binnenvlak: alles wat NIET zwart en NIET none is → vul */
+  out = out.replace(/\bfill="(?!none|#000(?:000)?|black)([^"]*)"/gi, `fill="${vul}"`);
+  /* 2. ringpad: zwart → rand, en voeg meteen de buitenrand-stroke toe op datzelfde
+        element (één regex-vervanging zodat de stroke alleen op de ring(en) landt) */
+  out = out.replace(/\bfill="(#000(?:000)?|black)"/gi,
+    `fill="${rand}" stroke="${buitenrand}" stroke-width="2"`);
   const inner = out.match(/<svg[^>]*>([\s\S]*?)<\/svg>/i);
   return inner ? inner[1].trim() : '';
 }
@@ -875,7 +881,7 @@ async function fetchTemplates() {
       if (!r.ok) continue;
       const svg = await r.text();
       const pt = POINTER_TYPES[key];
-      pt.shape = (fill, ink) => templateShape(svg, fill, ink);
+      pt.shape = (vul, rand, buitenrand) => templateShape(svg, vul, rand, buitenrand);
       loaded++;
     } catch(e) {}
   }
