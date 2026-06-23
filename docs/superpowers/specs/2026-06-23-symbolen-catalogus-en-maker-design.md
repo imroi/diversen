@@ -1,0 +1,153 @@
+# Ontwerp: Symbolen-catalogus + symbool-maker (één app, twee tabs)
+
+**Datum:** 2026-06-23
+**Status:** Ter review (ontwerpfase)
+**Vervangt:** `2026-06-23-lcms-symbolen-icoon-keuze-design.md` (dat ontwerp gaat op in dit grotere geheel; de al-gecommitte Tasks 1 & 2 worden gegeneraliseerd, zie "Migratie").
+
+## Doel
+
+De bestaande tool in `lcms-bibliotheek/` uitbouwen tot één web-app met twee
+functionaliteiten, en deze als hoofdingang van het project ontsluiten:
+
+1. **Catalogus** — alle SVG-iconen uit de hele repo zichtbaar en doorzoekbaar;
+   gebruikers kopiëren de directe link naar een symbool voor gebruik in hun
+   kaartplatform.
+2. **Nieuw symbool** — nieuwe symbolen maken op basis van 4 templates, met keuze
+   voor drie kleuren (buitenrand, rand, vul) en vooringestelde afzenderkleuren.
+
+## Context
+
+- Het `diversen`-project is volledig statisch, gepubliceerd via GitHub Pages op
+  `https://imroi.github.io/diversen/`. De huidige root `index.html` is een
+  mappen-browser die via de GitHub API de top-level mappen toont.
+- De repo bevat ~854 `*.svg` verspreid over vele mappen (kro, knmi, kvk, melvin,
+  lcms, lcms-bibliotheek, …). Deze symbolen zijn al in gebruik; **hun paden mogen
+  niet veranderen**.
+- `lcms-bibliotheek/index.html` is een zelfstandige app (vanilla JS) met al een
+  tab-structuur: een "Bibliotheek"-tab en een "Nieuw symbool"-wizard. De wizard
+  kent 4 pointer-templates (incident, eenheid, object, gebeurtenis), vaste
+  afzenders met preset-kleuren, en `ingestNewIcon()` voor icoonverwerking.
+- De 4 template-SVG's (`lcms-bibliotheek/lcms-svgs/template/*.svg`) hebben nu
+  **twee** gekleurde vlakken: een ring (`fill="#000"`) en een binnenvlak
+  (`fill="#D5D5D5"`). De afzender-`ink` kleurt de ring, de afzender-`fill` het
+  binnenvlak.
+- Referentie voor de gewenste catalogus-UX (klik symbool → kopieer link):
+  `https://cogocollect.github.io/symbols-data4oov/`.
+
+## Beslissingen (uit brainstorm)
+
+| Onderwerp | Keuze |
+|---|---|
+| Catalogus-scope | Alle `*.svg` in de hele repo |
+| Kopieer-link formaat | Beide tonen: GitHub Pages-URL én raw-URL, elk met kopieerknop |
+| Indexering | Gegenereerd `catalog-manifest.json`, automatisch ververst door een GitHub Action bij push |
+| Structuur | Eén app, twee tabs (Catalogus + Nieuw symbool), voortbouwend op `lcms-bibliotheek/index.html` |
+| Plaatsing | App blijft op `/lcms-bibliotheek/`; de root-landing krijgt een prominente knop ernaartoe |
+| Kleur-mapping | Template-ring splitsen in buitenrand (dunne buitenlijn) + rand (ringband); plus vul (binnenvlak) = 3 regio's |
+| Icoon-bron maker | Kiezen uit de catalogus + eigen SVG uploaden |
+| Buitenrand-default | Zwart (`#000`) voor alle afzenders |
+
+## Architectuur
+
+```
+build_catalog.py  ──scant hele repo──▶  lcms-bibliotheek/catalog-manifest.json
+       ▲ (GitHub Action draait dit bij elke push, commit het manifest)        │
+                                                                              │ fetch
+lcms-bibliotheek/index.html ──┬── Tab "Catalogus"  : grid + filters + kopieer-link
+                              └── Tab "Nieuw symbool": templates(3 kleuren) + icoon uit catalogus/upload
+
+index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
+```
+
+## Componenten
+
+### 1. `build_catalog.py` (nieuw, in repo-root)
+- Scant de repo recursief naar `*.svg`, exclusief `.git/`.
+- Schrijft `lcms-bibliotheek/catalog-manifest.json`: een array van
+  `{ "name": "<bestandsnaam-zonder-.svg>", "folder": "<map-pad>", "path": "<repo-relatief-pad>" }`,
+  gesorteerd op `path`. Voorbeeld: `{ "name": "natuurbrand", "folder": "lcms-bibliotheek/symbolen", "path": "lcms-bibliotheek/symbolen/natuurbrand.svg" }`.
+- Standaardbibliotheek only; draaibaar met `python3 build_catalog.py`.
+- **Open detail (spec-review):** template-SVG's (`lcms-bibliotheek/lcms-svgs/template/*.svg`)
+  worden wél meegenomen tenzij anders besloten; `symbolen/files.zip` is geen `.svg`
+  en valt vanzelf buiten de scan.
+
+### 2. `.github/workflows/build-catalog.yml` (nieuw)
+- Trigger: push naar `main`.
+- Stappen: checkout → `python3 build_catalog.py` → als `catalog-manifest.json`
+  wijzigde, commit & push het terug (met `[skip ci]` in de message om een lus te
+  voorkomen). Vereist `contents: write`-permissie.
+- Resultaat: beheerder voegt een SVG toe en pusht; het manifest wordt vanzelf
+  bijgewerkt.
+
+### 3. `lcms-bibliotheek/index.html` — Tab "Catalogus" (func 1)
+- Laadt `catalog-manifest.json` via `fetch()`.
+- Toont een doorzoekbaar grid (zoekveld op naam) met een filter per map/afzender.
+- Previews worden geladen via relatief pad (`../<path>`, want de app staat één
+  map diep).
+- Klik op een symbool → detailpaneel met grote preview en **twee** velden met
+  kopieerknop:
+  - Pages-URL: `https://imroi.github.io/diversen/<path>`
+  - raw-URL: `https://raw.githubusercontent.com/imroi/diversen/main/<path>`
+- Deze tab vervangt de huidige LCMS-specifieke "Bibliotheek"-tab als
+  browse-functie; LCMS-mappen verschijnen gewoon als filter.
+
+### 4. `lcms-bibliotheek/index.html` — Tab "Nieuw symbool" (func 2)
+- **Drie kleurkiezers:** buitenrand, rand, vul.
+- **Afzender-presets:** kies een vaste afzender → de drie kleuren worden
+  voorgevuld (vul = afzender-fill, rand = afzender-ink, buitenrand = `#000`); elke
+  kleur is daarna handmatig te overschrijven.
+- **Icoon-bron:** kies een icoon uit de catalogus (zelfde data als Tab 1) óf
+  upload een eigen SVG; beide lopen door de bestaande `ingestNewIcon()`-pijplijn.
+- Output: zelfstandige 121×121 SVG, te downloaden/kopiëren (zoals nu).
+
+### 5. Template-SVG's met 3 kleurregio's (wijziging)
+- De 4 bestanden in `lcms-bibliotheek/lcms-svgs/template/` krijgen een derde,
+  apart inkleurbare regio zodat buitenrand, rand en vul onafhankelijk te zetten
+  zijn.
+- **Conventie:** elk van de drie regio's draagt een eigen herkenbare
+  sentinel-kleur in het template-SVG, zodat de recolor-logica (uitbreiding van
+  `templateShape()`) elke regio gericht kan vervangen door de gekozen kleur:
+  vul-regio (`#D5D5D5`), rand-regio (`#000`), en een nieuwe buitenrand-regio met
+  een eigen sentinel.
+- **Open detail (uitwerking in plan):** de exacte SVG-techniek voor de dunne
+  buitenlijn (extra outline-path of `stroke` op de ringvorm) wordt in het
+  implementatieplan vastgelegd; de spec legt alleen de eis (3 onafhankelijke
+  regio's) en de conventie vast.
+
+### 6. `index.html` (root) — doorverwijzing (wijziging)
+- Voeg een prominente knop/link toe naar `lcms-bibliotheek/` ("Symbolen-app" of
+  vergelijkbaar), zodat de app de hoofdingang is. De mappen-browser blijft
+  verder ongewijzigd.
+
+## Datamodel: afzenderkleuren
+
+`SENDERS` breidt uit van `{label, fill, ink}` naar `{label, fill, ink, buitenrand}`.
+- `vul`  ← `fill`
+- `rand` ← `ink`
+- `buitenrand` ← `buitenrand` (default `#000` voor alle bestaande afzenders)
+
+## Migratie van het al-gecommitte werk (Tasks 1 & 2)
+
+- `build_symbolen.py` (alleen `symbolen/`) wordt **gegeneraliseerd** naar
+  `build_catalog.py` (hele repo). `build_symbolen.py` + `symbolen-manifest.json`
+  + `test_build_symbolen.py` worden vervangen/verwijderd ten gunste van de
+  catalogus-variant (met een eigen test).
+- `loadSymbolen()` (Task 2) gaat op in de catalogus-laadlogica en de
+  icoon-keuze van de maker.
+
+## Buiten scope (YAGNI)
+
+- Authenticatie/accounts; de catalogus is publiek lees-only.
+- Wijzigen van bestaande symboolpaden of mapstructuur.
+- Server-side rendering of een build-stap voor de app zelf (blijft één statisch
+  HTML-bestand met vanilla JS).
+- Vervangen of herzien van de per-map preview-pagina's met SLD/GeoStyler-export.
+- Behoud-beslissingen over bestaande LCMS-specifieke extra's (Controle-tab,
+  localStorage "mijn symbolen", ZIP-export) — die blijven as-is tenzij ze direct
+  botsen met bovenstaande.
+
+## Open punten voor spec-review
+
+1. Template-SVG's wel/niet in de catalogus opnemen (voorstel: wel).
+2. Of de app-map `lcms-bibliotheek/` hernoemd moet worden nu hij breder is dan
+   LCMS (voorstel: laten staan om churn te vermijden).
