@@ -156,3 +156,26 @@ index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
 1. **Template-SVG's worden in de catalogus opgenomen** (zoals alle andere SVG's).
 2. **De app-map blijft `lcms-bibliotheek/`** — niet hernoemen, om URL-churn te
    vermijden.
+
+## Revisie 1 — na lokale test (2026-06-23)
+
+Feedback na het lokaal testen van Plan A, met de doorgevoerde keuzes:
+
+1. Root-`index.html` kreeg `<meta charset="UTF-8">` (de "▶"-knop toonde mojibake).
+2. **Bibliotheek-tab verwijderd** — dupliceerde de catalogus. *Interim:* alleen de
+   tab is weg; de view + bijbehorende JS blijven (verborgen) staan omdat de maker
+   er nog mee verweven is (`saveEigenSymbool → rebuild()`, `initManifest → lzServer`).
+   Volledige code-opruiming gebeurt in **Plan B** (maker-herbouw).
+3. Catalogus-filters herbouwd en geverifieerd (de map-filter werkte niet/onhandig).
+4. Lelijke diepe-pad "Map"-filter verwijderd.
+5. **Filters = Type + Bron + Afzender + Categorie.** Bron = hoofdmap (kro, knmi,
+   brandkranen, lcms-bibliotheek, …; 23 stuks). Afzender (9 LCMS-afzenders) en
+   Categorie (eenheden/gebeurtenissen/incidenten/objecten) worden afgeleid uit
+   LCMS-paden `lcms-bibliotheek/lcms-svgs/<afzender>/<categorie>/<naam>.svg`;
+   niet-LCMS-bestanden hebben deze niet (afzender/categorie-filter narrowt dan
+   vanzelf naar LCMS).
+6. **Controle-tab verwijderd** (geen icoon-import meer nodig). *Interim:* zelfde
+   aanpak als punt 2 — tab weg, view/JS-opruiming in Plan B.
+7. **Thema: licht standaard + dark-toggle** (knop in de header; voorkeur in
+   localStorage `lcms_theme`).
+8. "256/235 geladen"-teller verdween met het weghalen van de Bibliotheek-tab.
