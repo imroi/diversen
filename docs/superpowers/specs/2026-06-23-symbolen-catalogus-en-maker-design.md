@@ -1,7 +1,7 @@
 # Ontwerp: Symbolen-catalogus + symbool-maker (één app, twee tabs)
 
 **Datum:** 2026-06-23
-**Status:** Ter review (ontwerpfase)
+**Status:** Goedgekeurd (ontwerpfase)
 **Vervangt:** `2026-06-23-lcms-symbolen-icoon-keuze-design.md` (dat ontwerp gaat op in dit grotere geheel; de al-gecommitte Tasks 1 & 2 worden gegeneraliseerd, zie "Migratie").
 
 ## Doel
@@ -151,8 +151,8 @@ index.html (root) ── prominente knop ──▶ lcms-bibliotheek/
   localStorage "mijn symbolen", ZIP-export) — die blijven as-is tenzij ze direct
   botsen met bovenstaande.
 
-## Open punten voor spec-review
+## Besliste punten (waren open in review)
 
-1. Template-SVG's wel/niet in de catalogus opnemen (voorstel: wel).
-2. Of de app-map `lcms-bibliotheek/` hernoemd moet worden nu hij breder is dan
-   LCMS (voorstel: laten staan om churn te vermijden).
+1. **Template-SVG's worden in de catalogus opgenomen** (zoals alle andere SVG's).
+2. **De app-map blijft `lcms-bibliotheek/`** — niet hernoemen, om URL-churn te
+   vermijden.
