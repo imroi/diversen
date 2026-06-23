@@ -11,6 +11,12 @@
     --mono:ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
     --sans:"Segoe UI",system-ui,-apple-system,sans-serif;
   }
+  body.light{
+    --bg:#ffffff; --panel:#f4f6f8; --panel2:#e9edf1; --line:#d4dade;
+    --ink:#1a2027; --muted:#5b6770; --accent:#0a84d6; --ok:#1a9e6e; --warn:#b9821a; --err:#d63b3b;
+  }
+  .theme-toggle{margin-left:14px;padding:7px 12px;border-radius:7px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);font-size:12px;cursor:pointer;font-family:var(--sans);white-space:nowrap}
+  .theme-toggle:hover{border-color:var(--accent)}
   *{box-sizing:border-box}
   html,body{margin:0;height:100%}
   body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
@@ -173,16 +179,15 @@
   #view-catalog .card .thumb img{max-width:74px;max-height:74px}
 </style>
 </head>
-<body>
+<body class="light">
 <header>
   <h1>LCMS Symbool Bibliotheek</h1>
   <span class="sub" id="hdrSub">laad je <b>LCMS SVG</b>-map om te beginnen</span>
   <div class="tabs">
     <div class="tab active" data-view="catalog">Catalogus</div>
-    <div class="tab" data-view="library">Bibliotheek</div>
     <div class="tab" data-view="add">Nieuw symbool</div>
-    <div class="tab" data-view="ctrl">Controle</div>
   </div>
+  <button id="themeToggle" class="theme-toggle" title="Wissel licht/donker thema">Donker</button>
 </header>
 
 <main>
@@ -197,8 +202,12 @@
           <div class="fitem" data-cattype="svg">SVG <span class="cnt" id="catCntSvg"></span></div>
           <div class="fitem" data-cattype="png">PNG <span class="cnt" id="catCntPng"></span></div>
         </div>
-        <h2>Map</h2>
-        <div id="catFolderFilters"></div>
+        <h2>Bron</h2>
+        <div id="catBronFilters"></div>
+        <h2>Afzender</h2>
+        <div id="catAfzFilters"></div>
+        <h2>Categorie</h2>
+        <div id="catCatFilters"></div>
       </aside>
       <div class="gridwrap">
         <div class="statusbar" id="catStatus">Catalogus laden…</div>
@@ -1354,7 +1363,17 @@ const RAW_BASE = 'https://raw.githubusercontent.com/imroi/diversen/main/';
 let CATALOG = [];
 let catSearchQ = "";
 let catTypeFilter = "all";   /* all | svg | png */
-let catFolderFilter = "*";
+let catBronFilter = "*";
+let catAfzFilter = "*";
+let catCatFilter = "*";
+
+/* afgeleide velden uit het pad — afzender/categorie alleen voor LCMS-symbolen
+   (lcms-bibliotheek/lcms-svgs/<afzender>/<categorie>/<naam>.svg) */
+function catBron(e){ return e.path.split('/')[0]; }
+function catAfz(e){ const p=e.path.split('/'); return (p[0]==='lcms-bibliotheek' && p[1]==='lcms-svgs' && p.length>=5) ? p[2] : null; }
+function catCat(e){ const p=e.path.split('/'); return (p[0]==='lcms-bibliotheek' && p[1]==='lcms-svgs' && p.length>=5) ? p[3] : null; }
+function afzLabel(k){ return (typeof SENDERS!=='undefined' && SENDERS[k] && SENDERS[k].label) ? SENDERS[k].label : k; }
+function catLabel(k){ return k ? k.charAt(0).toUpperCase()+k.slice(1).replace(/[-_]/g,' ') : k; }
 
 async function loadCatalog() {
   const status = document.getElementById('catStatus');
@@ -1366,28 +1385,42 @@ async function loadCatalog() {
     status.textContent = 'Kon catalog-manifest.json niet laden.';
     return;
   }
-  buildCatFolderFilters();
+  buildCatFilters();
   renderCatalog();
 }
 
-function buildCatFolderFilters() {
-  const folders = [...new Set(CATALOG.map(e => e.folder))].sort();
-  const el = document.getElementById('catFolderFilters');
+function buildCatFilters() {
+  const bronnen = [...new Set(CATALOG.map(catBron))].sort();
+  const afz = [...new Set(CATALOG.map(catAfz).filter(Boolean))].sort();
+  const cats = [...new Set(CATALOG.map(catCat).filter(Boolean))].sort();
+  renderFilterList('catBronFilters', bronnen, v => v, 'Alle bronnen',
+    () => catBronFilter, v => { catBronFilter = v; });
+  renderFilterList('catAfzFilters', afz, afzLabel, 'Alle afzenders',
+    () => catAfzFilter, v => { catAfzFilter = v; });
+  renderFilterList('catCatFilters', cats, catLabel, 'Alle categorieën',
+    () => catCatFilter, v => { catCatFilter = v; });
+}
+
+function renderFilterList(containerId, values, labelFn, allLabel, getCur, setCur) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
   const mk = (label, val) =>
-    `<div class="fitem${catFolderFilter === val ? ' active' : ''}" data-catfolder="${val}">${label}</div>`;
-  let html = mk('Alle mappen', '*');
-  folders.forEach(f => { html += mk(f, f); });
+    `<div class="fitem${getCur() === val ? ' active' : ''}" data-val="${val}">${label}</div>`;
+  let html = mk(allLabel, '*');
+  values.forEach(v => { html += mk(labelFn(v), v); });
   el.innerHTML = html;
   el.querySelectorAll('.fitem').forEach(it => it.onclick = () => {
-    catFolderFilter = it.dataset.catfolder;
-    buildCatFolderFilters();
+    setCur(it.dataset.val);
+    buildCatFilters();
     renderCatalog();
   });
 }
 
 function catMatches(entry) {
   if (catTypeFilter !== 'all' && entry.type !== catTypeFilter) return false;
-  if (catFolderFilter !== '*' && entry.folder !== catFolderFilter) return false;
+  if (catBronFilter !== '*' && catBron(entry) !== catBronFilter) return false;
+  if (catAfzFilter !== '*' && catAfz(entry) !== catAfzFilter) return false;
+  if (catCatFilter !== '*' && catCat(entry) !== catCatFilter) return false;
   if (catSearchQ && !entry.name.toLowerCase().includes(catSearchQ)) return false;
   return true;
 }
@@ -1403,8 +1436,7 @@ function renderCatalog() {
   const shown = CATALOG.filter(catMatches);
   const grid = document.getElementById('catGrid');
   document.getElementById('catEmpty').style.display = shown.length ? 'none' : 'block';
-  document.getElementById('catStatus').textContent =
-    `${shown.length} van ${all} getoond` + (catFolderFilter !== '*' ? ` — map ${catFolderFilter}` : '') + '.';
+  document.getElementById('catStatus').textContent = `${shown.length} van ${all} getoond.`;
   grid.innerHTML = shown.map((e, i) => {
     const lbl = e.name.replace(/[-_]/g, ' ');
     return `<div class="card" data-catidx="${CATALOG.indexOf(e)}">
@@ -1461,6 +1493,23 @@ document.getElementById('catDetailClose').onclick = () =>
   document.getElementById('catDetail').classList.remove('open');
 document.getElementById('catDetail').onclick = e => {
   if (e.target.id === 'catDetail') document.getElementById('catDetail').classList.remove('open');
+};
+
+/* ---------- thema (licht standaard, met toggle) ---------- */
+(function initTheme(){
+  const saved = localStorage.getItem('lcms_theme');
+  if (saved === 'dark') document.body.classList.remove('light');
+  else if (saved === 'light') document.body.classList.add('light');
+})();
+function syncThemeBtn(){
+  const b = document.getElementById('themeToggle');
+  if (b) b.textContent = document.body.classList.contains('light') ? 'Donker' : 'Licht';
+}
+syncThemeBtn();
+document.getElementById('themeToggle').onclick = () => {
+  document.body.classList.toggle('light');
+  localStorage.setItem('lcms_theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  syncThemeBtn();
 };
 
 /* ---------- init ---------- */
