@@ -328,6 +328,7 @@
             </div>
           </div>
           <div class="wiz-sectlbl">Kies een symbool</div>
+          <input type="text" id="makerIconSearch" placeholder="Zoek icoon op naam…" style="margin-bottom:7px">
           <div class="sym-grid" id="symbolenGrid"><span style="color:var(--muted);font-size:11px">—</span></div>
           <div class="wiz-sectlbl" style="margin-top:10px">Of upload een eigen SVG</div>
           <input type="file" id="addIcon" accept=".svg,image/svg+xml" style="display:none">
@@ -500,7 +501,6 @@ async function initManifest() {
     rebuild();
     fetchTemplates();
     fetchAssets();
-    loadSymbolen();
   } catch(e) {
     /* file:// of geen manifest — stille fallback naar drag-&-drop */
   }
@@ -949,68 +949,41 @@ function isLightColor(hex){
   return(0.299*r+0.587*g+0.114*b)>180;
 }
 
-/* ---- symbolen-picker ---- */
-const symbolenCache = {};
-let selectedSymbol = null;
+/* ---- icoon-picker (uit de CATALOG, alleen svg-entries) ---- */
+let makerIconSel = null;       /* path van het gekozen catalogus-icoon (voor .sel) */
+let makerIconQ = "";           /* zoekterm op naam */
 
-async function loadSymbolen() {
-  /* Primair: gegenereerd manifest (werkt op GitHub Pages, geen directory-listing nodig) */
-  let loaded = false;
-  try {
-    const r = await fetch('symbolen-manifest.json');
-    if (r.ok) {
-      const list = await r.json();
-      for (const entry of list) {
-        try {
-          const r2 = await fetch(entry.path);
-          if (r2.ok) {
-            symbolenCache[entry.path.split('/').pop()] = await r2.text();
-            loaded = true;
-          }
-        } catch(e) {}
-      }
-    }
-  } catch(e) {}
-  /* Fallback: directory-listing schrapen (bv. lokaal via `python -m http.server`) */
-  if (!loaded) {
-    try {
-      const r = await fetch('symbolen/');
-      if (!r.ok) return;
-      const html = await r.text();
-      const names = [...html.matchAll(/href="([^"#?]+\.svg)"/gi)].map(m => m[1]);
-      for (const name of names) {
-        try {
-          const r2 = await fetch('symbolen/' + name);
-          if (r2.ok) symbolenCache[name] = await r2.text();
-        } catch(e) {}
-      }
-    } catch(e) {}
-  }
-  renderSymbolenGrid();
-}
-
-function renderSymbolenGrid() {
+function renderMakerIconGrid() {
   const el = document.getElementById('symbolenGrid');
   if (!el) return;
-  const entries = Object.entries(symbolenCache);
-  if (!entries.length) {
-    el.innerHTML = '<span style="color:var(--muted);font-size:11px">Geen symbolen gevonden in symbolen/</span>';
+  if (!CATALOG.length) {
+    el.innerHTML = '<span style="color:var(--muted);font-size:11px">Catalogus nog niet geladen…</span>';
     return;
   }
-  el.innerHTML = entries.map(([name, svg]) => {
-    const lbl = name.replace(/\.svg$/i, '').replace(/[-_]/g, ' ');
-    return `<div class="symcard${selectedSymbol===name?' sel':''}" data-name="${name}">
-      <div class="sym-thumb">${svg}</div>
+  let svgs = CATALOG.filter(e => e.type === 'svg');
+  if (makerIconQ) svgs = svgs.filter(e => e.name.toLowerCase().includes(makerIconQ));
+  if (!svgs.length) {
+    el.innerHTML = '<span style="color:var(--muted);font-size:11px">Geen symbolen gevonden.</span>';
+    return;
+  }
+  el.innerHTML = svgs.map(e => {
+    const lbl = e.name.replace(/[-_]/g, ' ');
+    return `<div class="symcard${makerIconSel===e.path?' sel':''}" data-path="${e.path}">
+      <div class="sym-thumb"><img src="../${e.path}" alt="${e.name}" loading="lazy" style="width:40px;height:40px;object-fit:contain"></div>
       <div class="sym-lbl">${lbl}</div></div>`;
   }).join('');
-  el.querySelectorAll('.symcard').forEach(c => c.onclick = () => {
-    selectedSymbol = c.dataset.name;
-    el.querySelectorAll('.symcard').forEach(x => x.classList.toggle('sel', x.dataset.name === selectedSymbol));
-    ingestNewIcon(symbolenCache[selectedSymbol]);
+  el.querySelectorAll('.symcard').forEach(c => c.onclick = async () => {
+    makerIconSel = c.dataset.path;
+    el.querySelectorAll('.symcard').forEach(x => x.classList.toggle('sel', x.dataset.path === makerIconSel));
+    try {
+      const r = await fetch('../' + makerIconSel);
+      if (r.ok) ingestNewIcon(await r.text());
+    } catch (e) {}
   });
 }
 
 document.getElementById('btnUploadIcon').onclick = () => document.getElementById('addIcon').click();
+document.getElementById('makerIconSearch').oninput = e => { makerIconQ = e.target.value.toLowerCase(); renderMakerIconGrid(); };
 
 function renderPointerCards(){
   const el=document.getElementById("pointerCards");
@@ -1080,6 +1053,7 @@ function wizUpdateNav(){
 }
 function wizInit(){
   renderPointerCards(); renderSenderCards();
+  renderMakerIconGrid();
   wizGoStep(wizStep); wizCompose();
 }
 
@@ -1126,7 +1100,7 @@ function wizCompose(){
 /* ---- icoon laden ---- */
 document.getElementById("addIcon").onchange=e=>{
   const f=e.target.files[0]; if(!f)return;
-  selectedSymbol=null; renderSymbolenGrid();
+  makerIconSel=null; renderMakerIconGrid();
   const r=new FileReader(); r.onload=()=>{ingestNewIcon(r.result);}; r.readAsText(f);
 };
 
@@ -1175,7 +1149,7 @@ function ingestNewIcon(raw){
 
 document.getElementById("clearIcon").onclick=()=>{
   newIconInner=null; newIconVb=null;
-  selectedSymbol=null; renderSymbolenGrid();
+  makerIconSel=null; renderMakerIconGrid();
   document.getElementById("addDiag").innerHTML="";
   document.getElementById("clearIcon").style.display="none";
   document.getElementById("addIcon").value="";
@@ -1416,6 +1390,7 @@ async function loadCatalog() {
   }
   buildCatFilters();
   renderCatalog();
+  renderMakerIconGrid();
 }
 
 function buildCatFilters() {
