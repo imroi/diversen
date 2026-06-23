@@ -1,0 +1,2638 @@
+{
+  "senders": {
+    "algemeen": {
+      "label": "Algemeen",
+      "fill": "#D5D5D5",
+      "ink": "#000000"
+    },
+    "politie": {
+      "label": "Politie",
+      "fill": "#182866",
+      "ink": "#FFFFFF"
+    },
+    "brandweer": {
+      "label": "Brandweer",
+      "fill": "#F60000",
+      "ink": "#FFFFFF"
+    },
+    "GHOR": {
+      "label": "GHOR/Ambulance",
+      "fill": "#FFFFFF",
+      "ink": "#000000"
+    },
+    "kmar": {
+      "label": "KMAR",
+      "fill": "#009EE0",
+      "ink": "#FFFFFF"
+    },
+    "defensie": {
+      "label": "Defensie",
+      "fill": "#004535",
+      "ink": "#FFFFFF"
+    },
+    "bevolkingszorg": {
+      "label": "Bevolkingszorg",
+      "fill": "#E17000",
+      "ink": "#FFFFFF"
+    },
+    "rws": {
+      "label": "Rijkswaterstaat",
+      "fill": "#FFF329",
+      "ink": "#000000"
+    },
+    "waterschap": {
+      "label": "Waterschap",
+      "fill": "#00CC00",
+      "ink": "#000000"
+    }
+  },
+  "viewBox": "0 0 121 121",
+  "symbols": [
+    {
+      "id": "GHOR/eenheden/biker",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "biker",
+      "path": "GHOR/eenheden/biker.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/eenheid",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "GHOR/eenheden/eenheid.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/helicopter",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "helicopter",
+      "path": "GHOR/eenheden/helicopter.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/motor",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "motor",
+      "path": "GHOR/eenheden/motor.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/ovd",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "GHOR/eenheden/ovd.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/vaartuig_opvallend",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "vaartuig_opvallend",
+      "path": "GHOR/eenheden/vaartuig_opvallend.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/voertuig_groot_opvallend",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "voertuig_groot_opvallend",
+      "path": "GHOR/eenheden/voertuig_groot_opvallend.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/eenheden/voertuig_opvallend",
+      "sender": "GHOR",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "GHOR/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/gebeurtenissen/behandellocatie_tijdelijk",
+      "sender": "GHOR",
+      "category": "gebeurtenissen",
+      "name": "behandellocatie_tijdelijk",
+      "path": "GHOR/gebeurtenissen/behandellocatie_tijdelijk.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/gebeurtenissen/ehbo",
+      "sender": "GHOR",
+      "category": "gebeurtenissen",
+      "name": "ehbo",
+      "path": "GHOR/gebeurtenissen/ehbo.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/gebeurtenissen/mobiele_locatie",
+      "sender": "GHOR",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "GHOR/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/objecten/object",
+      "sender": "GHOR",
+      "category": "objecten",
+      "name": "object",
+      "path": "GHOR/objecten/object.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "GHOR/objecten/uitgangsstelling",
+      "sender": "GHOR",
+      "category": "objecten",
+      "name": "uitgangsstelling",
+      "path": "GHOR/objecten/uitgangsstelling.svg",
+      "colors": [
+        "#000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "algemeen/eenheden/vaartuig",
+      "sender": "algemeen",
+      "category": "eenheden",
+      "name": "vaartuig",
+      "path": "algemeen/eenheden/vaartuig.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/eenheden/voertuig",
+      "sender": "algemeen",
+      "category": "eenheden",
+      "name": "voertuig",
+      "path": "algemeen/eenheden/voertuig.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/eenheden/voertuig_groot",
+      "sender": "algemeen",
+      "category": "eenheden",
+      "name": "voertuig_groot",
+      "path": "algemeen/eenheden/voertuig_groot.svg",
+      "colors": [
+        "#000",
+        "#D9D9D9"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/actie_tijdelijk",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "actie_tijdelijk",
+      "path": "algemeen/gebeurtenissen/actie_tijdelijk.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/afzetting",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "algemeen/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/cado",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "cado",
+      "path": "algemeen/gebeurtenissen/cado.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/copi",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "copi",
+      "path": "algemeen/gebeurtenissen/copi.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/mast_tijdelijk",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "mast_tijdelijk",
+      "path": "algemeen/gebeurtenissen/mast_tijdelijk.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/mobiele_locatie",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "algemeen/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/ontsmettingslocatie",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "ontsmettingslocatie",
+      "path": "algemeen/gebeurtenissen/ontsmettingslocatie.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/plaats_delict",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "plaats_delict",
+      "path": "algemeen/gebeurtenissen/plaats_delict.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/ramptoeristen_pers",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "ramptoeristen_pers",
+      "path": "algemeen/gebeurtenissen/ramptoeristen_pers.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/slachtoffer_dodelijk",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "slachtoffer_dodelijk",
+      "path": "algemeen/gebeurtenissen/slachtoffer_dodelijk.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/slachtoffer_gewond",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "slachtoffer_gewond",
+      "path": "algemeen/gebeurtenissen/slachtoffer_gewond.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/gebeurtenissen/verzamelplaats_tijdelijk",
+      "sender": "algemeen",
+      "category": "gebeurtenissen",
+      "name": "verzamelplaats_tijdelijk",
+      "path": "algemeen/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/alarm",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "alarm",
+      "path": "algemeen/incidenten/alarm.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/bezitsaantasting",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "bezitsaantasting",
+      "path": "algemeen/incidenten/bezitsaantasting.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/brand",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "brand",
+      "path": "algemeen/incidenten/brand.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/dienstverlening",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "dienstverlening",
+      "path": "algemeen/incidenten/dienstverlening.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/gezondheid",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "gezondheid",
+      "path": "algemeen/incidenten/gezondheid.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/incident",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "incident",
+      "path": "algemeen/incidenten/incident.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/leefmilieu",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "leefmilieu",
+      "path": "algemeen/incidenten/leefmilieu.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/ongeval",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "ongeval",
+      "path": "algemeen/incidenten/ongeval.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/veiligheid_openbare_orde",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "veiligheid_openbare_orde",
+      "path": "algemeen/incidenten/veiligheid_openbare_orde.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/incidenten/verkeer",
+      "sender": "algemeen",
+      "category": "incidenten",
+      "name": "verkeer",
+      "path": "algemeen/incidenten/verkeer.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "algemeen/objecten/actie_vast",
+      "sender": "algemeen",
+      "category": "objecten",
+      "name": "actie_vast",
+      "path": "algemeen/objecten/actie_vast.svg",
+      "colors": [
+        "#000",
+        "#D8D8D8"
+      ]
+    },
+    {
+      "id": "algemeen/objecten/cado",
+      "sender": "algemeen",
+      "category": "objecten",
+      "name": "cado",
+      "path": "algemeen/objecten/cado.svg",
+      "colors": [
+        "#000",
+        "#D8D8D8"
+      ]
+    },
+    {
+      "id": "algemeen/objecten/klachtenmelding",
+      "sender": "algemeen",
+      "category": "objecten",
+      "name": "klachtenmelding",
+      "path": "algemeen/objecten/klachtenmelding.svg",
+      "colors": [
+        "#000",
+        "#080808",
+        "#D8D8D8",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "algemeen/objecten/mast_vast",
+      "sender": "algemeen",
+      "category": "objecten",
+      "name": "mast_vast",
+      "path": "algemeen/objecten/mast_vast.svg",
+      "colors": [
+        "#000",
+        "#D8D8D8"
+      ]
+    },
+    {
+      "id": "algemeen/objecten/object",
+      "sender": "algemeen",
+      "category": "objecten",
+      "name": "object",
+      "path": "algemeen/objecten/object.svg",
+      "colors": [
+        "#000",
+        "#D8D8D8"
+      ]
+    },
+    {
+      "id": "algemeen/objecten/uitgangsstelling",
+      "sender": "algemeen",
+      "category": "objecten",
+      "name": "uitgangsstelling",
+      "path": "algemeen/objecten/uitgangsstelling.svg",
+      "colors": [
+        "#000",
+        "#D8D8D8"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/eenheden/biker",
+      "sender": "bevolkingszorg",
+      "category": "eenheden",
+      "name": "biker",
+      "path": "bevolkingszorg/eenheden/biker.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/eenheden/eenheid",
+      "sender": "bevolkingszorg",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "bevolkingszorg/eenheden/eenheid.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/eenheden/ovd",
+      "sender": "bevolkingszorg",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "bevolkingszorg/eenheden/ovd.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/eenheden/voertuig_opvallend",
+      "sender": "bevolkingszorg",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "bevolkingszorg/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/gebeurtenissen/afzetting",
+      "sender": "bevolkingszorg",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "bevolkingszorg/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/gebeurtenissen/verzamelplaats_tijdelijk",
+      "sender": "bevolkingszorg",
+      "category": "gebeurtenissen",
+      "name": "verzamelplaats_tijdelijk",
+      "path": "bevolkingszorg/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/objecten/aangewezen_locatie",
+      "sender": "bevolkingszorg",
+      "category": "objecten",
+      "name": "aangewezen_locatie",
+      "path": "bevolkingszorg/objecten/aangewezen_locatie.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "bevolkingszorg/objecten/object",
+      "sender": "bevolkingszorg",
+      "category": "objecten",
+      "name": "object",
+      "path": "bevolkingszorg/objecten/object.svg",
+      "colors": [
+        "#E17000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/eenheden/drone",
+      "sender": "brandweer",
+      "category": "eenheden",
+      "name": "drone",
+      "path": "brandweer/eenheden/drone.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/eenheden/eenheid",
+      "sender": "brandweer",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "brandweer/eenheden/eenheid.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/eenheden/ovd",
+      "sender": "brandweer",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "brandweer/eenheden/ovd.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/eenheden/vaartuig_opvallend",
+      "sender": "brandweer",
+      "category": "eenheden",
+      "name": "vaartuig_opvallend",
+      "path": "brandweer/eenheden/vaartuig_opvallend.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/eenheden/voertuig_groot_opvallend",
+      "sender": "brandweer",
+      "category": "eenheden",
+      "name": "voertuig_groot_opvallend",
+      "path": "brandweer/eenheden/voertuig_groot_opvallend.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/eenheden/voertuig_opvallend",
+      "sender": "brandweer",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "brandweer/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/gebeurtenissen/meetwaarde",
+      "sender": "brandweer",
+      "category": "gebeurtenissen",
+      "name": "meetwaarde",
+      "path": "brandweer/gebeurtenissen/meetwaarde.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/gebeurtenissen/mobiele_locatie",
+      "sender": "brandweer",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "brandweer/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/gebeurtenissen/ontsmettingslocatie",
+      "sender": "brandweer",
+      "category": "gebeurtenissen",
+      "name": "ontsmettingslocatie",
+      "path": "brandweer/gebeurtenissen/ontsmettingslocatie.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/objecten/object",
+      "sender": "brandweer",
+      "category": "objecten",
+      "name": "object",
+      "path": "brandweer/objecten/object.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "brandweer/objecten/uitgangsstelling",
+      "sender": "brandweer",
+      "category": "objecten",
+      "name": "uitgangsstelling",
+      "path": "brandweer/objecten/uitgangsstelling.svg",
+      "colors": [
+        "#F60000",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/bus_opvallend",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "bus_opvallend",
+      "path": "defensie/eenheden/bus_opvallend.svg",
+      "colors": [
+        "#185648",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/commit",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "commit",
+      "path": "defensie/eenheden/commit.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/drone",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "drone",
+      "path": "defensie/eenheden/drone.svg",
+      "colors": [
+        "#185648",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/eenheid",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "defensie/eenheden/eenheid.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/helicopter",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "helicopter",
+      "path": "defensie/eenheden/helicopter.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/hond",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "hond",
+      "path": "defensie/eenheden/hond.svg",
+      "colors": [
+        "#185648",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/landmacht",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "landmacht",
+      "path": "defensie/eenheden/landmacht.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/luchtmacht",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "luchtmacht",
+      "path": "defensie/eenheden/luchtmacht.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/marine",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "marine",
+      "path": "defensie/eenheden/marine.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/motor",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "motor",
+      "path": "defensie/eenheden/motor.svg",
+      "colors": [
+        "#185648",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/vaartuig",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "vaartuig",
+      "path": "defensie/eenheden/vaartuig.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/vaartuig_opvallend",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "vaartuig_opvallend",
+      "path": "defensie/eenheden/vaartuig_opvallend.svg",
+      "colors": [
+        "#185648",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/voertuig_opvallend",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "defensie/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/eenheden/voetsurveillance",
+      "sender": "defensie",
+      "category": "eenheden",
+      "name": "voetsurveillance",
+      "path": "defensie/eenheden/voetsurveillance.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/actie_tijdelijk",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "actie_tijdelijk",
+      "path": "defensie/gebeurtenissen/actie_tijdelijk.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/afzetting",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "defensie/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/mast_tijdelijk",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "mast_tijdelijk",
+      "path": "defensie/gebeurtenissen/mast_tijdelijk.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/meetwaarde",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "meetwaarde",
+      "path": "defensie/gebeurtenissen/meetwaarde.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/mobiele_locatie",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "defensie/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/ontsmettingslocatie",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "ontsmettingslocatie",
+      "path": "defensie/gebeurtenissen/ontsmettingslocatie.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/gebeurtenissen/verzamelplaats_tijdelijk",
+      "sender": "defensie",
+      "category": "gebeurtenissen",
+      "name": "verzamelplaats_tijdelijk",
+      "path": "defensie/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/objecten/aangewezen_locatie",
+      "sender": "defensie",
+      "category": "objecten",
+      "name": "aangewezen_locatie",
+      "path": "defensie/objecten/aangewezen_locatie.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/objecten/actie_vast",
+      "sender": "defensie",
+      "category": "objecten",
+      "name": "actie_vast",
+      "path": "defensie/objecten/actie_vast.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/objecten/mast_vast copy",
+      "sender": "defensie",
+      "category": "objecten",
+      "name": "mast_vast copy",
+      "path": "defensie/objecten/mast_vast copy.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/objecten/object",
+      "sender": "defensie",
+      "category": "objecten",
+      "name": "object",
+      "path": "defensie/objecten/object.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/objecten/uitgangsstelling",
+      "sender": "defensie",
+      "category": "objecten",
+      "name": "uitgangsstelling",
+      "path": "defensie/objecten/uitgangsstelling.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "defensie/objecten/verzamelplaats_vast",
+      "sender": "defensie",
+      "category": "objecten",
+      "name": "verzamelplaats_vast",
+      "path": "defensie/objecten/verzamelplaats_vast.svg",
+      "colors": [
+        "#004535",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/beredenen",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "beredenen",
+      "path": "kmar/eenheden/beredenen.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/biker",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "biker",
+      "path": "kmar/eenheden/biker.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/bus_gepantserd",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "bus_gepantserd",
+      "path": "kmar/eenheden/bus_gepantserd.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/drone",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "drone",
+      "path": "kmar/eenheden/drone.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/eenheid",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "kmar/eenheden/eenheid.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/helicopter",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "helicopter",
+      "path": "kmar/eenheden/helicopter.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/hond",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "hond",
+      "path": "kmar/eenheden/hond.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/motor",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "motor",
+      "path": "kmar/eenheden/motor.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/ovd",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "kmar/eenheden/ovd.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/pakketbus",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "pakketbus",
+      "path": "kmar/eenheden/pakketbus.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/vaartuig",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "vaartuig",
+      "path": "kmar/eenheden/vaartuig.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/vaartuig_opvallend",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "vaartuig_opvallend",
+      "path": "kmar/eenheden/vaartuig_opvallend.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/voertuig",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "voertuig",
+      "path": "kmar/eenheden/voertuig.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/voertuig_groot",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "voertuig_groot",
+      "path": "kmar/eenheden/voertuig_groot.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/voertuig_groot_opvallend",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "voertuig_groot_opvallend",
+      "path": "kmar/eenheden/voertuig_groot_opvallend.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/voertuig_opvallend",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "kmar/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/eenheden/voetsurveillance",
+      "sender": "kmar",
+      "category": "eenheden",
+      "name": "voetsurveillance",
+      "path": "kmar/eenheden/voetsurveillance.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/actie_tijdelijk",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "actie_tijdelijk",
+      "path": "kmar/gebeurtenissen/actie_tijdelijk.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/afzetting",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "kmar/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/melder_getuige",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "melder_getuige",
+      "path": "kmar/gebeurtenissen/melder_getuige.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/mobiele_locatie",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "kmar/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/ontsmettingslocatie",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "ontsmettingslocatie",
+      "path": "kmar/gebeurtenissen/ontsmettingslocatie.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/plaats_delict",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "plaats_delict",
+      "path": "kmar/gebeurtenissen/plaats_delict.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/slachtoffer_dodelijk",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "slachtoffer_dodelijk",
+      "path": "kmar/gebeurtenissen/slachtoffer_dodelijk.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/slachtoffer_gewond",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "slachtoffer_gewond",
+      "path": "kmar/gebeurtenissen/slachtoffer_gewond.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/verdachte",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "verdachte",
+      "path": "kmar/gebeurtenissen/verdachte.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/gebeurtenissen/verzamelplaats_tijdelijk",
+      "sender": "kmar",
+      "category": "gebeurtenissen",
+      "name": "verzamelplaats_tijdelijk",
+      "path": "kmar/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/aangewezen_locatie",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "aangewezen_locatie",
+      "path": "kmar/objecten/aangewezen_locatie.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/actie_vast",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "actie_vast",
+      "path": "kmar/objecten/actie_vast.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/insluitingslocatie",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "insluitingslocatie",
+      "path": "kmar/objecten/insluitingslocatie.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/object",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "object",
+      "path": "kmar/objecten/object.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/safehouse",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "safehouse",
+      "path": "kmar/objecten/safehouse.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/uitgangsstelling",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "uitgangsstelling",
+      "path": "kmar/objecten/uitgangsstelling.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/verzamelplaats_vast",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "verzamelplaats_vast",
+      "path": "kmar/objecten/verzamelplaats_vast.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "kmar/objecten/verzegeld_pand",
+      "sender": "kmar",
+      "category": "objecten",
+      "name": "verzegeld_pand",
+      "path": "kmar/objecten/verzegeld_pand.svg",
+      "colors": [
+        "#009EE0",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/beredenen",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "beredenen",
+      "path": "politie/eenheden/beredenen.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/biker",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "biker",
+      "path": "politie/eenheden/biker.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/bus_gepantserd",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "bus_gepantserd",
+      "path": "politie/eenheden/bus_gepantserd.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/drone",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "drone",
+      "path": "politie/eenheden/drone.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/eenheid",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "politie/eenheden/eenheid.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/helicopter",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "helicopter",
+      "path": "politie/eenheden/helicopter.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/hond",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "hond",
+      "path": "politie/eenheden/hond.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/motor",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "motor",
+      "path": "politie/eenheden/motor.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/ovd",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "politie/eenheden/ovd.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/pakketbus",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "pakketbus",
+      "path": "politie/eenheden/pakketbus.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/vaartuig",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "vaartuig",
+      "path": "politie/eenheden/vaartuig.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/vaartuig_opvallend",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "vaartuig_opvallend",
+      "path": "politie/eenheden/vaartuig_opvallend.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/voertuig",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "voertuig",
+      "path": "politie/eenheden/voertuig.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/voertuig_groot",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "voertuig_groot",
+      "path": "politie/eenheden/voertuig_groot.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/voertuig_groot_opvallend",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "voertuig_groot_opvallend",
+      "path": "politie/eenheden/voertuig_groot_opvallend.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/voertuig_opvallend",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "politie/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/eenheden/voetsurveillance",
+      "sender": "politie",
+      "category": "eenheden",
+      "name": "voetsurveillance",
+      "path": "politie/eenheden/voetsurveillance.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/actie_tijdelijk",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "actie_tijdelijk",
+      "path": "politie/gebeurtenissen/actie_tijdelijk.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/afzetting",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "politie/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/melder_getuige",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "melder_getuige",
+      "path": "politie/gebeurtenissen/melder_getuige.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/mobiele_locatie",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "politie/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/ontsmettingslocatie",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "ontsmettingslocatie",
+      "path": "politie/gebeurtenissen/ontsmettingslocatie.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/plaats_delict",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "plaats_delict",
+      "path": "politie/gebeurtenissen/plaats_delict.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/slachtoffer_dodelijk",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "slachtoffer_dodelijk",
+      "path": "politie/gebeurtenissen/slachtoffer_dodelijk.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/slachtoffer_gewond",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "slachtoffer_gewond",
+      "path": "politie/gebeurtenissen/slachtoffer_gewond.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/verdachte",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "verdachte",
+      "path": "politie/gebeurtenissen/verdachte.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/gebeurtenissen/verzamelplaats_tijdelijk",
+      "sender": "politie",
+      "category": "gebeurtenissen",
+      "name": "verzamelplaats_tijdelijk",
+      "path": "politie/gebeurtenissen/verzamelplaats_tijdelijk.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/aangewezen_locatie",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "aangewezen_locatie",
+      "path": "politie/objecten/aangewezen_locatie.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/actie_vast",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "actie_vast",
+      "path": "politie/objecten/actie_vast.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/insluitingslocatie",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "insluitingslocatie",
+      "path": "politie/objecten/insluitingslocatie.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/object",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "object",
+      "path": "politie/objecten/object.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/safehouse",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "safehouse",
+      "path": "politie/objecten/safehouse.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/uitgangsstelling",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "uitgangsstelling",
+      "path": "politie/objecten/uitgangsstelling.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/verzamelplaats_vast",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "verzamelplaats_vast",
+      "path": "politie/objecten/verzamelplaats_vast.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "politie/objecten/verzegeld_pand",
+      "sender": "politie",
+      "category": "objecten",
+      "name": "verzegeld_pand",
+      "path": "politie/objecten/verzegeld_pand.svg",
+      "colors": [
+        "#182866",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "rws/eenheden/drone",
+      "sender": "rws",
+      "category": "eenheden",
+      "name": "drone",
+      "path": "rws/eenheden/drone.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/eenheden/eenheid",
+      "sender": "rws",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "rws/eenheden/eenheid.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/eenheden/ovd",
+      "sender": "rws",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "rws/eenheden/ovd.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/eenheden/vaartuig_opvallend",
+      "sender": "rws",
+      "category": "eenheden",
+      "name": "vaartuig_opvallend",
+      "path": "rws/eenheden/vaartuig_opvallend.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/eenheden/voertuig_opvallend",
+      "sender": "rws",
+      "category": "eenheden",
+      "name": "voertuig_opvallend",
+      "path": "rws/eenheden/voertuig_opvallend.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/afzetting",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "rws/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/beperking_scheepvaart",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "beperking_scheepvaart",
+      "path": "rws/gebeurtenissen/beperking_scheepvaart.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/beperking_wegverkeer",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "beperking_wegverkeer",
+      "path": "rws/gebeurtenissen/beperking_wegverkeer.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/crisisoverleg",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "crisisoverleg",
+      "path": "rws/gebeurtenissen/crisisoverleg.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/dode_dieren",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "dode_dieren",
+      "path": "rws/gebeurtenissen/dode_dieren.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/meetwaarde",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "meetwaarde",
+      "path": "rws/gebeurtenissen/meetwaarde.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/noodmaatregel",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "noodmaatregel",
+      "path": "rws/gebeurtenissen/noodmaatregel.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/schip",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "schip",
+      "path": "rws/gebeurtenissen/schip.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/waterverontreiniging_drijfvuil",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "waterverontreiniging_drijfvuil",
+      "path": "rws/gebeurtenissen/waterverontreiniging_drijfvuil.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/gebeurtenissen/werkzaamheden",
+      "sender": "rws",
+      "category": "gebeurtenissen",
+      "name": "werkzaamheden",
+      "path": "rws/gebeurtenissen/werkzaamheden.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/ankerplaats_haven",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "ankerplaats_haven",
+      "path": "rws/objecten/ankerplaats_haven.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/aquaduct",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "aquaduct",
+      "path": "rws/objecten/aquaduct.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/beweegbare_brug",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "beweegbare_brug",
+      "path": "rws/objecten/beweegbare_brug.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/dijk",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "dijk",
+      "path": "rws/objecten/dijk.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/gemaal",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "gemaal",
+      "path": "rws/objecten/gemaal.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/innamepunt_drinkwater",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "innamepunt_drinkwater",
+      "path": "rws/objecten/innamepunt_drinkwater.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/iv_systeem",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "iv_systeem",
+      "path": "rws/objecten/iv_systeem.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/ligplaats",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "ligplaats",
+      "path": "rws/objecten/ligplaats.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/object",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "object",
+      "path": "rws/objecten/object.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/object_pand",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "object_pand",
+      "path": "rws/objecten/object_pand.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/recreatiegebied",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "recreatiegebied",
+      "path": "rws/objecten/recreatiegebied.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/sluis",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "sluis",
+      "path": "rws/objecten/sluis.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/tunnel",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "tunnel",
+      "path": "rws/objecten/tunnel.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/vaste_brug",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "vaste_brug",
+      "path": "rws/objecten/vaste_brug.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/viaduct",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "viaduct",
+      "path": "rws/objecten/viaduct.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "rws/objecten/waterkering",
+      "sender": "rws",
+      "category": "objecten",
+      "name": "waterkering",
+      "path": "rws/objecten/waterkering.svg",
+      "colors": [
+        "#000",
+        "#FFF329"
+      ]
+    },
+    {
+      "id": "waterschap/eenheden/drone",
+      "sender": "waterschap",
+      "category": "eenheden",
+      "name": "drone",
+      "path": "waterschap/eenheden/drone.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/eenheden/eenheid",
+      "sender": "waterschap",
+      "category": "eenheden",
+      "name": "eenheid",
+      "path": "waterschap/eenheden/eenheid.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/eenheden/ovd",
+      "sender": "waterschap",
+      "category": "eenheden",
+      "name": "ovd",
+      "path": "waterschap/eenheden/ovd.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/eenheden/voertuig",
+      "sender": "waterschap",
+      "category": "eenheden",
+      "name": "voertuig",
+      "path": "waterschap/eenheden/voertuig.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/eenheden/voetsurveillance",
+      "sender": "waterschap",
+      "category": "eenheden",
+      "name": "voetsurveillance",
+      "path": "waterschap/eenheden/voetsurveillance.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/afzetting",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "afzetting",
+      "path": "waterschap/gebeurtenissen/afzetting.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/beperking-scheepvaart",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "beperking-scheepvaart",
+      "path": "waterschap/gebeurtenissen/beperking-scheepvaart.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/dode_dieren",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "dode_dieren",
+      "path": "waterschap/gebeurtenissen/dode_dieren.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/infra",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "infra",
+      "path": "waterschap/gebeurtenissen/infra.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/maatregel-hoog-impact-en-urgent",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "maatregel-hoog-impact-en-urgent",
+      "path": "waterschap/gebeurtenissen/maatregel-hoog-impact-en-urgent.svg",
+      "colors": [
+        "#000"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/maatregel-hoog-impact-of-urgent",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "maatregel-hoog-impact-of-urgent",
+      "path": "waterschap/gebeurtenissen/maatregel-hoog-impact-of-urgent.svg",
+      "colors": [
+        "#000",
+        "#FFBF00"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/maatregel-laag-urgent-weinig-impact",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "maatregel-laag-urgent-weinig-impact",
+      "path": "waterschap/gebeurtenissen/maatregel-laag-urgent-weinig-impact.svg",
+      "colors": [
+        "#000",
+        "#FF0"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/maatregel-uitgevoerd",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "maatregel-uitgevoerd",
+      "path": "waterschap/gebeurtenissen/maatregel-uitgevoerd.svg",
+      "colors": [
+        "#000",
+        "#0C0"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/meetwaarde",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "meetwaarde",
+      "path": "waterschap/gebeurtenissen/meetwaarde.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/mobiele_locatie",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "mobiele_locatie",
+      "path": "waterschap/gebeurtenissen/mobiele_locatie.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/noodmaatregel",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "noodmaatregel",
+      "path": "waterschap/gebeurtenissen/noodmaatregel.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/persleidingbreuk",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "persleidingbreuk",
+      "path": "waterschap/gebeurtenissen/persleidingbreuk.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/tijdelijke-peilscheiding",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "tijdelijke-peilscheiding",
+      "path": "waterschap/gebeurtenissen/tijdelijke-peilscheiding.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/tijdelijke-pompinstallatie",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "tijdelijke-pompinstallatie",
+      "path": "waterschap/gebeurtenissen/tijdelijke-pompinstallatie.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/watergang",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "watergang",
+      "path": "waterschap/gebeurtenissen/watergang.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/waterkering",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "waterkering",
+      "path": "waterschap/gebeurtenissen/waterkering.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/waterverontreiniging_drijfvuil",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "waterverontreiniging_drijfvuil",
+      "path": "waterschap/gebeurtenissen/waterverontreiniging_drijfvuil.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/werkzaamheden",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "werkzaamheden",
+      "path": "waterschap/gebeurtenissen/werkzaamheden.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/gebeurtenissen/zandzakken-bigbags",
+      "sender": "waterschap",
+      "category": "gebeurtenissen",
+      "name": "zandzakken-bigbags",
+      "path": "waterschap/gebeurtenissen/zandzakken-bigbags.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/incidenten/dreiging-stabiel",
+      "sender": "waterschap",
+      "category": "incidenten",
+      "name": "dreiging-stabiel",
+      "path": "waterschap/incidenten/dreiging-stabiel.svg",
+      "colors": [
+        "#000",
+        "#0C0"
+      ]
+    },
+    {
+      "id": "waterschap/incidenten/falende-waterkering",
+      "sender": "waterschap",
+      "category": "incidenten",
+      "name": "falende-waterkering",
+      "path": "waterschap/incidenten/falende-waterkering.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "waterschap/incidenten/hoog-urgent-en-veel-impact",
+      "sender": "waterschap",
+      "category": "incidenten",
+      "name": "hoog-urgent-en-veel-impact",
+      "path": "waterschap/incidenten/hoog-urgent-en-veel-impact.svg",
+      "colors": [
+        "#000"
+      ]
+    },
+    {
+      "id": "waterschap/incidenten/hoog-urgent-of-veel-impact",
+      "sender": "waterschap",
+      "category": "incidenten",
+      "name": "hoog-urgent-of-veel-impact",
+      "path": "waterschap/incidenten/hoog-urgent-of-veel-impact.svg",
+      "colors": [
+        "#000",
+        "#FFBF00"
+      ]
+    },
+    {
+      "id": "waterschap/incidenten/infra",
+      "sender": "waterschap",
+      "category": "incidenten",
+      "name": "infra",
+      "path": "waterschap/incidenten/infra.svg",
+      "colors": [
+        "#000",
+        "#D5D5D5"
+      ]
+    },
+    {
+      "id": "waterschap/incidenten/laag-urgent-weinig-impact",
+      "sender": "waterschap",
+      "category": "incidenten",
+      "name": "laag-urgent-weinig-impact",
+      "path": "waterschap/incidenten/laag-urgent-weinig-impact.svg",
+      "colors": [
+        "#000",
+        "#FF0"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/appendage",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "appendage",
+      "path": "waterschap/objecten/appendage.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/awzi",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "awzi",
+      "path": "waterschap/objecten/awzi.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/brug",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "brug",
+      "path": "waterschap/objecten/brug.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/dam",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "dam",
+      "path": "waterschap/objecten/dam.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/dijk",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "dijk",
+      "path": "waterschap/objecten/dijk.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/duiker",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "duiker",
+      "path": "waterschap/objecten/duiker.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/gemaal",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "gemaal",
+      "path": "waterschap/objecten/gemaal.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/innamepunt_drinkwater",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "innamepunt_drinkwater",
+      "path": "waterschap/objecten/innamepunt_drinkwater.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/object",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "object",
+      "path": "waterschap/objecten/object.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/object_pand",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "object_pand",
+      "path": "waterschap/objecten/object_pand.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/persleiding",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "persleiding",
+      "path": "waterschap/objecten/persleiding.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/rioolgemaal",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "rioolgemaal",
+      "path": "waterschap/objecten/rioolgemaal.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/sluis",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "sluis",
+      "path": "waterschap/objecten/sluis.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    },
+    {
+      "id": "waterschap/objecten/stuw",
+      "sender": "waterschap",
+      "category": "objecten",
+      "name": "stuw",
+      "path": "waterschap/objecten/stuw.svg",
+      "colors": [
+        "#192BC2",
+        "#FFF"
+      ]
+    }
+  ],
+  "total": 235
+}
