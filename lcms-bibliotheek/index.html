@@ -891,7 +891,7 @@ async function fetchTemplates() {
 }
 
 let wizStep=1, wizPointer=null, wizSender=null;
-let newIconInner=null, newIconVb=null;
+let newIconInner=null, newIconVb=null, newIconRootFill=null;
 let iconScaleFactor=1.0, iconDx=0, iconDy=0;
 let recolorToInk=false;
 let vulOverride=null, randOverride=null; /* per-kleur overrides in stap 3; null = volg afzender */
@@ -1070,8 +1070,10 @@ function wizCompose(){
       const recolored=applyRecolor(newIconInner).replace(/currentColor/gi,rand);
       iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})" fill="${rand}">${recolored}</g>`;
     } else {
-      const inner=newIconInner.replace(/currentColor/gi,rand);
-      iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})">${inner}</g>`;
+      /* origineel icoon behouden: herstel de root-fill van het bron-SVG zodat
+         ongevulde vlakken niet zwart worden, en forceer geen ink-kleur. */
+      const fillAttr=newIconRootFill?` fill="${newIconRootFill}"`:"";
+      iconEl=`<g transform="translate(${tx},${ty}) scale(${sc})"${fillAttr}>${newIconInner}</g>`;
     }
   }
   const result=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121"><g>${pt.shape(vul,rand)}${iconEl}</g></svg>`;
@@ -1121,7 +1123,7 @@ function ingestNewIcon(raw){
   const extUse=[...doc.querySelectorAll("use")].filter(el=>{const h=el.getAttribute("href")||el.getAttribute("xlink:href")||"";return h.startsWith("http")||h.startsWith("//");}).length;
   if(extImg||extUse)diags.push(["warn","bevat externe referenties — output mogelijk niet zelfstandig"]);
   else diags.push(["ok","zelfstandige SVG ✓"]);
-  newIconVb=vb; newIconInner=svg.innerHTML;
+  newIconVb=vb; newIconInner=svg.innerHTML; newIconRootFill=svg.getAttribute("fill");
   iconScaleFactor=1.0; iconDx=0; iconDy=0; recolorToInk=false;
   document.getElementById("slScale").value=100; document.getElementById("svalScale").textContent="100%";
   document.getElementById("slDx").value=0; document.getElementById("svalDx").textContent="0";
@@ -1134,7 +1136,7 @@ function ingestNewIcon(raw){
 }
 
 document.getElementById("clearIcon").onclick=()=>{
-  newIconInner=null; newIconVb=null;
+  newIconInner=null; newIconVb=null; newIconRootFill=null;
   makerIconSel=null; renderMakerIconGrid();
   document.getElementById("addDiag").innerHTML="";
   document.getElementById("clearIcon").style.display="none";
