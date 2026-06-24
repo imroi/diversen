@@ -102,6 +102,15 @@
   .btn:disabled{opacity:.4;cursor:not-allowed}
   .btn:hover:not(:disabled){filter:brightness(1.08)}
   .code{background:#0a0e12;border:1px solid var(--line);border-radius:7px;padding:9px;font-family:var(--mono);font-size:10.5px;color:#9fb3c8;white-space:pre-wrap;word-break:break-all;max-height:130px;overflow:auto;margin-top:8px}
+  .codepane{flex:none;height:240px;display:flex;flex-direction:column;border-top:1px solid var(--line);background:var(--panel)}
+  .codepane-head{display:flex;align-items:center;justify-content:space-between;padding:7px 12px;border-bottom:1px solid var(--line)}
+  .codepane-lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+  #backToWizard{background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:5px;cursor:pointer;font-size:11px;font-family:var(--mono)}
+  #backToWizard:hover{color:var(--ink);border-color:var(--accent)}
+  #addCodeEdit{flex:1;width:100%;box-sizing:border-box;resize:none;background:#0a0e12;border:none;outline:none;padding:10px 12px;font-family:var(--mono);font-size:11px;line-height:1.4;color:#9fb3c8;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:hidden;overflow-y:auto}
+  .codepane-foot{display:flex;align-items:flex-start;gap:12px;padding:8px 12px;border-top:1px solid var(--line)}
+  .codepane-foot .diag .row{padding:1px 0}
+  .add .col.l.locked{pointer-events:none;opacity:.45}
   .note{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.6;border-top:1px solid var(--line);padding-top:12px}
   .pill{display:inline-block;font-family:var(--mono);font-size:10px;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--muted)}
 
@@ -304,7 +313,6 @@
           <button class="btn" id="dlNew" disabled>Download nieuw symbool</button>
           <button class="btn ghost" id="copyNew" disabled>Kopieer SVG</button>
           <button class="btn ghost" id="btnExportZip" style="display:none;border-color:var(--ok);color:var(--ok)">Exporteer nieuwe symbolen als ZIP</button>
-          <div class="code" id="addCode">&lt;svg&gt;…&lt;/svg&gt;</div>
         </div>
         <!-- Navigatie -->
         <div class="wiz-nav">
@@ -312,15 +320,27 @@
           <button class="btn" id="wizNext" style="width:auto;padding:7px 18px;margin-top:0">Volgende →</button>
         </div>
       </div>
-      <!-- Rechts: live preview -->
-      <div class="col" style="padding:0">
-        <div class="stage">
+      <!-- Rechts: preview (boven) + editbare code (onder) -->
+      <div class="col" style="padding:0;display:flex;flex-direction:column">
+        <div class="stage" style="flex:1;min-height:0">
           <div id="addPreview"></div>
           <div class="stagemeta" id="addMeta">Kies een pointer-type om te beginnen</div>
           <div class="stage-zoom">
             <span>Zoom</span>
             <input type="range" id="previewZoom" min="50" max="400" value="100">
             <span id="previewZoomVal">100%</span>
+          </div>
+        </div>
+        <div class="codepane">
+          <div class="codepane-head">
+            <span class="codepane-lbl" id="codeModeLbl">SVG-code</span>
+            <button id="backToWizard" style="display:none">↩ Terug naar wizard</button>
+          </div>
+          <textarea id="addCodeEdit" spellcheck="false" placeholder="&lt;svg&gt;…&lt;/svg&gt;"></textarea>
+          <div class="codepane-foot">
+            <button class="btn" id="btnValidate" style="width:auto;margin:0;padding:7px 14px">Valideer &amp; toon</button>
+            <button class="btn ghost" id="btnCleanCode" style="width:auto;margin:0;padding:7px 14px">Opschonen</button>
+            <div class="diag" id="codeDiag" style="margin-top:0"></div>
           </div>
         </div>
       </div>
@@ -811,7 +831,8 @@ function wizUpdateNav(){
 function wizInit(){
   renderPointerCards(); renderSenderCards();
   renderMakerIconGrid();
-  wizGoStep(wizStep); wizCompose();
+  wizGoStep(wizStep);
+  if(!manualMode) wizCompose();   /* handmatige code niet overschrijven bij terugkeren */
 }
 
 document.getElementById("wizBack").onclick=()=>wizGoStep(wizStep-1);
@@ -823,7 +844,7 @@ function wizCompose(){
   const sender=SENDERS[wizSender];
   const out=document.getElementById("addPreview");
   const meta=document.getElementById("addMeta");
-  const code=document.getElementById("addCode");
+  const code=document.getElementById("addCodeEdit");
   const dl=document.getElementById("dlNew"),cp=document.getElementById("copyNew");
   if(!pt){
     out.innerHTML=""; meta.textContent="Kies een pointer-type om te beginnen";
@@ -850,10 +871,93 @@ function wizCompose(){
   out.innerHTML=result;
   const nm=normalizeName(document.getElementById("addName")?.value||"")||"nieuw_symbool";
   meta.textContent=`${wizSender||"(afzender)"}/${wizPointer}/${nm}`;
-  if(code)code.textContent=result;
+  if(code)code.value=result;
   if(dl)dl.disabled=cp.disabled=!(wizPointer&&wizSender);
   return result;
 }
+
+/* ---- handmatige code-modus: wizard genereert, code neemt over ---- */
+let manualMode=false;
+function setManualMode(on){
+  manualMode=on;
+  document.querySelector(".add .col.l").classList.toggle("locked",on);
+  document.getElementById("backToWizard").style.display=on?"":"none";
+  document.getElementById("codeModeLbl").textContent=on?"SVG-code · handmatig bewerkt":"SVG-code";
+}
+/* bron van waarheid voor export: handmatige code, anders wizard-output */
+function currentSvg(){
+  return manualMode ? document.getElementById("addCodeEdit").value.trim() : wizCompose();
+}
+document.getElementById("addCodeEdit").oninput=()=>{ if(!manualMode) setManualMode(true); };
+document.getElementById("backToWizard").onclick=()=>{
+  if(!confirm("Handmatige wijzigingen worden vervangen door de wizard-versie. Doorgaan?"))return;
+  setManualMode(false);
+  document.getElementById("codeDiag").innerHTML="";
+  wizCompose();
+};
+document.getElementById("btnValidate").onclick=()=>{
+  const raw=document.getElementById("addCodeEdit").value;
+  const diagEl=document.getElementById("codeDiag");
+  let doc;
+  try{doc=new DOMParser().parseFromString(raw,"image/svg+xml");}
+  catch(e){diagEl.innerHTML=row("err","SVG kon niet worden gelezen: "+e.message);return;}
+  const svg=doc.querySelector("svg"),parseErr=doc.querySelector("parsererror");
+  if(!svg||parseErr){
+    const detail=parseErr?parseErr.textContent.trim().split("\n")[0].slice(0,120):"";
+    diagEl.innerHTML=row("err","Geen geldige SVG"+(detail?": "+detail:"")+"."); return;
+  }
+  const diags=[];
+  const vb=(svg.getAttribute("viewBox")||"").trim();
+  diags.push(vb==="0 0 121 121"?["ok","viewBox 0 0 121 121 ✓"]:["warn",`viewBox is "${vb||"ontbreekt"}" — verwacht 0 0 121 121`]);
+  const extImg=[...doc.querySelectorAll("image")].filter(el=>el.getAttribute("href")||el.getAttribute("xlink:href")).length;
+  const extUse=[...doc.querySelectorAll("use")].filter(el=>{const h=el.getAttribute("href")||el.getAttribute("xlink:href")||"";return h.startsWith("http")||h.startsWith("//");}).length;
+  diags.push((extImg||extUse)?["warn","bevat externe referenties — output mogelijk niet zelfstandig"]:["ok","zelfstandige SVG ✓"]);
+  document.getElementById("addPreview").innerHTML=raw;
+  diags.unshift(["ok","code toegepast op preview"]);
+  diagEl.innerHTML=diags.map(d=>row(d[0],d[1])).join("");
+};
+
+/* ---- SVG opschonen: afronden, lege groepen/attributen weg, netjes inspringen ---- */
+function svgCleanNode(el){
+  [...el.attributes].forEach(a=>{
+    let v=a.value.trim();
+    if(v===""){ el.removeAttribute(a.name); return; }
+    v=v.replace(/-?\d+\.\d+/g, m=>String(Math.round(parseFloat(m)*1000)/1000));
+    el.setAttribute(a.name, v);
+  });
+  [...el.children].forEach(svgCleanNode);
+  [...el.children].forEach(c=>{
+    if(c.tagName==="g" && c.children.length===0 && c.textContent.trim()==="") c.remove();
+  });
+}
+function svgPretty(el,depth){
+  const pad="  ".repeat(depth);
+  let attrs="";
+  for(const a of el.attributes) attrs+=` ${a.name}="${a.value}"`;
+  const kids=[...el.childNodes].filter(n=>n.nodeType===1||(n.nodeType===3&&n.textContent.trim()!==""));
+  const elemKids=kids.filter(n=>n.nodeType===1);
+  if(kids.length===0) return `${pad}<${el.tagName}${attrs}/>`;
+  if(elemKids.length===0) return `${pad}<${el.tagName}${attrs}>${kids.map(n=>n.textContent.trim()).join(" ")}</${el.tagName}>`;
+  const inner=elemKids.map(k=>svgPretty(k,depth+1)).join("\n");
+  return `${pad}<${el.tagName}${attrs}>\n${inner}\n${pad}</${el.tagName}>`;
+}
+function cleanSvgString(raw){
+  const doc=new DOMParser().parseFromString(raw,"image/svg+xml");
+  const svg=doc.querySelector("svg");
+  if(!svg||doc.querySelector("parsererror")) return null;
+  svgCleanNode(svg);
+  if(!svg.getAttribute("xmlns")) svg.setAttribute("xmlns","http://www.w3.org/2000/svg");
+  return svgPretty(svg,0);
+}
+document.getElementById("btnCleanCode").onclick=()=>{
+  const ta=document.getElementById("addCodeEdit");
+  const diagEl=document.getElementById("codeDiag");
+  const cleaned=cleanSvgString(ta.value);
+  if(cleaned===null){ diagEl.innerHTML=row("err","Kan niet opschonen: geen geldige SVG."); return; }
+  ta.value=cleaned;
+  if(!manualMode) setManualMode(true);
+  diagEl.innerHTML=row("ok","Opgeschoond — klik ‘Valideer & toon’ om de preview te verversen.");
+};
 
 /* ---- icoon laden ---- */
 document.getElementById("addIcon").onchange=e=>{
@@ -962,7 +1066,7 @@ document.getElementById("addName").oninput=()=>{
 };
 
 document.getElementById("dlNew").onclick=()=>{
-  const result=wizCompose(); if(!result||!wizPointer||!wizSender)return;
+  const result=currentSvg(); if(!result||!wizPointer||!wizSender)return;
   const nm=normalizeName(document.getElementById("addName").value)||"nieuw_symbool";
   const id=`${wizSender}/${wizPointer}/${nm}`;
   const a=document.createElement("a");
@@ -975,7 +1079,7 @@ document.getElementById("dlNew").onclick=()=>{
 };
 
 document.getElementById("copyNew").onclick=()=>{
-  const result=wizCompose(); if(!result)return;
+  const result=currentSvg(); if(!result)return;
   navigator.clipboard.writeText(result).then(()=>{
     const cp=document.getElementById("copyNew");
     cp.textContent="Gekopieerd ✓"; setTimeout(()=>cp.textContent="Kopieer SVG",1200);
