@@ -3078,12 +3078,6 @@
     "type": "svg"
   },
   {
-    "name": "logo",
-    "folder": "lcms-bibliotheek/symbolen",
-    "path": "lcms-bibliotheek/symbolen/logo.svg",
-    "type": "svg"
-  },
-  {
     "name": "middelbaar_beroepsonderwijs_mbo",
     "folder": "lcms-bibliotheek/symbolen",
     "path": "lcms-bibliotheek/symbolen/middelbaar_beroepsonderwijs_mbo.svg",
