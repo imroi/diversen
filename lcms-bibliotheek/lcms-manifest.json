@@ -31,18 +31,13 @@
       "ink": "#FFFFFF"
     },
     "bevolkingszorg": {
-      "label": "Bevolkingszorg",
+      "label": "Gemeentes",
       "fill": "#E17000",
       "ink": "#FFFFFF"
     },
     "rws": {
       "label": "Rijkswaterstaat",
       "fill": "#FFF329",
-      "ink": "#000000"
-    },
-    "waterschap": {
-      "label": "Waterschap",
-      "fill": "#00CC00",
       "ink": "#000000"
     }
   },
