@@ -43,6 +43,12 @@
   .fitem.active{background:#cdeccf;color:#15402a}
   .fitem .sw{width:12px;height:12px;border-radius:3px;border:1px solid rgba(255,255,255,.2);flex:none}
   .fitem .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;opacity:.7}
+  .fitem .eye{flex:none;width:15px;height:15px;opacity:.9}
+  .fitem.layer.on{color:var(--ink)}
+  .fitem.layer.off{opacity:.4}
+  .fitem.layer.off:hover{opacity:.7}
+  .showall-btn{width:100%;margin-top:10px;padding:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;font-family:inherit}
+  .showall-btn:hover{filter:brightness(1.08)}
 
   .gridwrap{overflow-y:auto;padding:18px 22px}
   .btnsm{padding:5px 13px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#06121c;font-weight:600;font-size:12px;cursor:pointer}
@@ -176,6 +182,7 @@
     <div class="lib">
       <aside class="filters">
         <input class="search" id="catSearch" placeholder="Zoek op naam…">
+        <button class="showall-btn" id="catShowAll">Toon alles</button>
         <h2>Type</h2>
         <div id="catTypeFilters">
           <div class="fitem active" data-cattype="all">Alle <span class="cnt" id="catCntAll"></span></div>
@@ -1001,9 +1008,11 @@ const RAW_BASE = 'https://raw.githubusercontent.com/imroi/diversen/main/';
 let CATALOG = [];
 let catSearchQ = "";
 let catTypeFilter = "all";   /* all | svg | png */
-let catBronFilter = "*";
-let catAfzFilter = "*";
-let catCatFilter = "*";
+/* oog-lagen: lege Set = hele groep zichtbaar (geen restrictie);
+   niet-lege Set = alleen deze waarden zichtbaar. */
+const catBronVis = new Set();
+const catAfzVis  = new Set();
+const catCatVis  = new Set();
 
 /* afgeleide velden uit het pad — afzender/categorie alleen voor LCMS-symbolen
    (lcms-bibliotheek/lcms-svgs/<afzender>/<categorie>/<naam>.svg) */
@@ -1032,24 +1041,37 @@ function buildCatFilters() {
   const bronnen = [...new Set(CATALOG.map(catBron))].sort();
   const afz = [...new Set(CATALOG.map(catAfz).filter(Boolean))].sort();
   const cats = [...new Set(CATALOG.map(catCat).filter(Boolean))].sort();
-  renderFilterList('catBronFilters', bronnen, v => v, 'Alle bronnen',
-    () => catBronFilter, v => { catBronFilter = v; });
-  renderFilterList('catAfzFilters', afz, afzLabel, 'Alle afzenders',
-    () => catAfzFilter, v => { catAfzFilter = v; });
-  renderFilterList('catCatFilters', cats, catLabel, 'Alle categorieën',
-    () => catCatFilter, v => { catCatFilter = v; });
+  renderFilterList('catBronFilters', bronnen, v => v, 'Alle bronnen', catBronVis);
+  renderFilterList('catAfzFilters', afz, afzLabel, 'Alle afzenders', catAfzVis);
+  renderFilterList('catCatFilters', cats, catLabel, 'Alle categorieën', catCatVis);
 }
 
-function renderFilterList(containerId, values, labelFn, allLabel, getCur, setCur) {
+const EYE_ON  = '<svg class="eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>';
+const EYE_OFF = '<svg class="eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>';
+
+/* toggle één laag binnen een groep:
+   - groep "alles aan" (lege Set) → isoleer deze laag
+   - laag aan → uit (kan groep terug op "alles" zetten)
+   - laag uit → toevoegen */
+function toggleLayer(set, val) {
+  if (set.size === 0) set.add(val);
+  else if (set.has(val)) set.delete(val);
+  else set.add(val);
+}
+
+function renderFilterList(containerId, values, labelFn, allLabel, set) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  const mk = (label, val) =>
-    `<div class="fitem${getCur() === val ? ' active' : ''}" data-val="${val}">${label}</div>`;
-  let html = mk(allLabel, '*');
-  values.forEach(v => { html += mk(labelFn(v), v); });
+  const allOn = set.size === 0;
+  let html = `<div class="fitem alle${allOn ? ' active' : ''}" data-val="*">${allLabel}</div>`;
+  values.forEach(v => {
+    const on = allOn || set.has(v);
+    html += `<div class="fitem layer ${on ? 'on' : 'off'}" data-val="${v}">${on ? EYE_ON : EYE_OFF}<span>${labelFn(v)}</span></div>`;
+  });
   el.innerHTML = html;
   el.querySelectorAll('.fitem').forEach(it => it.onclick = () => {
-    setCur(it.dataset.val);
+    if (it.dataset.val === '*') set.clear();
+    else toggleLayer(set, it.dataset.val);
     buildCatFilters();
     renderCatalog();
   });
@@ -1057,9 +1079,9 @@ function renderFilterList(containerId, values, labelFn, allLabel, getCur, setCur
 
 function catMatches(entry) {
   if (catTypeFilter !== 'all' && entry.type !== catTypeFilter) return false;
-  if (catBronFilter !== '*' && catBron(entry) !== catBronFilter) return false;
-  if (catAfzFilter !== '*' && catAfz(entry) !== catAfzFilter) return false;
-  if (catCatFilter !== '*' && catCat(entry) !== catCatFilter) return false;
+  if (catBronVis.size && !catBronVis.has(catBron(entry))) return false;
+  if (catAfzVis.size  && !catAfzVis.has(catAfz(entry)))   return false;
+  if (catCatVis.size  && !catCatVis.has(catCat(entry)))   return false;
   if (catSearchQ && !entry.name.toLowerCase().includes(catSearchQ)) return false;
   return true;
 }
@@ -1099,6 +1121,11 @@ document.querySelectorAll('#catTypeFilters .fitem').forEach(it => it.onclick = (
     .forEach(x => x.classList.toggle('active', x.dataset.cattype === catTypeFilter));
   renderCatalog();
 });
+document.getElementById('catShowAll').onclick = () => {
+  catBronVis.clear(); catAfzVis.clear(); catCatVis.clear();
+  buildCatFilters();
+  renderCatalog();
+};
 
 function showCatalogDetail(entry) {
   const pagesUrl = PAGES_BASE + entry.path;
