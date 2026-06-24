@@ -105,7 +105,7 @@
   .codepane{flex:none;height:240px;display:flex;flex-direction:column;border-top:1px solid var(--line);background:var(--panel)}
   .codepane-head{display:flex;align-items:center;justify-content:space-between;padding:7px 12px;border-bottom:1px solid var(--line)}
   .codepane-lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
-  #backToWizard{background:transparent;border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:5px;cursor:pointer;font-size:11px;font-family:var(--mono)}
+  #backToWizard{flex:none;background:transparent;border:1px solid var(--line);color:var(--muted);padding:7px 12px;border-radius:7px;cursor:pointer;font-size:12px;font-family:inherit}
   #backToWizard:hover{color:var(--ink);border-color:var(--accent)}
   #addCodeEdit{flex:1;width:100%;box-sizing:border-box;resize:none;background:#0a0e12;border:none;outline:none;padding:10px 12px;font-family:var(--mono);font-size:11px;line-height:1.4;color:#9fb3c8;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:hidden;overflow-y:auto}
   .codepane-foot{display:flex;align-items:flex-start;gap:12px;padding:8px 12px;border-top:1px solid var(--line)}
@@ -334,10 +334,10 @@
         <div class="codepane">
           <div class="codepane-head">
             <span class="codepane-lbl" id="codeModeLbl">SVG-code</span>
-            <button id="backToWizard" style="display:none">↩ Terug naar wizard</button>
           </div>
           <textarea id="addCodeEdit" spellcheck="false" placeholder="&lt;svg&gt;…&lt;/svg&gt;"></textarea>
           <div class="codepane-foot">
+            <button id="backToWizard" style="display:none">↩ Terug naar wizard</button>
             <button class="btn" id="btnValidate" style="width:auto;margin:0;padding:7px 14px">Valideer &amp; toon</button>
             <button class="btn ghost" id="btnCleanCode" style="width:auto;margin:0;padding:7px 14px">Opschonen</button>
             <div class="diag" id="codeDiag" style="margin-top:0"></div>
@@ -890,7 +890,6 @@ function currentSvg(){
 }
 document.getElementById("addCodeEdit").oninput=()=>{ if(!manualMode) setManualMode(true); };
 document.getElementById("backToWizard").onclick=()=>{
-  if(!confirm("Handmatige wijzigingen worden vervangen door de wizard-versie. Doorgaan?"))return;
   setManualMode(false);
   document.getElementById("codeDiag").innerHTML="";
   wizCompose();
