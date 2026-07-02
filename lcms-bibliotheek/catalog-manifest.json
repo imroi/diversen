@@ -120,6 +120,18 @@
     "type": "png"
   },
   {
+    "name": "datalek_extern",
+    "folder": "datalekt",
+    "path": "datalekt/datalek_extern.svg",
+    "type": "svg"
+  },
+  {
+    "name": "datalek_intern",
+    "folder": "datalekt",
+    "path": "datalekt/datalek_intern.svg",
+    "type": "svg"
+  },
+  {
     "name": "ddos",
     "folder": "datalekt",
     "path": "datalekt/ddos.png",
