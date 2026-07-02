@@ -120,6 +120,12 @@
     "type": "png"
   },
   {
+    "name": "bec",
+    "folder": "datalekt",
+    "path": "datalekt/bec.svg",
+    "type": "svg"
+  },
+  {
     "name": "datalek_extern",
     "folder": "datalekt",
     "path": "datalekt/datalek_extern.svg",
@@ -138,6 +144,12 @@
     "type": "png"
   },
   {
+    "name": "ddos",
+    "folder": "datalekt",
+    "path": "datalekt/ddos.svg",
+    "type": "svg"
+  },
+  {
     "name": "extern",
     "folder": "datalekt",
     "path": "datalekt/extern.png",
@@ -150,10 +162,28 @@
     "type": "png"
   },
   {
+    "name": "niet_naleving",
+    "folder": "datalekt",
+    "path": "datalekt/niet_naleving.svg",
+    "type": "svg"
+  },
+  {
     "name": "ransomware",
     "folder": "datalekt",
     "path": "datalekt/ransomware.png",
     "type": "png"
+  },
+  {
+    "name": "ransomware",
+    "folder": "datalekt",
+    "path": "datalekt/ransomware.svg",
+    "type": "svg"
+  },
+  {
+    "name": "report",
+    "folder": "datalekt",
+    "path": "datalekt/report.svg",
+    "type": "svg"
   },
   {
     "name": "transparantie",
