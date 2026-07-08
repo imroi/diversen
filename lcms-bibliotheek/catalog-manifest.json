@@ -354,6 +354,42 @@
     "type": "svg"
   },
   {
+    "name": "explosie_r1",
+    "folder": "knmi",
+    "path": "knmi/explosie_r1.svg",
+    "type": "svg"
+  },
+  {
+    "name": "explosie_r2",
+    "folder": "knmi",
+    "path": "knmi/explosie_r2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "explosie_r3",
+    "folder": "knmi",
+    "path": "knmi/explosie_r3.svg",
+    "type": "svg"
+  },
+  {
+    "name": "geinduceerd_r1",
+    "folder": "knmi",
+    "path": "knmi/geinduceerd_r1.svg",
+    "type": "svg"
+  },
+  {
+    "name": "geinduceerd_r2",
+    "folder": "knmi",
+    "path": "knmi/geinduceerd_r2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "geinduceerd_r3",
+    "folder": "knmi",
+    "path": "knmi/geinduceerd_r3.svg",
+    "type": "svg"
+  },
+  {
     "name": "gladheid",
     "folder": "knmi",
     "path": "knmi/gladheid.svg",
@@ -381,6 +417,24 @@
     "name": "onweer",
     "folder": "knmi",
     "path": "knmi/onweer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tektonisch_r1",
+    "folder": "knmi",
+    "path": "knmi/tektonisch_r1.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tektonisch_r2",
+    "folder": "knmi",
+    "path": "knmi/tektonisch_r2.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tektonisch_r3",
+    "folder": "knmi",
+    "path": "knmi/tektonisch_r3.svg",
     "type": "svg"
   },
   {
