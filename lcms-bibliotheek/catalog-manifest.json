@@ -6012,6 +6012,12 @@
     "type": "svg"
   },
   {
+    "name": "sasvloot",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/sasvloot.svg",
+    "type": "svg"
+  },
+  {
     "name": "auto",
     "folder": "vps",
     "path": "vps/auto.svg",
