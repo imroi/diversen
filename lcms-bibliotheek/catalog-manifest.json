@@ -5988,6 +5988,12 @@
     "type": "svg"
   },
   {
+    "name": "heli_rood",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/heli_rood.svg",
+    "type": "svg"
+  },
+  {
     "name": "kustwacht",
     "folder": "voertuigposities",
     "path": "voertuigposities/kustwacht.svg",
