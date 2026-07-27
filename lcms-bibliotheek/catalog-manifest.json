@@ -5958,6 +5958,12 @@
     "type": "svg"
   },
   {
+    "name": "bus",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/bus.svg",
+    "type": "svg"
+  },
+  {
     "name": "chinook",
     "folder": "voertuigposities",
     "path": "voertuigposities/chinook.svg",
