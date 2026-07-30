@@ -3636,6 +3636,18 @@
     "type": "svg"
   },
   {
+    "name": "object_brug_dicht",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/object_brug_dicht.svg",
+    "type": "svg"
+  },
+  {
+    "name": "object_brug_open",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/object_brug_open.svg",
+    "type": "svg"
+  },
+  {
     "name": "uitgangsstelling",
     "folder": "lcms/algemeen/objecten",
     "path": "lcms/algemeen/objecten/uitgangsstelling.png",
