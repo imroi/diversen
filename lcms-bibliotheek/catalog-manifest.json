@@ -1890,6 +1890,18 @@
     "type": "svg"
   },
   {
+    "name": "brug_dicht_rood",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/brug_dicht_rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "brug_open_groen",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/brug_open_groen.svg",
+    "type": "svg"
+  },
+  {
     "name": "cado",
     "folder": "lcms-bibliotheek/lcms-svgs/algemeen/objecten",
     "path": "lcms-bibliotheek/lcms-svgs/algemeen/objecten/cado.svg",
