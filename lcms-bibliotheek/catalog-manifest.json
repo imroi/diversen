@@ -3606,6 +3606,12 @@
     "type": "svg"
   },
   {
+    "name": "camera",
+    "folder": "lcms/algemeen/objecten",
+    "path": "lcms/algemeen/objecten/camera.svg",
+    "type": "svg"
+  },
+  {
     "name": "klachtenmelding",
     "folder": "lcms/algemeen/objecten",
     "path": "lcms/algemeen/objecten/klachtenmelding.svg",
