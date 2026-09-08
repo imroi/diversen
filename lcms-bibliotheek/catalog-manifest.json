@@ -6054,6 +6054,12 @@
     "type": "svg"
   },
   {
+    "name": "vliegverkeer",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/vliegverkeer.svg",
+    "type": "svg"
+  },
+  {
     "name": "auto",
     "folder": "vps",
     "path": "vps/auto.svg",
