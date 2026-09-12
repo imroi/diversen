@@ -1824,6 +1824,24 @@
     "type": "svg"
   },
   {
+    "name": "voetbal_cat_a",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/voetbal_cat_a.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetbal_cat_b",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/voetbal_cat_b.svg",
+    "type": "svg"
+  },
+  {
+    "name": "voetbal_cat_c",
+    "folder": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen",
+    "path": "lcms-bibliotheek/lcms-svgs/algemeen/gebeurtenissen/voetbal_cat_c.svg",
+    "type": "svg"
+  },
+  {
     "name": "alarm",
     "folder": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten",
     "path": "lcms-bibliotheek/lcms-svgs/algemeen/incidenten/alarm.svg",
