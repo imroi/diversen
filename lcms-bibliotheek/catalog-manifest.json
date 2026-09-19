@@ -6018,6 +6018,12 @@
     "type": "svg"
   },
   {
+    "name": "defensie-vliegtuig",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/defensie-vliegtuig.svg",
+    "type": "svg"
+  },
+  {
     "name": "heli_blauw",
     "folder": "voertuigposities",
     "path": "voertuigposities/heli_blauw.svg",
