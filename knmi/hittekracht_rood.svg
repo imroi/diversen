@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 54" width="26" height="54">
+  <!-- buis (omtrek) -->
+  <rect x="10" y="5" width="6" height="30" rx="3" fill="white" stroke="black" stroke-width="1.6"/>
+  <!-- bol (omtrek) -->
+  <circle cx="13" cy="44" r="9" fill="white" stroke="black" stroke-width="1.6"/>
+  <!-- vulling: bol altijd vol -->
+  <circle cx="13" cy="44" r="6.7" fill="#FF0000"/>
+  <!-- vulling: buis tot het juiste niveau -->
+  <rect x="11.2" y="12.5" width="3.6" height="28.5" rx="1.6" fill="#FF0000"/>
+  <!-- schaalstreepjes -->
+  <line x1="17" y1="12" x2="19" y2="12" stroke="#666" stroke-width="1"/>
+  <line x1="17" y1="19" x2="19" y2="19" stroke="#666" stroke-width="1"/>
+  <line x1="17" y1="26" x2="19" y2="26" stroke="#666" stroke-width="1"/>
+  <line x1="17" y1="33" x2="19" y2="33" stroke="#666" stroke-width="1"/>
+</svg>
