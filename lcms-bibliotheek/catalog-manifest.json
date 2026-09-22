@@ -3180,6 +3180,30 @@
     "type": "svg"
   },
   {
+    "name": "hittekracht_geel",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/hittekracht_geel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hittekracht_groen",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/hittekracht_groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hittekracht_rood",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/hittekracht_rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hittekracht_zwart",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/hittekracht_zwart.svg",
+    "type": "svg"
+  },
+  {
     "name": "hoger_en_wetenschappelijk_onderwijs",
     "folder": "lcms-bibliotheek/symbolen",
     "path": "lcms-bibliotheek/symbolen/hoger_en_wetenschappelijk_onderwijs.svg",
