@@ -408,6 +408,30 @@
     "type": "svg"
   },
   {
+    "name": "hittekracht_geel",
+    "folder": "knmi",
+    "path": "knmi/hittekracht_geel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hittekracht_groen",
+    "folder": "knmi",
+    "path": "knmi/hittekracht_groen.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hittekracht_rood",
+    "folder": "knmi",
+    "path": "knmi/hittekracht_rood.svg",
+    "type": "svg"
+  },
+  {
+    "name": "hittekracht_zwart",
+    "folder": "knmi",
+    "path": "knmi/hittekracht_zwart.svg",
+    "type": "svg"
+  },
+  {
     "name": "hozen",
     "folder": "knmi",
     "path": "knmi/hozen.svg",
