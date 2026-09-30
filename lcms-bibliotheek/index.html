@@ -132,6 +132,11 @@
   .pcard:hover,.pcard.sel{border-color:var(--accent)}.pcard.sel{background:#12222c}
   .pcard svg{display:block;margin:0 auto 8px;width:60px;height:60px}
   .pcard-lbl{font-size:12px;font-weight:600}.pcard-desc{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.3}
+  .pcard{position:relative}
+  .pcard.add{border-style:dashed;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .pcard.add:hover{color:var(--ink)}
+  .pcard.custom{border-color:var(--ok)}.pcard.custom.sel{border-color:var(--accent)}
+  .pcard.custom:hover .scard-del{display:block}
   .sender-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:4px}
   .scard{border:2px solid var(--line);border-radius:8px;padding:9px 10px;cursor:pointer;transition:.12s;display:flex;align-items:center;gap:9px;position:relative}
   .scard:hover,.scard.sel{border-color:var(--accent)}.scard.sel{background:var(--panel2)}
@@ -250,6 +255,18 @@
         <div id="wcStep1">
           <div class="wiz-title">Kies het type pointer</div>
           <div class="pointer-cards" id="pointerCards"></div>
+          <div class="sform" id="newPointerForm" style="display:none">
+            <div class="wiz-sectlbl">Eigen pointer</div>
+            <input type="text" id="newPointerName" placeholder="bv. Evacuatiepunt" style="margin-top:4px">
+            <input type="file" id="newPointerFile" accept=".svg,image/svg+xml" style="display:none">
+            <button class="btn ghost" id="newPointerUpload" style="margin-top:8px">↑ SVG kiezen</button>
+            <div class="diag" id="newPointerDiag"></div>
+            <div style="font-size:10.5px;color:var(--muted);line-height:1.4;margin-top:6px">Zwarte vlakken worden de randkleur, andere gekleurde vlakken de vulkleur van de afzender.</div>
+            <div class="sform-actions">
+              <button class="btn" id="newPointerSave" style="width:auto;padding:7px 14px;margin-top:0">Opslaan</button>
+              <button class="btn ghost" id="newPointerCancel" style="width:auto;padding:7px 14px;margin-top:0">Annuleer</button>
+            </div>
+          </div>
         </div>
         <!-- Stap 2 -->
         <div id="wcStep2" style="display:none">
@@ -678,6 +695,56 @@ async function fetchTemplates() {
   if (loaded > 0) renderPointerCards();
 }
 
+/* eigen pointers: persistent via localStorage */
+const EIGEN_POINTERS_KEY = 'lcms_mijn_pointers';
+const eigenPointers = new Map(); /* key → {label, svg} */
+
+/* Schaalt een geüploade pointer-SVG naar het 121×121-canvas en kleurt hem in */
+function customPointerType(info) {
+  const doc = new DOMParser().parseFromString(info.svg, "image/svg+xml");
+  const vb = (doc.querySelector("svg")?.getAttribute("viewBox") || "0 0 121 121").trim().split(/[ ,]+/).map(Number);
+  const [vx, vy, vw, vh] = vb.length === 4 && vb[2] > 0 && vb[3] > 0 ? vb : [0, 0, 121, 121];
+  const sc = round(121 / Math.max(vw, vh));
+  const tx = round((121 - vw * sc) / 2 - vx * sc), ty = round((121 - vh * sc) / 2 - vy * sc);
+  const identity = sc === 1 && tx === 0 && ty === 0;
+  return {label: info.label, desc: "Eigen pointer", custom: true, iconCx: 60.5, iconCy: 60.5, iconSize: 55,
+    shape: (vul, rand) => {
+      const inner = templateShape(info.svg, vul, rand);
+      return identity ? inner : `<g transform="translate(${tx},${ty}) scale(${sc})">${inner}</g>`;
+    }};
+}
+
+function loadEigenPointers() {
+  try {
+    const raw = localStorage.getItem(EIGEN_POINTERS_KEY);
+    if (!raw) return;
+    for (const [key, info] of Object.entries(JSON.parse(raw))) {
+      eigenPointers.set(key, info);
+      POINTER_TYPES[key] = customPointerType(info);
+    }
+  } catch(e) {}
+}
+
+function saveEigenPointer(key, info) {
+  eigenPointers.set(key, info);
+  POINTER_TYPES[key] = customPointerType(info);
+  _persistEigenPointers();
+}
+
+function deleteEigenPointer(key) {
+  eigenPointers.delete(key);
+  delete POINTER_TYPES[key];
+  _persistEigenPointers();
+}
+
+function _persistEigenPointers() {
+  try {
+    localStorage.setItem(EIGEN_POINTERS_KEY, JSON.stringify(Object.fromEntries(eigenPointers)));
+  } catch(e) {}
+}
+
+loadEigenPointers();
+
 let wizStep=1, wizPointer=null, wizSender=null;
 let newIconInner=null, newIconVb=null, newIconRootFill=null;
 let iconScaleFactor=1.0, iconDx=0, iconDy=0;
@@ -766,18 +833,85 @@ document.getElementById('previewZoom').oninput = e => {
 
 function renderPointerCards(){
   const el=document.getElementById("pointerCards");
-  el.innerHTML=Object.entries(POINTER_TYPES).map(([key,pt])=>{
+  const cards=Object.entries(POINTER_TYPES).map(([key,pt])=>{
     const preview=pt.shape("#2e3f50","#7bafc7");
-    return `<div class="pcard${wizPointer===key?" sel":""}" data-key="${key}">
+    const del=pt.custom?`<button class="scard-del" data-del="${key}" title="Verwijder eigen pointer">×</button>`:"";
+    return `<div class="pcard${wizPointer===key?" sel":""}${pt.custom?" custom":""}" data-key="${key}">
+      ${del}
       <svg viewBox="0 0 121 121" xmlns="http://www.w3.org/2000/svg">${preview}</svg>
       <div class="pcard-lbl">${pt.label}</div><div class="pcard-desc">${pt.desc}</div></div>`;
   }).join("");
-  el.querySelectorAll(".pcard").forEach(c=>c.onclick=()=>{
+  el.innerHTML=cards+`<div class="pcard add" data-add="1"><span style="font-size:22px;line-height:1">＋</span><div class="pcard-lbl" style="margin-top:6px">Eigen pointer</div><div class="pcard-desc">SVG uploaden</div></div>`;
+  el.querySelectorAll(".pcard").forEach(c=>c.onclick=e=>{
+    if(e.target.closest(".scard-del"))return;
+    if(c.dataset.add){
+      document.getElementById("newPointerForm").style.display="block";
+      document.getElementById("newPointerName").focus();
+      return;
+    }
     wizPointer=c.dataset.key;
     el.querySelectorAll(".pcard").forEach(x=>x.classList.toggle("sel",x.dataset.key===wizPointer));
     wizUpdateNav(); wizCompose();
   });
+  el.querySelectorAll(".scard-del").forEach(btn=>btn.onclick=e=>{
+    e.stopPropagation();
+    const key=btn.dataset.del;
+    if(!confirm(`Verwijder eigen pointer "${POINTER_TYPES[key].label}"? Bestaande symbolen die deze pointer gebruiken blijven bestaan.`))return;
+    deleteEigenPointer(key);
+    if(wizPointer===key) wizPointer=null;
+    renderPointerCards(); wizUpdateNav(); wizCompose();
+  });
 }
+
+/* ---- eigen pointer toevoegen ---- */
+let newPointerSvg=null;
+function resetPointerForm(){
+  newPointerSvg=null;
+  document.getElementById("newPointerForm").style.display="none";
+  document.getElementById("newPointerName").value="";
+  document.getElementById("newPointerFile").value="";
+  document.getElementById("newPointerDiag").innerHTML="";
+}
+document.getElementById("newPointerUpload").onclick=()=>document.getElementById("newPointerFile").click();
+document.getElementById("newPointerFile").onchange=e=>{
+  const f=e.target.files[0]; if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{
+    const diagEl=document.getElementById("newPointerDiag");
+    const doc=new DOMParser().parseFromString(r.result,"image/svg+xml");
+    const svg=doc.querySelector("svg");
+    if(!svg||doc.querySelector("parsererror")){
+      newPointerSvg=null; diagEl.innerHTML=row("err","Geen geldige SVG."); return;
+    }
+    newPointerSvg=r.result;
+    const diags=[];
+    const vb=(svg.getAttribute("viewBox")||"").trim();
+    diags.push(vb==="0 0 121 121"?["ok","viewBox 0 0 121 121 ✓"]:["warn",`viewBox "${vb||"ontbreekt"}" — wordt geschaald naar 121×121`]);
+    const fills=[...doc.querySelectorAll("[fill]")].map(el=>el.getAttribute("fill")).filter(f=>f!=="none");
+    const hasRand=fills.some(f=>/^(#000(000)?|black)$/i.test(f));
+    const hasVul=fills.some(f=>!/^(#000(000)?|black)$/i.test(f));
+    diags.push(hasRand?["ok","zwart vlak → randkleur ✓"]:["warn","geen zwart fill-vlak — randkleur heeft geen effect"]);
+    diags.push(hasVul?["ok","gekleurd vlak → vulkleur ✓"]:["warn","geen gekleurd fill-vlak — vulkleur heeft geen effect"]);
+    diagEl.innerHTML=diags.map(d=>row(d[0],d[1])).join("");
+    const nameEl=document.getElementById("newPointerName");
+    if(!nameEl.value.trim()) nameEl.value=f.name.replace(/\.svg$/i,"");
+  };
+  r.readAsText(f);
+};
+document.getElementById("newPointerSave").onclick=()=>{
+  const name=document.getElementById("newPointerName").value.trim();
+  if(!newPointerSvg){alert("Kies eerst een SVG.");return;}
+  if(!name){alert("Geef een naam op.");return;}
+  const key=normalizeName(name);
+  if(!key){alert("Naam levert geen geldige sleutel op.");return;}
+  if(POINTER_TYPES[key]&&!eigenPointers.has(key)){alert(`"${key}" is een standaard pointer-type; kies een andere naam.`);return;}
+  if(eigenPointers.has(key)&&!confirm(`Eigen pointer "${key}" bestaat al. Vervangen?`))return;
+  saveEigenPointer(key,{label:name,svg:newPointerSvg});
+  wizPointer=key;
+  resetPointerForm();
+  renderPointerCards(); wizUpdateNav(); wizCompose();
+};
+document.getElementById("newPointerCancel").onclick=resetPointerForm;
 
 function renderSenderCards(){
   const el=document.getElementById("senderCards");
