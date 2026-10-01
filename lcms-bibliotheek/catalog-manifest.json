@@ -3258,10 +3258,22 @@
     "type": "png"
   },
   {
+    "name": "marker-1",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/marker-1.svg",
+    "type": "svg"
+  },
+  {
     "name": "marker-2",
     "folder": "lcms-bibliotheek/symbolen",
     "path": "lcms-bibliotheek/symbolen/marker-2.png",
     "type": "png"
+  },
+  {
+    "name": "marker-2",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/marker-2.svg",
+    "type": "svg"
   },
   {
     "name": "middelbaar_beroepsonderwijs_mbo",
