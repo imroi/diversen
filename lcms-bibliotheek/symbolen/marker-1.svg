@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1200" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+ <!-- driehoek punt omlaag (verticaal gespiegeld), oranje -->
+ <path transform="matrix(1 0 0 -1 0 1200)" d="m679.97 155.21 460.22 797.26c36.516 63.281-10.594 138.66-80.016 138.66h-920.44c-16.734 0-32.531-4.2656-46.359-12.281l0.046875-0.046875c-43.219-25.031-60.047-80.859-33.75-126.47l460.22-797.11c35.578-61.594 124.36-61.875 160.08 0z" fill="#f28c28" fill-rule="evenodd"/>
+ <text x="600" y="660" font-family="Arial, Helvetica, sans-serif" font-size="560" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+</svg>
