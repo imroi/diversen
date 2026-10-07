@@ -3288,6 +3288,12 @@
     "type": "svg"
   },
   {
+    "name": "ndw_drip",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/ndw_drip.svg",
+    "type": "svg"
+  },
+  {
     "name": "oliepompinstallatie",
     "folder": "lcms-bibliotheek/symbolen",
     "path": "lcms-bibliotheek/symbolen/oliepompinstallatie.svg",
