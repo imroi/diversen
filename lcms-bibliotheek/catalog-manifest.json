@@ -6216,6 +6216,12 @@
     "type": "svg"
   },
   {
+    "name": "ADE_icoon",
+    "folder": "vraa",
+    "path": "vraa/ADE_icoon.svg",
+    "type": "svg"
+  },
+  {
     "name": "buurt_gemeenschapshuis",
     "folder": "vraa",
     "path": "vraa/buurt_gemeenschapshuis.svg",
