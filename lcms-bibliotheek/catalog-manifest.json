@@ -3150,6 +3150,12 @@
     "type": "svg"
   },
   {
+    "name": "bosbrandeneuropa",
+    "folder": "lcms-bibliotheek/symbolen",
+    "path": "lcms-bibliotheek/symbolen/bosbrandeneuropa.svg",
+    "type": "svg"
+  },
+  {
     "name": "buurt_gemeenschapshuis",
     "folder": "lcms-bibliotheek/symbolen",
     "path": "lcms-bibliotheek/symbolen/buurt_gemeenschapshuis.svg",
