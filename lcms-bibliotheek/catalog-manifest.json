@@ -6072,6 +6072,12 @@
     "type": "svg"
   },
   {
+    "name": "baggerschip",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/baggerschip.svg",
+    "type": "svg"
+  },
+  {
     "name": "boat",
     "folder": "voertuigposities",
     "path": "voertuigposities/boat.svg",
@@ -6090,6 +6096,12 @@
     "type": "svg"
   },
   {
+    "name": "calamiteitenvaartuig",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/calamiteitenvaartuig.svg",
+    "type": "svg"
+  },
+  {
     "name": "chinook",
     "folder": "voertuigposities",
     "path": "voertuigposities/chinook.svg",
@@ -6099,6 +6111,18 @@
     "name": "defensie-vliegtuig",
     "folder": "voertuigposities",
     "path": "voertuigposities/defensie-vliegtuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "duikvaartuig",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/duikvaartuig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "havendienst",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/havendienst.svg",
     "type": "svg"
   },
   {
@@ -6144,9 +6168,81 @@
     "type": "svg"
   },
   {
+    "name": "loodsboot",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/loodsboot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "medisch_transport",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/medisch_transport.svg",
+    "type": "svg"
+  },
+  {
+    "name": "militair",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/militair.svg",
+    "type": "svg"
+  },
+  {
+    "name": "onbekend",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/onbekend.svg",
+    "type": "svg"
+  },
+  {
+    "name": "overig",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/overig.svg",
+    "type": "svg"
+  },
+  {
+    "name": "passagiersschip",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/passagiersschip.svg",
+    "type": "svg"
+  },
+  {
+    "name": "passagiersschip_groot",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/passagiersschip_groot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "passagiersschip_klein",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/passagiersschip_klein.svg",
+    "type": "svg"
+  },
+  {
+    "name": "passagiersschip_middel",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/passagiersschip_middel.svg",
+    "type": "svg"
+  },
+  {
+    "name": "pleziervaart",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/pleziervaart.svg",
+    "type": "svg"
+  },
+  {
+    "name": "politie",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/politie.svg",
+    "type": "svg"
+  },
+  {
     "name": "politieheli",
     "folder": "voertuigposities",
     "path": "voertuigposities/politieheli.svg",
+    "type": "svg"
+  },
+  {
+    "name": "reddingsvaartuig",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/reddingsvaartuig.svg",
     "type": "svg"
   },
   {
@@ -6156,9 +6252,45 @@
     "type": "svg"
   },
   {
+    "name": "sleepboot",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/sleepboot.svg",
+    "type": "svg"
+  },
+  {
+    "name": "sneldienst",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/sneldienst.svg",
+    "type": "svg"
+  },
+  {
+    "name": "tanker",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/tanker.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vissersschip",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/vissersschip.svg",
+    "type": "svg"
+  },
+  {
     "name": "vliegverkeer",
     "folder": "voertuigposities",
     "path": "voertuigposities/vliegverkeer.svg",
+    "type": "svg"
+  },
+  {
+    "name": "vrachtschip",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/vrachtschip.svg",
+    "type": "svg"
+  },
+  {
+    "name": "zeilschip",
+    "folder": "voertuigposities",
+    "path": "voertuigposities/zeilschip.svg",
     "type": "svg"
   },
   {
