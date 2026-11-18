@@ -192,6 +192,54 @@
     "type": "png"
   },
   {
+    "name": "Geit",
+    "folder": "dieren",
+    "path": "dieren/Geit.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Hert",
+    "folder": "dieren",
+    "path": "dieren/Hert.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Konijn",
+    "folder": "dieren",
+    "path": "dieren/Konijn.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Paard",
+    "folder": "dieren",
+    "path": "dieren/Paard.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Pluimvee",
+    "folder": "dieren",
+    "path": "dieren/Pluimvee.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Rund",
+    "folder": "dieren",
+    "path": "dieren/Rund.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Schaap",
+    "folder": "dieren",
+    "path": "dieren/Schaap.svg",
+    "type": "svg"
+  },
+  {
+    "name": "Varken",
+    "folder": "dieren",
+    "path": "dieren/Varken.svg",
+    "type": "svg"
+  },
+  {
     "name": "elec_onderbreking",
     "folder": "energieonderbrekingen",
     "path": "energieonderbrekingen/elec_onderbreking.svg",
