@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="10" fill="#ffffff" stroke="#232323" stroke-width="0.4"/>
+<rect x="8" y="14" width="8" height="4" rx="2" fill="black"/>
+<path d="M10 15L8.6718 13.0077C8.23375 12.3506 8 11.5786 8 10.7889V9V9C8 8.44772 8.44772 8 9 8H12" stroke="black"/>
+<path d="M14 15L15.3282 13.0077C15.7662 12.3506 16 11.5786 16 10.7889V9V9C16 8.44772 15.5523 8 15 8H12" stroke="black"/>
+<path d="M16 9H17.5H18.6582C18.847 9 19 9.15303 19 9.3418V9.3418C19 10.0101 18.5168 10.5805 17.8576 10.6904L16 11" stroke="black"/>
+<path d="M8 9H6.5H5.3418C5.15303 9 5 9.15303 5 9.3418V9.3418C5 10.0101 5.48319 10.5805 6.14244 10.6904L8 11" stroke="black"/>
+<path d="M15 8L15.2111 7.89443C16.3075 7.34626 17 6.22573 17 5V5" stroke="black"/>
+<path d="M9 8L8.78885 7.89443C7.69253 7.34626 7 6.22573 7 5V5" stroke="black"/>
+<ellipse cx="10.5" cy="16" rx="0.5" ry="1" fill="white"/>
+<ellipse cx="13.5" cy="16" rx="0.5" ry="1" fill="white"/>
+<ellipse cx="10.5" cy="11" rx="0.5" ry="1" fill="black"/>
+<ellipse cx="13.5" cy="11" rx="0.5" ry="1" fill="black"/>
+</svg>
